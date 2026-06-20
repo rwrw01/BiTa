@@ -324,6 +324,7 @@
 
   /* ── Print ── */
   @media print {
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     header { padding: 1rem 1.5rem; }
     .progress-bar { display: none; }
     main { padding: 1rem 1.5rem; max-width: none; }
@@ -331,8 +332,8 @@
     .print-bar { display: none; }
     #output { display: block !important; }
     .output-body { border: 1px solid #ccc; }
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+    .domains-table { font-size: 0.75rem; }
+    .domains-table td, .domains-table th { padding: 0.4rem 0.6rem; }
   }
 </style>
 </head>
