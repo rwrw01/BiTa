@@ -342,14 +342,14 @@
 <header>
   <div class="kader">M&amp;I/Partners · Business IT Alignment</div>
   <h1>BITA-tool</h1>
-  <p>Genereer een op maat gemaakte aanpak op basis van organisatietype, stakeholdercultuur en volwassenheidsniveau.</p>
+  <p>Genereer een op maat gemaakte aanpak op basis van organisatietype, bestuurscultuur en volwassenheidsniveau.</p>
 </header>
 
 <div class="progress-bar" id="progress-bar">
   <div class="progress-step active" data-step="1">1 · Module</div>
   <div class="progress-step" data-step="2">2 · Doel</div>
   <div class="progress-step" data-step="3">3 · Organisatietype</div>
-  <div class="progress-step" data-step="4">4 · Stakeholdercultuur</div>
+  <div class="progress-step" data-step="4">4 · Bestuurscultuur</div>
   <div class="progress-step" data-step="5">5 · Volwassenheid</div>
 </div>
 
@@ -387,11 +387,11 @@
     </div>
   </div>
 
-  <!-- Step 4: Quinn-cultuur -->
+  <!-- Step 4: Bestuurscultuur -->
   <div class="wizard-step" id="step-4">
-    <div class="step-title">Stap 4 — Stakeholdercultuur</div>
-    <div class="step-sub">Wat drijft de beslissende stakeholder?</div>
-    <div class="option-grid" id="opts-quinn"></div>
+    <div class="step-title">Stap 4 — Bestuurscultuur</div>
+    <div class="step-sub">Hoe werkt het politieke besluitvormingsproces in deze gemeente?</div>
+    <div class="option-grid" id="opts-bestuurscultuur"></div>
     <div class="nav-buttons">
       <button class="btn btn-secondary" id="back-4">← Terug</button>
       <button class="btn btn-primary" id="next-4" disabled>Volgende →</button>
@@ -449,17 +449,17 @@ const CONTENT = {
       { key: 'toetsing',      label: 'Toetsing',      sub: 'Gap-analyse of audit — waar staan we?' },
     ],
     orgtypes: [
-      { key: 'klein-direct',    label: 'Kleine gemeente, één managementlaag',    sub: 'Gemeentesecretaris en directie sturen direct aan; één managementlaag eronder' },
-      { key: 'procedureel',     label: 'Procedureel en hiërarchisch',            sub: 'Vaste processen, formele besluitvorming, rollen duidelijk belegd' },
-      { key: 'vakgericht',      label: 'Vakgericht en professioneel',            sub: 'Specialisten werken autonoom op basis van vakkennis, niet op mandaat' },
-      { key: 'projectmatig',    label: 'Projectmatig en coalitiegericht',        sub: 'Werkt in teams en pilots, snelheid boven procedure' },
-      { key: 'gedecentraliseerd', label: 'Gedecentraliseerd met meerdere diensten', sub: 'Zelfstandige eenheden onder één bestuurlijk dak' },
+      { key: 'plat',           label: 'Platte aansturing, directe lijn',        sub: 'Top en uitvoering staan dicht bij elkaar — weinig lagen, direct schakelen. Economies of flow.' },
+      { key: 'regelgestuurd',  label: 'Regelgestuurd en gestandaardiseerd',      sub: 'Coördinatie via vaste processen, systemen en lagen. PDCA-cyclus centraal. Economies of scale.' },
+      { key: 'vakinhoudelijk', label: 'Vakinhoudelijk geleid',                   sub: 'Professionals bepalen de werkwijze op basis van expertise — de lijn stuurt op output, niet op methode.' },
+      { key: 'teamgedreven',   label: 'Teamgedreven en adaptief',                sub: 'Werkt in tijdelijke teams en programma\'s — structuur past zich aan de opgave aan.' },
+      { key: 'concern',        label: 'Concern met zelfstandige domeinen',       sub: 'Autonome clusters of diensten onder één bestuurlijk dak — rapportage op twee niveaus.' },
     ],
-    quinn: [
-      { key: 'hierarchie',   label: 'Regel & structuur',       sub: 'Procedures, formele accountability, audittrail' },
-      { key: 'output',       label: 'Output & resultaat',      sub: 'Doelmatigheid, kosten, aantoonbaar rendement' },
-      { key: 'vernieuwing',  label: 'Vernieuwing & experiment', sub: 'Zichtbare vernieuwing, coalitie, ambitie' },
-      { key: 'samenwerking', label: 'Samenwerking & vertrouwen', sub: 'Peers, collectieve normen, sectorreferenties' },
+    bestuurscultuur: [
+      { key: 'gemeenschap', label: 'Gemeenschapscultuur', sub: 'Informeel en consensusgericht — pragmatisch, conflictvermijdend, "gezellig besturen"' },
+      { key: 'vecht',       label: 'Vechtcultuur',        sub: 'Informeel en politiek — meningsverschillen worden snel persoonlijk, formele procedures ontbreken' },
+      { key: 'debat',       label: 'Debatcultuur',        sub: 'Formeel en politiek — zakelijk proceduregericht, conflictregulering via formele kanalen' },
+      { key: 'regent',      label: 'Regentencultuur',     sub: 'Formeel en consensusgericht — elitair pragmatisme, stille consensus via netwerk' },
     ],
     volwassenheid: [
       { key: 1, label: 'Ad hoc',         sub: 'Processen werken niet of nauwelijks — ook als er beleid op papier staat' },
@@ -471,7 +471,7 @@ const CONTENT = {
 
   // ── Module content ─────────────────────────────────────────────
   // Structure per module → doel → orgtype:
-  //   { intro, wel[], niet[], tip, domeinen[], quinn{key→{argument,eerste_stap}}, volwassenheid{1-4→{toelichting,eerste_stap}} }
+  //   { intro, wel[], niet[], tip, domeinen[], bestuurscultuur{key→{argument,eerste_stap}}, volwassenheid{1-4→{toelichting,eerste_stap}} }
   // null at any level = placeholder (not yet authored)
   modules: {
 
@@ -494,8 +494,8 @@ const CONTENT = {
 
         implementatie: {
 
-          'klein-direct': {
-            intro: 'Een kleine gemeente met één managementlaag heeft beperkte IB-capaciteit intern. De gemeentesecretaris is feitelijk eigenaar; de aanpak moet passen bij een kleine ploeg die meerdere rollen combineert.',
+          'plat': {
+            intro: 'Een organisatie met platte aansturing heeft weinig beslislagen tussen top en uitvoering. De gemeentesecretaris of directeur heeft een directe lijn naar de werkvloer. IB-capaciteit is beperkt intern — de aanpak moet passen bij een klein ploeg die meerdere rollen combineert, ongeacht de gemeentegrootte.',
             wel: [
               'Pragmatische aanpak — één persoon combineert CISO/FG/privacy',
               'Aansluiten bij VNG-modelbeleid en IBD-diensten als externe tweede lijn',
@@ -520,11 +520,11 @@ const CONTENT = {
               { naam: 'Leveranciersbeheer',       ref: 'A.15',   aanpak: 'Verwerkersovereenkomsten via VNG-modelcontract; jaarlijkse checklist voor kritische leveranciers' },
               { naam: 'ISMS inrichting',          ref: 'H.4–6',  aanpak: 'Lean ISMS via ENSIA-zelfevaluatie; geen apart ISMS-traject; IBD-baseline als kader' },
             ],
-            quinn: {
-              hierarchie:   { argument: 'BIO 2 is een wettelijke verplichting voor gemeenten. Aantoonbare naleving is niet optioneel en vereist formele vastlegging.',                                                         eerste_stap: 'Laat de gemeentesecretaris een besluit nemen over de BIO 2-aanpak en leg dit vast als startdocument.' },
-              output:       { argument: 'De kosten van een datalek (meldplicht AP, herstelkosten, reputatieschade) overtreffen de investering in een basisniveau BIO 2 meerdere malen.',                                     eerste_stap: 'Voer een IBD-quickscan uit om de huidige gap te meten en vertaal dit naar een prioriteitenlijst met kosten.' },
-              vernieuwing:  { argument: 'BIO 2-compliance is een voorwaarde voor aansluiting op landelijke voorzieningen en datakoppelingen met andere overheden.',                                                          eerste_stap: 'Inventariseer welke landelijke koppelingen of samenwerkingen BIO 2 vereisen als toelatingseis.' },
-              samenwerking: { argument: 'Omliggende gemeenten werken aan dezelfde BIO 2-verplichting. Gezamenlijke aanpak via de regio of een ambtelijke fusie is efficiënter.',                                            eerste_stap: 'Neem contact op met een buurgemeente om te verkennen of een gezamenlijke IB-functionaris haalbaar is.' },
+            bestuurscultuur: {
+              gemeenschap: { argument: 'BIO 2 is voor alle gemeenten verplicht. In een directe organisatie pakt u dit samen op — overleg met de gemeentesecretaris en sleutelfunctionarissen, zonder grote projectstructuur.', eerste_stap: 'Organiseer een informeel startgesprek met de gemeentesecretaris en twee of drie betrokken teamleiders om de aanpak gezamenlijk te bepalen.' },
+              vecht:       { argument: 'Vermijd dat BIO 2 een politiek dossier wordt. Bouw informeel draagvlak bij de gemeentesecretaris en een of twee invloedrijke teamleiders voordat u het breder uitzet.', eerste_stap: 'Voer bilaterale gesprekken met de gemeentesecretaris en de meest invloedrijke teamleider om een stille coalitie te vormen voor de aanpak.' },
+              debat:       { argument: 'BIO 2 is een wettelijke verplichting voor gemeenten. Aantoonbare naleving is niet optioneel en vereist een formeel besluit als startdocument.', eerste_stap: 'Laat de gemeentesecretaris een formeel besluit nemen over de BIO 2-aanpak en leg dit vast als mandaat voor de uitvoering.' },
+              regent:      { argument: 'Sluit aan bij de gezaghebbende opinie van de gemeentesecretaris. Als de top het als normconforme verplichting beschouwt, volgt de organisatie vanzelf.', eerste_stap: 'Bespreek de BIO 2-verplichting discreet met de gemeentesecretaris en vraag diens expliciete steun voordat u het in een bredere setting bespreekt.' },
             },
             volwassenheid: {
               1: { toelichting: 'Beleid staat op papier maar wordt niet gevolgd of is onbekend bij medewerkers.',                                           eerste_stap: 'Voer een IBD-zelfevaluatie uit om vast te stellen wat er feitelijk werkt — niet wat gedocumenteerd is.' },
@@ -534,7 +534,7 @@ const CONTENT = {
             },
           },
 
-          'procedureel': {
+          'regelgestuurd': {
             intro: 'Een procedureel en hiërarchisch ingerichte gemeente accepteert compliance als norm. Formele documentatie, stuurgroepbesluiten en auditcycli passen bij dit type.',
             wel: [
               'Formeel ISMS-traject met jaarplan',
@@ -560,11 +560,11 @@ const CONTENT = {
               { naam: 'Leveranciersbeheer',       ref: 'A.15',   aanpak: 'Verwerkersovereenkomsten via juridische afdeling, standaard due diligence checklist' },
               { naam: 'ISMS inrichting',          ref: 'H.4–6',  aanpak: 'Volledig ISMS-traject met scope, beleid, doelstellingen, PDCA, management review' },
             ],
-            quinn: {
-              hierarchie:   { argument: 'NEN 7510/BIO 2 past bij het karakter van uw organisatie — formeel, aantoonbaar, geauditeerd. De norm sluit aan bij hoe u al werkt.',                   eerste_stap: 'Schrijf een managementnotitie "besluit gevraagd" voor het vaststellen van het ISMS-kader en scope.' },
-              output:       { argument: 'BIO 2-compliance reduceert het aansprakelijkheidsrisico aantoonbaar. De investering is te verantwoorden in euro\'s kosten per incident.',                eerste_stap: 'Maak een business case: kosten gemiddeld datalek versus jaarlijkse investering in een ISMS.' },
-              vernieuwing:  { argument: 'NEN 7510-aantoonbaarheid is een voorwaarde voor samenwerking met ketenpartners en aanbestedingen die dit vereisen.',                                    eerste_stap: 'Inventariseer welke aanbestedingen of ketenpartners BIO 2-compliance vereisen als toetredingseis.' },
-              samenwerking: { argument: 'De VNG en IBD hebben BIO 2 als sectorstandaard vastgesteld. Dit is de gezamenlijke norm van alle gemeenten.',                                           eerste_stap: 'Gebruik de IBD-zelfevaluatie als startpunt en bespreek de uitkomst in gemeentelijk MT-overleg.' },
+            bestuurscultuur: {
+              gemeenschap: { argument: 'NEN 7510/BIO 2 past bij hoe u als organisatie al werkt. Sluit aan op de collegiale norm — andere gemeenten met vergelijkbare structuur doen dit ook.', eerste_stap: 'Gebruik de IBD-zelfevaluatie als gezamenlijk startpunt en bespreek de uitkomst in een informeel MT-overleg.' },
+              vecht:       { argument: 'Maak BIO 2 geen politieke speelbal. Ankert de aanpak in de bestaande processtructuur en bouw formele coalitie via de reguliere vergadercyclus — buiten de politieke arena.', eerste_stap: 'Identificeer twee of drie MT-leden die het belang van compliance onderschrijven en zorg dat zij het voorstel mede-ondertekenen.' },
+              debat:       { argument: 'NEN 7510/BIO 2 past bij het karakter van uw organisatie — formeel, aantoonbaar, geauditeerd. Aantoonbare naleving is bestuurlijk afdwingbaar en reduceert aansprakelijkheidsrisico.', eerste_stap: 'Schrijf een managementnotitie "besluit gevraagd" voor het vaststellen van het ISMS-kader en scope, en zet deze op de agenda van het eerstvolgende MT.' },
+              regent:      { argument: 'Een formeel ISMS versterkt de professionele reputatie van de organisatie richting toezichthouders en ketenpartners. Stille instemming van het management is voldoende om het traject te starten.', eerste_stap: 'Bespreek het ISMS-voorstel discreet met de directeur en vraag ruimte in de vergadercyclus zodra sleutelfiguren zijn meegenomen.' },
             },
             volwassenheid: {
               1: { toelichting: 'Processen staan op papier maar worden niet nageleefd of zijn niet formeel belegd.',                                         eerste_stap: 'Voer een interne audit op de drie meest kritische BIO 2-maatregelen om de feitelijke situatie te meten.' },
@@ -574,7 +574,7 @@ const CONTENT = {
             },
           },
 
-          'vakgericht': {
+          'vakinhoudelijk': {
             intro: 'Een vakgerichte organisatie accepteert geen top-down compliance. Professionals nemen eigenaarschap wanneer informatiebeveiliging gekoppeld is aan hun vakinhoudelijke verantwoordelijkheid — niet aan een managementmandaat.',
             wel: [
               '"Zorgplicht" of "professionele verantwoordelijkheid" als ingang',
@@ -601,11 +601,11 @@ const CONTENT = {
               { naam: 'Leveranciersbeheer',       ref: 'A.15',   aanpak: 'Toets via vakinhoudelijke criteria: "voldoet de leverancier aan de norm die wij als beroepsgroep stellen?"' },
               { naam: 'ISMS inrichting',          ref: 'H.4–6',  aanpak: 'ISMS starten vanuit de kernprocessen: welke informatie is vitaal voor de dienstverlening aan burgers/cliënten?' },
             ],
-            quinn: {
-              hierarchie:   { argument: 'BIO 2 is een wettelijke verplichting die ook voor uw organisatie geldt. De inspectie toetst dit — het is geen keuze.',                           eerste_stap: 'Koppel de BIO 2-verplichting aan het bestaande toezichtskader en gebruik dat als mandaat voor de aanpak.' },
-              output:       { argument: 'Een datalek kost uw organisatie direct: herstelkosten, meldplicht bij AP, inspectietoetsing en reputatieschade.',                               eerste_stap: 'Reken één realistisch datalekscenario door naar kosten en gebruik dit in het gesprek met de beslissende stakeholder.' },
-              vernieuwing:  { argument: 'Informatiebeveiliging is de randvoorwaarde voor digitale innovatie. Zonder dit fundament stranden data- en AI-trajecten.',                       eerste_stap: 'Koppel een lopend innovatietraject aan een concrete BIO 2-maatregel en laat zien dat het één het andere versterkt.' },
-              samenwerking: { argument: 'Collega-instellingen in de sector hanteren dezelfde aanpak. Dit is de norm van de beroepsgroep, niet een externe verplichting.',               eerste_stap: 'Zoek een collega-instelling die al verder is en gebruik hun aanpak als peer-referentie in het interne gesprek.' },
+            bestuurscultuur: {
+              gemeenschap: { argument: 'Collega-instellingen in de sector pakken BIO 2 samen op. Sluit aan bij de beroepsgemeenschap — het is de norm van vakgenoten, geen externe opgave van boven.', eerste_stap: 'Zoek een collega-instelling die al verder is en gebruik hun aanpak als peer-referentie in het interne gesprek.' },
+              vecht:       { argument: 'Omzeil de bestuurlijke arena: bouw draagvlak bij invloedrijke professionals en laat hen de aanpak dragen. Vakinhoudelijk eigenaarschap maakt politisering overbodig.', eerste_stap: 'Identificeer twee of drie vakinhoudelijke trekkers die BIO 2 willen uitdragen en stel hen aan als IB-aanjager binnen hun domein.' },
+              debat:       { argument: 'BIO 2 is een wettelijke verplichting en het toezichtskader toetst naleving. Formeel mandaat voor de CISO maakt vakinhoudelijke inbedding bestuurlijk afdwingbaar.', eerste_stap: 'Koppel de BIO 2-verplichting aan het bestaande toezichtskader en laat dit vaststellen als formeel mandaat in het bestuurlijk overleg.' },
+              regent:      { argument: 'Informatiebeveiliging behoort tot de professionele standaard van de organisatie. Steun van gezaghebbende vakleiders legitimeert de aanpak zonder bestuurlijk conflict.', eerste_stap: 'Bespreek de aanpak discreet met de meest gezaghebbende vakleider en vraag diens expliciete onderschrijving als ankerpunt voor de bredere uitrol.' },
             },
             volwassenheid: {
               1: { toelichting: 'Er is beleid maar professionals weten er nauwelijks van; eigenaarschap ontbreekt volledig.',                                   eerste_stap: 'Voer een korte sessie met drie leidinggevenden: wat weten zij van BIO 2 en wie is eigenaar in hun ogen?' },
@@ -615,7 +615,7 @@ const CONTENT = {
             },
           },
 
-          'projectmatig': {
+          'teamgedreven': {
             intro: 'Een projectmatige en coalitiegericht ingerichte organisatie ervaart compliance als rem. NEN 7510/BIO 2 werkt alleen als het gepositioneerd wordt als enabler van de innovatie-agenda — niet als barrière.',
             wel: [
               'Privacy by Design als ontwerpprincipe van dag 1',
@@ -642,11 +642,11 @@ const CONTENT = {
               { naam: 'Leveranciersbeheer',       ref: 'A.15',   aanpak: 'Security als criterium in vendor-selectie, geïntegreerd in het PoC-framework' },
               { naam: 'ISMS inrichting',          ref: 'H.4–6',  aanpak: 'Lean ISMS: minimale scope, hoge iteratiesnelheid, uitbreiden op basis van geleerde lessen' },
             ],
-            quinn: {
-              hierarchie:   { argument: 'BIO 2 biedt het formele kader waarbinnen projecten kunnen opereren zonder ad-hoc goedkeuringsprocessen.',                                              eerste_stap: 'Definieer een standaard IB-toets die elk project bij opstart doorloopt — licht, snel, gestandaardiseerd.' },
-              output:       { argument: 'Security-by-design voorkomt kostbare herwerking achteraf. Een lek na go-live kost tien keer meer dan preventie.',                                      eerste_stap: 'Kwantificeer de herstelkosten van één beveiligingsincident in een lopend project en gebruik dit als argument.' },
-              vernieuwing:  { argument: 'BIO 2-aantoonbaarheid is een toelatingseis voor samenwerking met Rijksdiensten en voor AI-toepassingen op persoonsgegevens.',                         eerste_stap: 'Gebruik een concreet extern samenwerkingstraject dat BIO 2 vereist als vliegwiel voor de interne aanpak.' },
-              samenwerking: { argument: 'Security champions in het team zorgen dat IB een teamverantwoordelijkheid is — geen controlefunctie van buiten.',                                       eerste_stap: 'Wijs per team een security champion aan die de IB-toets bij projectstart faciliteert.' },
+            bestuurscultuur: {
+              gemeenschap: { argument: 'BIO 2-compliance is een gedeelde verantwoordelijkheid van alle teams. In een coalitiegedreven organisatie werkt een gezamenlijke aanpak beter dan een centrale verplichting van boven.', eerste_stap: 'Organiseer een gezamenlijke kickoff met teamleiders en security champions om de BIO 2-aanpak samen te vormgeven.' },
+              vecht:       { argument: 'Maak BIO 2 geen bestuurlijk strijdpunt. Bouw draagvlak via de teams zelf — security champions per team maken de aanpak bottom-up en vermijden politisering.', eerste_stap: 'Wijs per team een security champion aan en geef hen mandaat om de IB-aanpak binnen hun team te trekken, los van de bestuurlijke agenda.' },
+              debat:       { argument: 'BIO 2-aantoonbaarheid is een toelatingseis voor samenwerking met Rijksdiensten en aanbestedingen. Een formeel mandaat per project maakt dit zakelijk afdwingbaar.', eerste_stap: 'Definieer een standaard IB-toets die elk project bij opstart doorloopt en laat dit formeel vaststellen als projecteis.' },
+              regent:      { argument: 'Een sterk IB-kader versterkt de bestuurlijke reputatie van de organisatie bij externe partners. Stille instemming van sleutelfiguren geeft de aanpak gezag zonder bestuurlijke arena.', eerste_stap: 'Bespreek de BIO 2-aanpak discreet met de meest invloedrijke programmamanager en gebruik diens instemming als anker voor de bredere uitrol.' },
             },
             volwassenheid: {
               1: { toelichting: 'IB is geen onderdeel van projectstart; elk project regelt het (of niet) op eigen wijze.',                                      eerste_stap: 'Definieer een minimale IB-checklist van vijf vragen die elk project bij kickoff beantwoordt.' },
@@ -656,7 +656,7 @@ const CONTENT = {
             },
           },
 
-          'gedecentraliseerd': {
+          'concern': {
             intro: 'Een gedecentraliseerde organisatie met meerdere diensten heeft een overkoepelend kader nodig met lokale implementatievrijheid. Eenheidsworst werkt niet; de concern-CISO kan niet alle diensten afdekken.',
             wel: [
               'Overkoepelend BIO 2-kader met lokale uitwerking per dienst',
@@ -682,11 +682,11 @@ const CONTENT = {
               { naam: 'Leveranciersbeheer',       ref: 'A.15',   aanpak: 'Centrale inkoop voor concernbrede leveranciers; lokale due diligence voor dienst-specifieke leveranciers' },
               { naam: 'ISMS inrichting',          ref: 'H.4–6',  aanpak: 'Concern-ISMS scope met dienst-bijlagen; management review op twee niveaus (dienst + concern)' },
             ],
-            quinn: {
-              hierarchie:   { argument: 'Een overkoepelend BIO 2-kader met formele eigenaarsbeschrijving per dienst maakt concernbrede aantoonbaarheid mogelijk.',                         eerste_stap: 'Stel een concernbreed IB-beleid vast en laat elk diensthoofd een uitvoeringsplan opstellen binnen dat kader.' },
-              output:       { argument: 'Concernbrede risicoreductie is efficiënter dan per dienst afzonderlijk investeren. Gedeelde tooling verlaagt de totale kosten.',                  eerste_stap: 'Maak een kostenvergelijking van decentraal versus centraal-met-lokale-uitvoering voor BIO 2-implementatie.' },
-              vernieuwing:  { argument: 'Een sterk concern-IB-kader maakt snellere technologie-adoptie per dienst mogelijk — het kader geeft duidelijkheid over de randvoorwaarden.',     eerste_stap: 'Koppel het IB-kader aan één concrete dienstinnovatie en laat zien dat de kaders helpen in plaats van hinderen.' },
-              samenwerking: { argument: 'IB-coördinatoren per dienst bouwen een netwerk dat kennis deelt en gezamenlijk sterker staat.',                                                   eerste_stap: 'Richt een IB-coördinatorenoverleg in dat maandelijks bijeenkomt om ervaringen te delen.' },
+            bestuurscultuur: {
+              gemeenschap: { argument: 'IB-coördinatoren per dienst bouwen een netwerk dat kennis deelt en gezamenlijk sterker staat. In een consensusgedreven concern werkt dit beter dan een centrale verplichting.', eerste_stap: 'Richt een IB-coördinatorenoverleg in dat maandelijks bijeenkomt om ervaringen te delen en draagvlak te kweken.' },
+              vecht:       { argument: 'Maak het concern-IB-kader geen politiek strijdpunt tussen diensten. Bouw via informele bilaterale afstemming met diensthoofden een coalitie voordat u het formeel vastlegt.', eerste_stap: 'Voer bilaterale gesprekken met elk diensthoofd afzonderlijk om bezwaren vroegtijdig te signaleren en informele instemming te verkrijgen.' },
+              debat:       { argument: 'Een overkoepelend BIO 2-kader met formele eigenaarsbeschrijving per dienst maakt concernbrede aantoonbaarheid mogelijk en reduceert aansprakelijkheidsrisico.', eerste_stap: 'Stel een concernbreed IB-beleid formeel vast en laat elk diensthoofd een uitvoeringsplan opstellen binnen dat kader.' },
+              regent:      { argument: 'Een sterk concern-IB-kader versterkt de bestuurlijke reputatie richting toezichthouders. Stille consensus via sleutelfiguren in het concern is de effectiefste route.', eerste_stap: 'Bespreek het concernkader discreet met de twee of drie meest gezaghebbende diensthoofden en formaliseer daarna via de reguliere vergadercyclus.' },
             },
             volwassenheid: {
               1: { toelichting: 'IB is per dienst anders georganiseerd of nauwelijks aanwezig; er is geen concernlijn.',                                         eerste_stap: 'Maak een inventarisatie van de huidige IB-staat per dienst en gebruik dit als baseline voor het concernkader.' },
@@ -706,7 +706,7 @@ const CONTENT = {
   const mods = CONTENT.meta.modules.map(m => m.key);
   const doelen = CONTENT.meta.doelen.map(d => d.key);
   const orgs = CONTENT.meta.orgtypes.map(o => o.key);
-  const quinns = CONTENT.meta.quinn.map(q => q.key);
+  const bestuursculturen = CONTENT.meta.bestuurscultuur.map(b => b.key);
   const levels = CONTENT.meta.volwassenheid.map(v => v.key);
 
   mods.forEach(mod => {
@@ -721,7 +721,7 @@ const CONTENT = {
         console.assert(Array.isArray(oc.wel),  `${mod}/${doel}/${org}: missing wel[]`);
         console.assert(Array.isArray(oc.niet), `${mod}/${doel}/${org}: missing niet[]`);
         console.assert(typeof oc.tip === 'string', `${mod}/${doel}/${org}: missing tip`);
-        quinns.forEach(q => console.assert(oc.quinn?.[q]?.argument, `${mod}/${doel}/${org}: missing quinn.${q}.argument`));
+        bestuursculturen.forEach(b => console.assert(oc.bestuurscultuur?.[b]?.argument, `${mod}/${doel}/${org}: missing bestuurscultuur.${b}.argument`));
         levels.forEach(l => console.assert(oc.volwassenheid?.[l]?.eerste_stap, `${mod}/${doel}/${org}: missing volwassenheid.${l}.eerste_stap`));
       });
     });
@@ -730,8 +730,8 @@ const CONTENT = {
 })(); // end validateContent
 
 // ── Wizard state ──────────────────────────────────────────────────
-const state = { module: null, doel: null, orgtype: null, quinn: null, volwassenheid: null };
-const stepKeys = [null, 'module', 'doel', 'orgtype', 'quinn', 'volwassenheid'];
+const state = { module: null, doel: null, orgtype: null, bestuurscultuur: null, volwassenheid: null };
+const stepKeys = [null, 'module', 'doel', 'orgtype', 'bestuurscultuur', 'volwassenheid'];
 
 // ── Render option cards for a step ───────────────────────────────
 function renderOptions(containerId, items, stateKey, nextBtnId) {
@@ -775,7 +775,7 @@ function showStep(n) {
     () => renderOptions('opts-module',       CONTENT.meta.modules,       'module',       'next-1'),
     () => renderOptions('opts-doel',         CONTENT.meta.doelen,        'doel',         'next-2'),
     () => renderOptions('opts-orgtype',      CONTENT.meta.orgtypes,      'orgtype',      'next-3'),
-    () => renderOptions('opts-quinn',        CONTENT.meta.quinn,         'quinn',        'next-4'),
+    () => renderOptions('opts-bestuurscultuur', CONTENT.meta.bestuurscultuur, 'bestuurscultuur', 'next-4'),
     () => renderOptions('opts-volwassenheid',CONTENT.meta.volwassenheid, 'volwassenheid','next-5'),
   ];
   if (renders[n]) renders[n]();
@@ -817,18 +817,18 @@ function esc(s) {
 
 // ── Output renderer ───────────────────────────────────────────────
 function renderOutput() {
-  const { module: mod, doel, orgtype, quinn, volwassenheid: vol } = state;
+  const { module: mod, doel, orgtype, bestuurscultuur: bc, volwassenheid: vol } = state;
 
   // Resolve labels from meta
   const modMeta  = CONTENT.meta.modules.find(m => m.key === mod);
   const doelMeta = CONTENT.meta.doelen.find(d => d.key === doel);
   const orgMeta  = CONTENT.meta.orgtypes.find(o => o.key === orgtype);
-  const quinnMeta= CONTENT.meta.quinn.find(q => q.key === quinn);
+  const bcMeta   = CONTENT.meta.bestuurscultuur.find(b => b.key === bc);
   const volMeta  = CONTENT.meta.volwassenheid.find(v => v.key === vol);
 
   // Render badges
   document.getElementById('output-badges').innerHTML =
-    [modMeta, doelMeta, orgMeta, quinnMeta, volMeta]
+    [modMeta, doelMeta, orgMeta, bcMeta, volMeta]
       .map(m => `<span class="badge">${esc(m.label)}</span>`)
       .join('');
 
@@ -852,7 +852,7 @@ function renderOutput() {
   const c = orgtypeContent;
   // state is always fully populated before renderOutput() is called;
   // fallback {} prevents errors if content has a gap for this combination
-  const q = c.quinn?.[quinn] || {};
+  const b = c.bestuurscultuur?.[bc] || {};
   const v = c.volwassenheid?.[vol] || {};
 
   body.innerHTML = `
@@ -894,8 +894,8 @@ function renderOutput() {
     </div>` : ''}
 
     <div class="output-section">
-      <h3>Hoe aanspreken — stakeholdercultuur: ${esc(quinnMeta.label)}</h3>
-      <div class="info-box">${q.argument ? esc(q.argument) : '<em>Nog niet uitgewerkt voor deze combinatie.</em>'}</div>
+      <h3>Hoe aanspreken — bestuurscultuur: ${esc(bcMeta.label)}</h3>
+      <div class="info-box">${b.argument ? esc(b.argument) : '<em>Nog niet uitgewerkt voor deze combinatie.</em>'}</div>
     </div>
 
     <div class="output-section">
