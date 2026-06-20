@@ -743,8 +743,8 @@ function renderOptions(containerId, items, stateKey, nextBtnId) {
     card.innerHTML = `
       <div class="opt-icon">${i + 1}</div>
       <div>
-        <div class="opt-label">${item.label}</div>
-        <div class="opt-sub">${item.sub}</div>
+        <div class="opt-label">${esc(item.label)}</div>
+        <div class="opt-sub">${esc(item.sub)}</div>
       </div>`;
     card.addEventListener('click', () => {
       state[stateKey] = item.key;
@@ -859,7 +859,7 @@ function renderOutput() {
 
     <div class="output-section">
       <h3>Context</h3>
-      <p>${c.intro}</p>
+      <p>${esc(c.intro)}</p>
     </div>
 
     <div class="output-section">
@@ -867,14 +867,14 @@ function renderOutput() {
       <div class="col-pair">
         <div class="col-wel">
           <h4>Wat werkt</h4>
-          <ul class="klein">${c.wel.map(w => `<li>${w}</li>`).join('')}</ul>
+          <ul class="klein">${c.wel.map(w => `<li>${esc(w)}</li>`).join('')}</ul>
         </div>
         <div class="col-niet">
           <h4>Wat niet werkt</h4>
-          <ul class="klein">${c.niet.map(n => `<li>${n}</li>`).join('')}</ul>
+          <ul class="klein">${c.niet.map(n => `<li>${esc(n)}</li>`).join('')}</ul>
         </div>
       </div>
-      ${c.tip ? `<div class="tip-box"><strong>Tip:</strong> ${c.tip}</div>` : ''}
+      ${c.tip ? `<div class="tip-box"><strong>Tip:</strong> ${esc(c.tip)}</div>` : ''}
     </div>
 
     ${c.domeinen && c.domeinen.length ? `
@@ -885,9 +885,9 @@ function renderOutput() {
         <tbody>
           ${c.domeinen.map(d => `
             <tr>
-              <td>${d.naam}</td>
-              <td style="white-space:nowrap;color:#666">${d.ref}</td>
-              <td>${d.aanpak}</td>
+              <td>${esc(d.naam)}</td>
+              <td style="white-space:nowrap;color:#666">${esc(d.ref)}</td>
+              <td>${esc(d.aanpak)}</td>
             </tr>`).join('')}
         </tbody>
       </table>
@@ -895,14 +895,14 @@ function renderOutput() {
 
     <div class="output-section">
       <h3>Hoe aanspreken — stakeholdercultuur: ${esc(quinnMeta.label)}</h3>
-      <div class="info-box">${q.argument || '<em>Nog niet uitgewerkt voor deze combinatie.</em>'}</div>
+      <div class="info-box">${esc(q.argument) || '<em>Nog niet uitgewerkt voor deze combinatie.</em>'}</div>
     </div>
 
     <div class="output-section">
       <h3>Eerste stap — volwassenheidsniveau: ${esc(volMeta.label)}</h3>
       <div class="tip-box">
-        ${v.toelichting ? `<p style="margin-bottom:0.5rem;color:#555;font-size:0.85rem;">${v.toelichting}</p>` : ''}
-        <strong>Concrete eerste stap:</strong> ${v.eerste_stap || '<em>Nog niet uitgewerkt voor dit niveau.</em>'}
+        ${v.toelichting ? `<p style="margin-bottom:0.5rem;color:#555;font-size:0.85rem;">${esc(v.toelichting)}</p>` : ''}
+        <strong>Concrete eerste stap:</strong> ${esc(v.eerste_stap) || '<em>Nog niet uitgewerkt voor dit niveau.</em>'}
       </div>
     </div>
 
