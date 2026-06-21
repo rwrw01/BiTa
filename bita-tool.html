@@ -490,7 +490,210 @@ const CONTENT = {
       doelen: {
         visie:     null,
         strategie: null,
-        toetsing:  null,
+
+        toetsing: {
+
+          'plat': {
+            intro: 'In een platte organisatie is toetsing pragmatisch en snel. De ENSIA-zelfevaluatie is het primaire instrument — het geeft een jaarlijkse foto van de BIO 2-naleving en is verplicht voor gemeenten. Capaciteit is beperkt, dus de toetsing moet gericht zijn: liever drie domeinen grondig getoetst dan veertien domeinen oppervlakkig afgevinkt.',
+            wel: [
+              'ENSIA-zelfevaluatie als primair en verplicht jaarlijks instrument',
+              'IBD-zelfevaluatie als aanvullende quickscan vóór ENSIA',
+              'Directe betrokkenheid gemeentesecretaris als proceseigenaar van de toetsing',
+              'Beperkte scope: focus op de meest kritische systemen en maatregelen',
+              'Resultaten direct bespreken met het team — geen lange rapportagetrajecten',
+              'Aansluiten bij IBD-signalen en dreigingsinformatie als toetsingsinput',
+            ],
+            niet: [
+              'Grote externe auditopdrachten als eerste stap',
+              'Verwachten dat alle 214 maatregelen in één cyclus volledig getoetst zijn',
+              'Toetsing delegeren aan externen zonder interne kennis van de situatie',
+              'Bevindingen parkeren zonder verbeterplan en eigenaar',
+            ],
+            tip: 'Gebruik de IBD-zelfevaluatie als warming-up drie maanden vóór ENSIA. Zo weet u wat u gaat aantreffen en kunt u de grootste gaps sluiten voordat de formele zelfevaluatie start.',
+            domeinen: [
+              { naam: 'IAM & Autorisatiebeheer', ref: '5.15–5.18', aanpak: 'Steekproef: controleer vijf accounts op actualiteit en minimale rechten; vergelijk met de HR-mutatielijst van de afgelopen drie maanden' },
+              { naam: 'Risicomanagement',         ref: '5.08',      aanpak: 'Controleer of er een actuele risicoanalyse bestaat en of de eigenaar deze herkent; ouder dan twee jaar = bevinding' },
+              { naam: 'BCM & Continuïteit',       ref: '5.30',      aanpak: 'Ga na of het uitwijkplan actueel is en of het afgelopen jaar is geoefend; vraag twee medewerkers wat zij doen bij uitval' },
+              { naam: 'Bewustzijn & training',    ref: '5.04 / 6.03', aanpak: 'Controleer of nieuwe medewerkers IB-bewustzijn hebben ontvangen; informele steekproef van drie medewerkers over basisregels' },
+              { naam: 'Incidentbeheer',           ref: '5.24–5.27', aanpak: 'Controleer of er een meldpunt is en of incidenten van het afgelopen jaar zijn geregistreerd; nul meldingen is een bevinding' },
+              { naam: 'Leveranciersbeheer',       ref: '5.19–5.22', aanpak: 'Controleer of kritische leveranciers een verwerkersovereenkomst hebben; check de vervaldatum van de drie belangrijkste contracten' },
+              { naam: 'ISMS inrichting',          ref: '5.01 / 5.02', aanpak: 'ENSIA-zelfevaluatie als primaire toets; controleer of IB-beleid actueel is en door directie vastgesteld' },
+            ],
+            bestuurscultuur: {
+              gemeenschap: { argument: 'In een gemeenschapscultuur is toetsing een gevoelig moment — het gevoel van "wij worden beoordeeld" kan weerstand oproepen. Positioneer ENSIA en de IBD-zelfevaluatie expliciet als gezamenlijk leermoment, niet als externe controle: "wij maken samen een foto van waar we staan." Bespreek de uitkomsten informeel in het MT voordat ze naar buiten gaan — niet als afrekening, maar als input voor de verbeteragenda. Benadruk dat de bevindingen normaal zijn voor een gemeente van deze omvang en dat vergelijkbare gemeenten dezelfde plaatjes laten zien. Vermijd externe auditors als eerste stap; dat voelt als wantrouwen.', eerste_stap: 'Plan de IBD-zelfevaluatie en bespreek de uitkomsten in een informeel MT-overleg als gezamenlijk startpunt voor het verbeterplan.' },
+              vecht:       { argument: 'In een vechtcultuur kan een toetsingsuitkomst snel een strijdpunt worden als de resultaten aan personen worden gekoppeld. Anker de toetsing in objectieve instrumenten — ENSIA en IBD-zelfevaluatie zijn genormeerde instrumenten die niet door de interne politiek zijn bedacht. Bouw draagvlak bij sleutelpersonen vóór de presentatie van de uitkomsten: een verrast diensthoofd in een vergadering is het grootste risico. Voer de interne toetsing altijd vóór externe audit — zo bepaalt u zelf de agenda. Presenteer bevindingen als systeemfout, nooit als persoonlijk falen.', eerste_stap: 'Voer de ENSIA-zelfevaluatie intern uit en bespreek de uitkomsten bilateraal met sleutelpersonen voordat ze in een bredere vergadering worden geagendeerd.' },
+              debat:       { argument: 'Een debatcultuur spreekt de taal van formele instrumenten, objectieve referenties en aantoonbaarheid. De ENSIA-zelfevaluatie is een formeel verplicht instrument voor gemeenten; de uitkomsten worden gerapporteerd aan de gemeenteraad en toezichthouders. Dat geeft de toetsing bestuurlijk gewicht en maakt de resultaten moeilijk te negeren. Een externe auditor of de gemeentelijke accountant als referentie versterkt het formele gezag van de bevindingen. Breng de toetsingsuitkomsten als managementrapportage met expliciete actielijst en eigenaarsbeschrijving. Verbind de bevindingen aan het wettelijke toezichtkader: provincie en rekenkamer kunnen ernaar vragen.', eerste_stap: 'Voer de ENSIA-zelfevaluatie uit en presenteer de uitkomsten als formele managementrapportage met actiepunten aan het MT.' },
+              regent:      { argument: 'In een regentencultuur bepalen sleutelfiguren informeel de koers voordat formele besluitvorming plaatsvindt. Bespreek de toetsingsuitkomsten eerst discreet met de gemeentesecretaris vóór enige bredere presentatie — die mag de bevindingen kennen en hun betekenis begrijpen voordat het formele gesprek plaatsvindt. Positioneer ENSIA als professionele verantwoording aan de gemeenteraad en toezichthouders, niet als extern opgelegde controle: "wij laten zien dat wij onze zaken op orde hebben." Zorg dat de gemeentesecretaris de bevindingen als eigenaar presenteert, niet als reactie op externe druk.', eerste_stap: 'Bespreek de ENSIA-uitkomsten discreet met de gemeentesecretaris voordat ze breder worden gedeeld; vraag diens steun voor het verbeterplan.' },
+            },
+            volwassenheid: {
+              1: { toelichting: 'De organisatie weet niet wat er staat: er is geen actueel beeld van de BIO 2-naleving en eerder uitgevoerde toetsingen zijn onbekend of niet opgevolgd.', eerste_stap: 'Voer de IBD-zelfevaluatie uit als snelle nulmeting — dit duurt twee tot drie dagdelen en geeft direct een eerste beeld van de grootste gaps.' },
+              2: { toelichting: 'Er zijn toetsingsresultaten beschikbaar maar opvolging ontbreekt: de vorige ENSIA is afgerond maar de bevindingen liggen in een la.', eerste_stap: 'Haal de laatste ENSIA-resultaten op, benoem per bevinding een eigenaar en een haalbare deadline, en bespreek dit in het eerstvolgende MT.' },
+              3: { toelichting: 'ENSIA is jaarlijks klaar en er is een verbeterplan; de volgende stap is externe validatie van de meest kritische maatregelen.', eerste_stap: 'Vraag de IBD of een externe auditor om de drie hoogst scorende risicobevindingen te valideren en de aanpak te beoordelen.' },
+              4: { toelichting: 'De toetsing is geborgd en extern gevalideerd; de organisatie gebruikt de resultaten actief als sturingsinformatie.', eerste_stap: 'Initieer benchmarking met twee of drie vergelijkbare gemeenten via de IBD om de eigen resultaten in perspectief te plaatsen.' },
+            },
+          },
+
+          'regelgestuurd': {
+            intro: 'In een regelgestuurde organisatie is toetsing een gestructureerd en formeel proces. De ENSIA-zelfevaluatie wordt grondig voorbereid via een compliancematrix, en de uitkomst leidt tot een formeel MT-besluit over de verbeteraanpak. Three Lines of Defense is het leidende governancemodel voor de auditketen.',
+            wel: [
+              'Gestructureerde ENSIA-voorbereiding met compliancematrix per maatregel',
+              'Externe audit of accountantscontrole als verificatie van de zelfevaluatie',
+              'Three Lines of Defense: interne audit (derde lijn) voert gap-analyse uit',
+              'Formele MT-rapportage op basis van toetsingsuitkomsten',
+              'Bestuurlijk besluit over de verbeteraanpak na de toetsing',
+              'Koppeling aan de rechtmatigheidsverklaring van de gemeentelijke accountant',
+            ],
+            niet: [
+              'Informele zelfevaluatie zonder compliancematrix',
+              'Toetsingsresultaten bespreken zonder formeel actiepunt en eigenaar',
+              'Gap-analyse uitbesteden zonder interne kwaliteitstoets',
+              'Toetsing zien als eenmalige exercitie in plaats van jaarlijkse cyclus',
+            ],
+            tip: 'Koppel de ENSIA-voorbereiding aan de rechtmatigheidsverklaring. De gemeentelijke accountant raakt BIO 2 via informatiebeveiliging van de financiële systemen — een gezamenlijke aanpak versterkt beide trajecten en bespaart capaciteit.',
+            domeinen: [
+              { naam: 'IAM & Autorisatiebeheer', ref: '5.15–5.18', aanpak: 'Formele access review met audit trail; vergelijk rollenmatrix met HR-registratie; bevindingen in ITSM als verbeterticket' },
+              { naam: 'Risicomanagement',         ref: '5.08',      aanpak: 'Controleer risicoregister op actualiteit, eigenaarsbeschrijving en besluit over restrisico; rapporteer stand van zaken aan MT' },
+              { naam: 'BCM & Continuïteit',       ref: '5.30',      aanpak: 'Controleer BCP/DRP op actualiteit en aantoonbare oefening; interne audit legt bevindingen vast in formeel rapport' },
+              { naam: 'Bewustzijn & training',    ref: '5.04 / 6.03', aanpak: 'HR-registratie op voltooide e-learningmodule; compliance-rapportage per afdeling; lage deelnamegraad = formele bevinding' },
+              { naam: 'Incidentbeheer',           ref: '5.24–5.27', aanpak: 'Auditeer incidentregistratie: volledigheid, categorisering en opvolging; vergelijk met meldplicht AP en IBD' },
+              { naam: 'Leveranciersbeheer',       ref: '5.19–5.22', aanpak: 'Due diligence checklist voor de vijf meest kritische leveranciers; verifieer verwerkersovereenkomsten op actualiteit' },
+              { naam: 'ISMS inrichting',          ref: '5.01 / 5.02', aanpak: 'Controleer of management review is uitgevoerd, verbeterdoelstellingen zijn vastgesteld en PDCA-cyclus aantoonbaar draait' },
+            ],
+            bestuurscultuur: {
+              gemeenschap: { argument: 'In een gemeenschapscultuur wordt toetsing geaccepteerd als het als gezamenlijk kwaliteitsmoment wordt gepresenteerd en niet als externe controle. In een regelgestuurde organisatie past de ENSIA-structuur bij de bestaande procesrationaliteit: het is een norm die aansluit op hoe u al werkt. Bespreek de uitkomsten in een informeel MT-overleg vóór de formele verslaglegging — dat geeft ruimte voor nuance en eigenaarschap. Benadruk dat de compliancematrix een foto is van de gezamenlijke prestatie, niet een beoordeling van personen. Vermijd de framing van externe druk; presenteer het als professionele standaard die de gemeente siert.', eerste_stap: 'Gebruik de ENSIA-compliancematrix als gespreksagenda in een informeel MT-overleg en bepaal gezamenlijk de prioriteiten voor het verbeterplan.' },
+              vecht:       { argument: 'In een vechtcultuur kan een formele audit snel een politiek strijdpunt worden als de uitkomsten aan personen worden gekoppeld. Anker de toetsing in objectieve instrumenten — ENSIA en de rechtmatigheidsverklaring zijn externe normen die boven de interne politiek uitstijgen. Bouw een formele coalitie bij MT-leden die compliance al onderschrijven en laat hen de bevindingen mede-presenteren. Voer interne gap-analyse vóór externe audit — zo hebt u de regie over de agenda. Presenteer bevindingen altijd als systeemkwaliteit, nooit als persoonlijk falen van een afdeling of leidinggevende.', eerste_stap: 'Voer de interne gap-analyse uit met de interne auditfunctie en bespreek de uitkomsten bilateraal met MT-leden vóór de formele rapportage.' },
+              debat:       { argument: 'Een debatcultuur is de natuurlijke omgeving voor gestructureerde toetsing: formele rapportages, heldere eigenaarsbeschrijvingen en aantoonbare opvolging zijn precies wat deze cultuur verwacht. De ENSIA-zelfevaluatie met compliancematrix, gevolgd door een MT-rapportage en bestuurlijk besluit, sluit naadloos aan op de formele vergadercyclus. Externe auditoren en de gemeentelijke accountant als referentie geven de bevindingen extra gezag. Breng de toetsingsuitkomsten als R/A/G-rapportage met expliciete actielijst, eigenaar en deadline. De debatcultuur verwacht altijd een formele lijn — informeel bespreken zonder besluit is onvoldoende.', eerste_stap: 'Stel de compliancematrix op en agenda de ENSIA-uitkomsten als formele bestuurlijke rapportage met R/A/G-status en actielijst.' },
+              regent:      { argument: 'In een regentencultuur bepalen sleutelfiguren informeel de koers voordat de formele vergadering plaatsvindt. In een regelgestuurde organisatie heeft de directeur doorslaggevend gewicht in dit informele circuit. Bespreek de toetsingsuitkomsten eerst discreet met de directeur en één of twee sleutel-MT-leden — zij moeten de bevindingen kennen en hun betekenis begrijpen vóór de formele presentatie. Positioneer de externe audit en ENSIA als professionele verantwoording richting toezichthouders: "wij laten zien dat onze processen op orde zijn." Zorg dat de directeur de bevindingen als eigenaar presenteert aan het MT, niet als reactie op externe druk.', eerste_stap: 'Bespreek de conceptuitkomsten van de gap-analyse discreet met de directeur voordat ze als formele rapportage worden gepresenteerd.' },
+            },
+            volwassenheid: {
+              1: { toelichting: 'Toetsing heeft niet eerder plaatsgevonden of de vorige gap-analyse is nooit formeel besproken; er is geen actueel beeld van de BIO 2-naleving.', eerste_stap: 'Start met een interne audit op de drie meest kritische BIO 2-maatregelen en leg de uitkomsten vast als formeel starttdocument voor het ISMS-traject.' },
+              2: { toelichting: 'De organisatie heeft resultaten maar opvolging is niet formeel belegd: bevindingen zijn beschikbaar maar eigenaarschap en deadlines ontbreken.', eerste_stap: 'Stel een formeel verbeterplan op met per bevinding een eigenaar, maatregel en deadline; bespreek dit in het MT.' },
+              3: { toelichting: 'ENSIA is jaarlijks klaar en formeel gerapporteerd; de volgende stap is externe validatie van de meest kritische maatregelen via de interne auditfunctie of een externe partij.', eerste_stap: 'Plan een interne audit (derde lijn) op de meest kritische BIO 2-domeinen en koppel de uitkomsten aan de rechtmatigheidsverklaring.' },
+              4: { toelichting: 'Het toetsingsproces is geborgd en levert sturingsinformatie; de organisatie benchmarkt haar resultaten met vergelijkbare gemeenten.', eerste_stap: 'Introduceer een jaarlijkse IB-benchmark met vergelijkbare gemeenten via de IBD en gebruik de uitkomsten als input voor de PDCA-cyclus.' },
+            },
+          },
+
+          'vakinhoudelijk': {
+            intro: 'In een vakinhoudelijk geleide organisatie werkt toetsing alleen als professionals het instrument herkennen als kwalitatieve meting van hun eigen domein. Positioneer de gap-analyse als "voldoen wij aan de norm die wij als beroepsgroep hanteren" — de rekenkamer en provincie zijn referenties, geen bedreigingen.',
+            wel: [
+              'Peer-review door een andere vakinhoudelijke gemeente of IBD-expert',
+              'Professionals zijn eigenaar van de resultaten in hun eigen domein',
+              'IBD-zelfevaluatie als laagdrempelige eerste meting',
+              'ENSIA als aantoonbare verantwoording richting externe toezichthouders',
+              'Kwaliteitstoets per domein in plaats van brede compliancescan',
+              'Koppeling aan beroepsnorm en vakinhoudelijke verantwoordelijkheid',
+            ],
+            niet: [
+              'Externe audit die professionals als controleur ervaart',
+              'Toetsing die als top-down compliance wordt gepresenteerd',
+              'Gap-analyse zonder betrokkenheid van de betrokken professionals',
+              'Rekenkamer of provincie framen als bedreiging in plaats van referentie',
+            ],
+            tip: 'Laat professionals hun eigen domein toetsen vóór de ENSIA-zelfevaluatie. Zo zijn zij eigenaar van de uitkomsten en voelen zij zich niet gecontroleerd maar ondersteund. De CISO faciliteert het proces, de professional vult de inhoud in.',
+            domeinen: [
+              { naam: 'IAM & Autorisatiebeheer', ref: '5.15–5.18', aanpak: 'Professionals controleren of de toegang tot hun eigen dossiers klopt; koppel aan beroepsgeheim en tuchtrechtelijke aansprakelijkheid' },
+              { naam: 'Risicomanagement',         ref: '5.08',      aanpak: 'Risicoanalyse per vakdomein, geleid door de professional zelf; CISO faciliteert het format, professional vult de inhoud in' },
+              { naam: 'BCM & Continuïteit',       ref: '5.30',      aanpak: 'Scenario\'s toetsen in vakoverleg: "wat doen wij als het systeem uitvalt tijdens onze dienstverlening?" — professional als toetser' },
+              { naam: 'Bewustzijn & training',    ref: '5.04 / 6.03', aanpak: 'Steekproef bij nieuwe medewerkers: is IB-bewustzijn onderdeel van de vakintroductie? Professional valideert de aanpak' },
+              { naam: 'Incidentbeheer',           ref: '5.24–5.27', aanpak: 'Evalueer incidentregistratie per domein met de betrokken professionals; lage meldingsgraad is een kwaliteitsbevinding' },
+              { naam: 'Leveranciersbeheer',       ref: '5.19–5.22', aanpak: 'Professionals beoordelen of leveranciers voldoen aan de vakinhoudelijke norm; CISO ondersteunt met het toetsingskader' },
+              { naam: 'ISMS inrichting',          ref: '5.01 / 5.02', aanpak: 'Gap-analyse op ISMS via ENSIA; professional is eigenaar van het resultaat in zijn domein, CISO integreert de bevindingen' },
+            ],
+            bestuurscultuur: {
+              gemeenschap: { argument: 'In een gemeenschapscultuur is toetsing een gezamenlijk leermoment — het gevoel van collegiale kwaliteitsmeting werkt beter dan externe controle. Positioneer de peer-review en ENSIA als "wij meten samen hoe wij er als organisatie voor staan" en benadruk dat de uitkomsten een gezamenlijke foto zijn, geen beoordeling van individuen. Gebruik vergelijkbare gemeenten als referentie — hoe scoren collega\'s op dezelfde domeinen? Dat heeft meer gewicht dan een intern compliancerapport. Bespreek de resultaten in een informele setting met de betrokken professionals vóór de formele rapportage. Vermijd elke framing van externe controle of verplichting.', eerste_stap: 'Organiseer een informele sessie met professionals uit elk vakdomein om de IBD-zelfevaluatie gezamenlijk in te vullen en de uitkomsten direct te bespreken.' },
+              vecht:       { argument: 'In een vechtcultuur worden toetsingsresultaten snel persoonlijk als ze aan afdelingen of leidinggevenden worden gekoppeld. Bouw draagvlak bij invloedrijke professionals vóór de toetsing — zij moeten het instrument willen dragen. Anker de gap-analyse in objectieve instrumenten zoals ENSIA en IBD-zelfevaluatie; die zijn genormeerd en boven de interne politiek verheven. Voer interne peer-review vóór externe audit zodat professionals de regie houden over de uitkomsten. Presenteer bevindingen altijd per domein als collectief resultaat, nooit als persoonlijk falen van een professional of leidinggevende.', eerste_stap: 'Identificeer twee of drie invloedrijke professionals die de peer-review willen trekken en bouw draagvlak bij hen voordat de toetsing formeel wordt gestart.' },
+              debat:       { argument: 'Een debatcultuur verwacht formele instrumenten en aantoonbare resultaten — ook in een vakinhoudelijk geleide organisatie. De ENSIA-zelfevaluatie is een verplicht formeel instrument en de rekenkamer kan hierop toetsen. Externe auditoren of de gemeentelijke accountant als referentie geven de bevindingen formeel gezag. Breng de toetsingsuitkomsten als formele managementrapportage met per domein een eigenaar, een bevinding en een concrete actiemaatregel. Koppel de resultaten aan het wettelijke toezichtkader — provincie en rekenkamer zijn geen bedreiging maar een objectieve referentie die professionals serieus nemen.', eerste_stap: 'Koppel de ENSIA-uitkomsten aan het wettelijke toezichtkader en presenteer de bevindingen als formele rapportage per domein met eigenaar en actiepunt.' },
+              regent:      { argument: 'In een regentencultuur bepalen de meest gezaghebbende vakleiders de toon van de organisatie — hun oordeel over de kwaliteit van de informatiebeveiliging heeft meer gewicht dan een formeel compliancerapport. Bespreek de toetsingsuitkomsten eerst discreet met de meest gezaghebbende professional in elk domein vóór de formele presentatie. Positioneer de gap-analyse als professionele zelfreflectie: "wij als vakorganisatie meten of wij voldoen aan de norm die wij onszelf stellen." Zorg dat de meest gezaghebbende vakleider de bevindingen als eigenaar presenteert, niet de CISO. Dat geeft de resultaten intern meer gewicht dan elke externe audit.', eerste_stap: 'Bespreek de conceptresultaten van de gap-analyse discreet met de meest gezaghebbende vakleider en vraag diens publieke onderschrijving van het verbeterplan.' },
+            },
+            volwassenheid: {
+              1: { toelichting: 'Professionals weten niet wat BIO 2 inhoudt of wat er van hun domein verwacht wordt; er is geen beeld van de naleving.', eerste_stap: 'Organiseer een korte sessie per vakdomein om samen de meest relevante BIO 2-maatregelen te benoemen en de huidige situatie te beschrijven.' },
+              2: { toelichting: 'Bewustzijn groeit maar toetsing is nog afhankelijk van één trekker; als die wegvalt, valt de toetsing stil.', eerste_stap: 'Beleg formeel eigenaarschap van de toetsing per domein bij een lijnmanager en documenteer de aanpak zodat die overdraagbaar is.' },
+              3: { toelichting: 'Toetsing is structureel en professionals zijn eigenaar van hun domeinresultaten; de volgende stap is externe validatie.', eerste_stap: 'Vraag een IBD-expert of externe peer-reviewer om de bevindingen van de drie meest kritische domeinen te valideren.' },
+              4: { toelichting: 'De organisatie gebruikt toetsingsresultaten actief als vakinhoudelijk leermoment; incidenten en bevindingen worden in vakoverleg besproken.', eerste_stap: 'Introduceer een halfjaarlijks vakoverleg over IB-bevindingen en verbeteringen, geleid door een professional — niet door de CISO.' },
+            },
+          },
+
+          'teamgedreven': {
+            intro: 'In een teamgedreven organisatie vindt toetsing per project en per team plaats, niet primair op organisatieniveau. Een lightweight security assessment bij de afronding van elk project is effectiever dan één jaarlijkse brede audit. ENSIA zorgt voor de organisatiebrede baseline; de echte leerwaarde zit in de team-reviews.',
+            wel: [
+              'Lightweight security assessment ingebakken in de projectafronding',
+              'ENSIA als organisatiebrede baseline — niet als enige toetsingsinstrument',
+              'Penetratietest of red team oefening past bij de innovatiecultuur',
+              'Blameless postmortem na elk IB-incident als toets op de meldcultuur',
+              'Security champion per team als interne toetser',
+              'IBD-dreigingsinformatie als input voor de team-risicoanalyse',
+            ],
+            niet: [
+              'Grote externe audit als primaire toetsingsvorm',
+              'Compliancematrix die het hele team lang bezighoudt',
+              'Toetsing die los staat van de projectcyclus',
+              'Één jaarlijkse audit als enige meting — dan is de aanpak al achterhaald',
+            ],
+            tip: 'Bouw een standaard IB-toetsmoment in bij elke projectafronding: vijf vragen, tien minuten, door het team zelf. Dit levert meer inzicht dan een externe audit die eens per jaar langskomt en de context niet kent.',
+            domeinen: [
+              { naam: 'IAM & Autorisatiebeheer', ref: '5.15–5.18', aanpak: 'Per project controleren of toegangsrechten na afronding worden ingetrokken; zero-trust principes toetsen in de CI/CD-pipeline' },
+              { naam: 'Risicomanagement',         ref: '5.08',      aanpak: 'Threat modeling als toetsingsinstrument per project; evalueer na afronding of geïdentificeerde risico\'s zijn gemitigeerd' },
+              { naam: 'BCM & Continuïteit',       ref: '5.30',      aanpak: 'Chaos engineering als toetsinstrument: kleine uitvaloefeningen aantoonbaar uitgevoerd en gedocumenteerd per release' },
+              { naam: 'Bewustzijn & training',    ref: '5.04 / 6.03', aanpak: 'Security champions rapporteren per kwartaal over IB-bewustzijn in hun team; spot-checks via phishing-simulatie' },
+              { naam: 'Incidentbeheer',           ref: '5.24–5.27', aanpak: 'Blameless postmortem na elk incident: toetst meldcultuur, reactiesnelheid en lerend vermogen van het team' },
+              { naam: 'Leveranciersbeheer',       ref: '5.19–5.22', aanpak: 'Security-criteria in vendor-selectie toetsen via PoC-evaluatie; controleer of leveranciers IB-vereisten nakomen' },
+              { naam: 'ISMS inrichting',          ref: '5.01 / 5.02', aanpak: 'ENSIA als organisatiebrede toets; per project lichte gap-analyse via de standaard IB-checklist bij projectafronding' },
+            ],
+            bestuurscultuur: {
+              gemeenschap: { argument: 'In een gemeenschapscultuur is toetsing een gezamenlijk leermoment — teams doen mee omdat ze er beter van worden, niet omdat het verplicht is. Positioneer de security assessment bij projectafronding als standaard teamgewoonte: "wij checken altijd even of alles klopt voordat we opleveren." ENSIA is de formele baseline die de organisatie als geheel verantwoording aflegt; de échte leerwaarde zit in de team-reviews. Bespreek bevindingen openlijk in retrospectives en sprint reviews. Vermijd externe auditoren als eerste stap — dat voelt als wantrouwen in de teams.', eerste_stap: 'Voer de standaard IB-checklist in als vaste stap bij de eerste drie projectafsluitingen en bespreek de uitkomsten in de retrospective.' },
+              vecht:       { argument: 'In een vechtcultuur kan een externe audit snel een strijdpunt worden als de uitkomsten aan teams of projectleiders worden gekoppeld. Bouw de toetsing in als bottom-up proces: security champions per team zijn de toetsers, niet een externe partij die langs komt. Anker de organisatiebrede toets in ENSIA — dat is een genormeerd instrument boven de interne politiek. Voer penetratietests en red team oefeningen als gezamenlijke teamoefening, niet als verborgen controle. Presenteer bevindingen als gedeeld leermoment van het team, nooit als persoonlijk falen van een teamlid of projectleider.', eerste_stap: 'Laat security champions per team de IB-toets uitvoeren bij de eerstvolgende projectafronding en presenteer de uitkomsten in een gezamenlijke retrospective.' },
+              debat:       { argument: 'Een debatcultuur verwacht formele instrumenten en zakelijke aantoonbaarheid — ook in een innovatieve, teamgedreven omgeving. BIO 2-aantoonbaarheid is een harde toelatingseis voor samenwerking met Rijksdiensten en aanbestedingen. Een gestandaardiseerde IB-toets per project maakt dit zakelijk afdwingbaar en geeft teams duidelijkheid. Breng de penetratietest of red team oefening als formeel resultaat in bij de projectevaluatie. Gebruik ENSIA als formele organisatiebrede baseline die in een managementrapportage wordt gepresenteerd. De debatcultuur verwacht altijd een formele lijn — informele team-reviews zijn aanvullend, niet vervangend.', eerste_stap: 'Definieer de standaard IB-toets per project als formele projecteis en leg vast dat de uitkomsten onderdeel zijn van de projectevaluatie.' },
+              regent:      { argument: 'In een regentencultuur bepalen de meest invloedrijke programmamanagers en projectleiders de richting — hun oordeel over de kwaliteit van een project heeft meer gewicht dan een externe audit. Bespreek de toetsingsaanpak en de uitkomsten van ENSIA eerst discreet met de meest invloedrijke programmamanager. Positioneer de penetratietest of red team oefening als bewijs van professionele kwaliteit: "wij testen onszelf, wij wachten niet op een externe controle." Zorg dat de meest invloedrijke programmamanager de aanpak als eigenaar presenteert in het MT. Dat geeft de toetsing intern meer gewicht dan elk extern rapport.', eerste_stap: 'Bespreek de toetsingsaanpak discreet met de meest invloedrijke programmamanager en vraag diens publieke onderschrijving als anker voor de bredere implementatie.' },
+            },
+            volwassenheid: {
+              1: { toelichting: 'IB-toetsing is geen onderdeel van de projectcyclus; elk project sluit af zonder IB-check en er is geen organisatiebreed beeld van de naleving.', eerste_stap: 'Stel een minimale IB-checklist van vijf vragen op en gebruik die bij de afsluiting van de drie lopende projecten als pilot.' },
+              2: { toelichting: 'Toetsing vindt soms plaats maar is afhankelijk van de initiatieven van individuele security champions; er is geen structurele aanpak.', eerste_stap: 'Maak de IB-toets een verplichte stap in het projectfasemodel en leg dit vast in de projectmethodiek.' },
+              3: { toelichting: 'IB-toetsing is structureel onderdeel van projectafronding; de volgende stap is automatisering in de CI/CD-pipeline.', eerste_stap: 'Integreer de IB-toets als geautomatiseerde check in de CI/CD-pipeline en koppel bevindingen aan het backlog van het team.' },
+              4: { toelichting: 'DevSecOps is ingericht en blameless postmortems zijn standaard; de organisatie leert continu van bevindingen uit productie.', eerste_stap: 'Start een red team oefening of penetratietest op het meest kritische platform en gebruik de uitkomsten als input voor de volgende kwartaalplanning.' },
+            },
+          },
+
+          'concern': {
+            intro: 'Toetsing in een concern vindt op twee niveaus plaats: een concern-brede ENSIA-zelfevaluatie voor de organisatie als geheel, en dienst-specifieke gap-analyses per eenheid. De concern-CISO coördineert en stelt de baseline vast; de dienst-CISO\'s voeren de toetsing uit en zijn verantwoording schuldig aan zowel hun diensthoofd als de concern-CISO.',
+            wel: [
+              'Concern-brede ENSIA-zelfevaluatie als jaarlijkse baseline',
+              'Dienst-specifieke gap-analyse per eenheid op basis van concern-baseline',
+              'Benchmarking tussen diensten als verbetermechanisme',
+              'Concern-CISO coördineert; dienst-CISO\'s voeren uit',
+              'Rapportage op twee niveaus: dienst en concern',
+              'Rekenkamer beoordeelt concern-niveau; diensten zijn intern verantwoording schuldig',
+            ],
+            niet: [
+              'Één uniforme audit over alle diensten zonder lokale context',
+              'Concern-CISO die alle toetsing zelf uitvoert zonder lokale betrokkenheid',
+              'Bevindingen op dienst-niveau pas bespreken op concern-niveau',
+              'Benchmarking gebruiken als afrekenmechanisme in plaats van leermiddel',
+            ],
+            tip: 'Gebruik de benchmark tussen diensten als motor voor verbetering, niet als ranglijst. Organisaties die niet weten waar ze staan ten opzichte van vergelijkbare eenheden, hebben geen externe referentie om verbetering te motiveren.',
+            domeinen: [
+              { naam: 'IAM & Autorisatiebeheer', ref: '5.15–5.18', aanpak: 'Concern-brede access review met lokale uitvoering per dienst; vergelijk resultaten per dienst en signaleer uitschieters aan concern-CISO' },
+              { naam: 'Risicomanagement',         ref: '5.08',      aanpak: 'Concern-risico-inventarisatie als kader; dienst-specifieke risicoanalyse als toets op de lokale situatie; rapportage aan concern-CISO' },
+              { naam: 'BCM & Continuïteit',       ref: '5.30',      aanpak: 'Concern BCP als baseline; toets per dienst of de uitvoeringsvariant actueel is en of er jaarlijks is geoefend' },
+              { naam: 'Bewustzijn & training',    ref: '5.04 / 6.03', aanpak: 'Concernbrede baseline; per dienst aanvullende toets op vakspecifieke risico\'s; deelnamegraad vergelijken per dienst' },
+              { naam: 'Incidentbeheer',           ref: '5.24–5.27', aanpak: 'Dienst-eigen first response toetsen; concern-CISO evalueert escalatiepatronen; concernbrede leerrapportage als output' },
+              { naam: 'Leveranciersbeheer',       ref: '5.19–5.22', aanpak: 'Centrale due diligence voor concernbrede leveranciers; per dienst lokale toets op dienst-specifieke leveranciers' },
+              { naam: 'ISMS inrichting',          ref: '5.01 / 5.02', aanpak: 'Concern-ISMS als kader; dienst-bijlagen als toetsingsdomein; management review op twee niveaus met concernbrede synthese' },
+            ],
+            bestuurscultuur: {
+              gemeenschap: { argument: 'In een gemeenschapscultuur werkt toetsing het best als gezamenlijk leermoment tussen diensten — geen ranglijst, maar een foto die het concern sterker maakt. Positioneer de benchmark tussen diensten als kennisdelingsplatform: "dienst A heeft dit goed opgelost, hoe kunnen wij dat ook doen?" Het IB-coördinatorennetwerk is de uitvoerende kracht; maandelijkse bijeenkomsten bouwen collegialiteit en gedeeld eigenaarschap. Bespreek de ENSIA-uitkomsten in een gezamenlijk overleg van alle IB-coördinatoren vóór de formele concernrapportage. Vermijd hiërarchische framing — benadruk de gezamenlijke kwaliteitsambitie.', eerste_stap: 'Organiseer een gezamenlijk overleg van alle IB-coördinatoren om de ENSIA-uitkomsten per dienst te bespreken en van elkaar te leren.' },
+              vecht:       { argument: 'In een vechtcultuur kan een concern-brede audit snel een interdienst-conflict worden als diensten de benchmark als ranglijst ervaren. Bouw de toetsing op als bilateraal proces: concern-CISO spreekt eerst individueel met elk diensthoofd over de resultaten van hun dienst vóór de concernbrede presentatie. Anker de toetsing in ENSIA — een extern genormeerd instrument dat boven de interne politiek uitstijgt. Benchmarking mag pas worden gepresenteerd als het vertrouwen is gebouwd dat het een leerinstrument is, geen afrekenmechanisme. Presenteer bevindingen altijd per dienst als collectief resultaat, nooit als persoonlijk falen van een dienst-CISO of diensthoofd.', eerste_stap: 'Voer bilaterale gesprekken met elk diensthoofd over de resultaten van hun dienst vóór de concernbrede presentatie van de benchmark.' },
+              debat:       { argument: 'Een debatcultuur spreekt de taal van formele rapportages, eigenaarsbeschrijvingen en aantoonbare opvolging — precies wat een concern-toetsingsstructuur vereist. Een concern-brede ENSIA-zelfevaluatie met dienst-bijlagen maakt concernbrede aantoonbaarheid mogelijk richting rekenkamer, provincie en AP. Breng de toetsingsuitkomsten als formele concernrapportage met per dienst een R/A/G-status en actielijst. Elk diensthoofd presenteert zijn eigen resultaten — dat legt eigenaarschap expliciet bij de dienst. De rekenkamer als externe referentie geeft de concernrapportage extra formeel gewicht. De debatcultuur verwacht altijd een formele lijn; informele bespreking zonder besluit is onvoldoende.', eerste_stap: 'Stel een formele concernrapportage op met ENSIA-uitkomsten per dienst en agenda deze in de concernbrede MT-vergadering met elk diensthoofd als eigenaar.' },
+              regent:      { argument: 'In een regentencultuur bepalen de meest gezaghebbende diensthoofden en de concern-directeur informeel de koers van het concern. Een sterk concern-IB-toetsingsproces versterkt de bestuurlijke reputatie van het concern als geheel richting toezichthouders en ketenpartners. Bespreek de toetsingsuitkomsten eerst discreet met de concern-directeur en de twee of drie meest gezaghebbende diensthoofden vóór de formele concernrapportage. Positioneer de benchmark als bewijs van professionele kwaliteit: "ons concern meet zichzelf en verbetert continu." Zorg dat de concern-directeur de bevindingen als eigenaar presenteert in de formele vergadering — dat geeft de toetsing intern het hoogste gezag.', eerste_stap: 'Bespreek de conceptresultaten van de concern-ENSIA discreet met de concern-directeur en de meest gezaghebbende diensthoofden voordat de formele rapportage plaatsvindt.' },
+            },
+            volwassenheid: {
+              1: { toelichting: 'Toetsing is per dienst anders of nauwelijks aanwezig; er is geen concern-breed beeld van de BIO 2-naleving.', eerste_stap: 'Maak een inventarisatie van de toetsingsactiviteiten per dienst en gebruik dit als baseline voor de concern-brede ENSIA-aanpak.' },
+              2: { toelichting: 'Er is een concern-CISO maar de toetsing per dienst is zwak en afhankelijk van persoonlijk initiatief van de lokale contactpersoon.', eerste_stap: 'Benoem per dienst een verantwoordelijke voor de gap-analyse en formaliseer dit in de dienstorganisatie met een duidelijk mandaat.' },
+              3: { toelichting: 'ENSIA is concern-breed klaar en dienst-bijlagen zijn opgesteld; de volgende stap is een gestructureerde benchmark tussen diensten.', eerste_stap: 'Introduceer een jaarlijkse benchmark tussen diensten op basis van de ENSIA-uitkomsten en organiseer een gezamenlijk verbeteroverleg.' },
+              4: { toelichting: 'Het toetsingsproces is geborgd op twee niveaus en de benchmark levert sturingsinformatie; de organisatie leert van best practices per dienst.', eerste_stap: 'Start een peer-review programma waarbij diensten elkaars IB-aanpak beoordelen en best practices uitwisselen.' },
+            },
+          },
+
+        }, // end toetsing
 
         implementatie: {
 
