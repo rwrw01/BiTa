@@ -489,7 +489,210 @@ const CONTENT = {
       label: 'BIO 2 — Informatiebeveiliging voor gemeenten',
       doelen: {
         visie:     null,
-        strategie: null,
+
+        strategie: {
+
+          'plat': {
+            intro: 'In een platte organisatie is strategievorming pragmatisch: geen dikke beleidsnota maar een A4 met prioriteiten voor twee jaar. De gemeentesecretaris is eigenaar; de combinatiefunctie CISO/privacy trekt de uitvoering. De IBD-routekaart is het kapstok — u past niet alles zelf uit.',
+            wel: [
+              'Pragmatisch 2-jarenplan op één A4 met concrete prioriteiten',
+              'IBD-routekaart als standaard meerjarenplanning — niet zelf uitvinden',
+              'Gemeentesecretaris als eigenaar; combinatiefunctie als uitvoerder',
+              'Jaar 1: orde op zaken (IAM, incidentmeldpunt, bewustwording); Jaar 2: ENSIA-ready',
+              'IB-budget opnemen in jaarplan zonder groot investeringsvoorstel',
+              'Samenwerking met buurgemeenten of samenwerkingsverband als capaciteitsbuffer',
+            ],
+            niet: [
+              'Meerjarenplan van dertig pagina\'s dat in een la verdwijnt',
+              'Alle 214 BIO 2-maatregelen in het eerste jaar willen realiseren',
+              'Aparte stuurgroep of strategisch IB-comité oprichten',
+              'Grote-gemeente-aanpak kopiëren zonder aanpassing aan de schaal',
+            ],
+            tip: 'Gebruik de IBD-routekaart als kapstok voor uw strategie. Die is specifiek gemaakt voor gemeenten van uw omvang en bespaart u maanden uitzoekwerk. Pas de prioriteitenlijst aan op uw lokale situatie en leg dit vast in een beslisdocument van maximaal twee pagina\'s.',
+            domeinen: [
+              { naam: 'IAM & Autorisatiebeheer', ref: '5.15–5.18',    aanpak: 'Prioriteit jaar 1: accounts op orde en minimale rechten geborgd. Eigenaar: ICT-beheerder. Maatstaf: nul onbeheerde accounts na de jaarlijkse HR-koppeling.' },
+              { naam: 'Risicomanagement',         ref: '5.08',          aanpak: 'Jaarlijkse risicoanalyse door gemeentesecretaris en CISO samen, op basis van IBD-risicomodel. Planning: vastgesteld vóór 1 maart elk jaar.' },
+              { naam: 'BCM & Continuïteit',       ref: '5.30',          aanpak: 'Strategie: jaarlijks oefenen op kernsystemen. Eigenaar: gemeentesecretaris. Prioriteit jaar 2: scenario\'s uitbreiden op basis van ENSIA-bevindingen.' },
+              { naam: 'Bewustzijn & training',    ref: '5.04 / 6.03',   aanpak: 'Jaar 1: bewustwordingssessie in elk teamoverleg. Jaar 2: aantoonbare onboarding voor nieuwe medewerkers. Budget: geen aparte scholingslijn nodig.' },
+              { naam: 'Incidentbeheer',           ref: '5.24–5.27',     aanpak: 'Prioriteit jaar 1: één duidelijk meldpunt en lage drempel. Eigenaar: CISO. Maatstaf voor ENSIA: aantoonbaar geregistreerde incidenten.' },
+              { naam: 'Leveranciersbeheer',       ref: '5.19–5.22',     aanpak: 'Jaar 1: verwerkersovereenkomsten op orde via VNG-modelcontract. Jaar 2: jaarlijkse review van de vijf meest kritische leveranciers.' },
+              { naam: 'ISMS inrichting',          ref: '5.01 / 5.02',   aanpak: 'Lean ISMS via ENSIA-zelfevaluatie als strategisch kompas. Geen apart ISMS-traject; IBD-baseline als minimumstandaard.' },
+            ],
+            bestuurscultuur: {
+              gemeenschap: { argument: 'Een gemeenschapscultuur vraagt om een strategie die als gezamenlijk traject wordt beleefd, niet als extern opgelegde agenda. Maak het plan in een sessie met de gemeentesecretaris en twee of drie betrokken teamleiders: wat zijn onze drie grootste risico\'s en wat pakken we als eerste aan? Gebruik peercomparisons: welke buurgemeenten of samenwerkingsverbanden hebben al een plan? Dat heeft meer overtuigingskracht dan een technische roadmap. Vertaal de prioriteiten naar wat het betekent voor de dagelijkse dienstverlening, niet naar compliancemaatregelen. Vermijd een technocratisch document — een visueel éénpager werkt beter dan een tien pagina\'s tellend plan.', eerste_stap: 'Organiseer een co-creatiesessie met de gemeentesecretaris en twee teamleiders om samen de top drie IB-prioriteiten voor jaar 1 te bepalen.' },
+              vecht:       { argument: 'Strategie kan in een vechtcultuur een strijdpunt worden zodra de eigenaarsvraag politiek wordt geladen. Anker de strategie in objectieve baselines: de IBD-routekaart en de ENSIA-agenda zijn externe normen die boven de interne politiek uitstijgen. Bouw draagvlak bij sleutelpersonen vóór de formele presentatie — een verraste tegenstander in het overleg is het grootste risico. Maak het plan compact en operationeel: een A4 met prioriteiten, eigenaar en deadline per maatregel. Geen visiedocumenten die bestuurlijk kunnen worden aangevochten. Koppel de strategie aan wat iedereen wil: minder gedoe bij datalekken en uitval, niet aan complianceplicht.', eerste_stap: 'Bouw informeel draagvlak bij de gemeentesecretaris en één of twee invloedrijke teamleiders voordat u de strategie formeel bespreekt.' },
+              debat:       { argument: 'Een debatcultuur verwacht een formeel meerjarenplan met MT-besluit, expliciete eigenaarsbeschrijving en koppeling aan de P&C-cyclus. Breng de strategie in als bestuurlijke notitie met risicoduiding: wat zijn de consequenties van niet-naleving? De ENSIA-agenda en de provincie zijn externe referenties die de strategie bestuurlijk gewicht geven. Koppel het IB-budget expliciet aan het jaarplan zodat de raad de ambitie kan volgen. Houd het plan compact maar formeel onderbouwd — een A4 met concrete mijlpalen en een beslisdocument voor het MT.', eerste_stap: 'Stel een bestuurlijke notitie op met de twee-jarenplanning en vraag de gemeentesecretaris formeel akkoord in het eerstvolgende MT.' },
+              regent:      { argument: 'In een regentencultuur wordt de strategie eerst informeel gedeeld met de sleutelfiguren vóór de formele presentatie. De gemeentesecretaris moet het plan persoonlijk dragen — niet als reactie op externe druk, maar als eigen bestuurlijke ambitie. Positioneer de strategie als professionele norm die de gemeente goed doet staan richting provincie en rekenkamer. Bespreek het plan één-op-één met de gemeentesecretaris en vraag diens actieve sponsorschap. Zodra de informele lijn staat, gaat de formele bekrachtiging soepel. Vermijd de framing van complianceverplichting; presenteer het als bestuurlijk onderscheidend vermogen.', eerste_stap: 'Bespreek het concept-meerjarenplan discreet met de gemeentesecretaris en vraag diens actieve sponsorschap vóór de formele presentatie.' },
+            },
+            volwassenheid: {
+              1: { toelichting: 'Er is geen strategie: prioriteiten zijn onbekend, er is geen eigenaar benoemd en er bestaat geen beeld van waar de organisatie naartoe wil op het gebied van informatiebeveiliging.', eerste_stap: 'Gebruik de IBD-routekaart als startpunt en stel samen met de gemeentesecretaris drie concrete prioriteiten vast voor het eerste jaar.' },
+              2: { toelichting: 'Er zijn losse initiatieven maar geen samenhangend plan: het is onduidelijk wat de volgorde van maatregelen is en wie eigenaar is van welk onderdeel.', eerste_stap: 'Schrijf een éénpagina-plan met de prioriteiten voor jaar 1 en jaar 2, benoem per maatregel een eigenaar en een haalbare deadline.' },
+              3: { toelichting: 'Er is een plan en uitvoering loopt; de volgende stap is de strategie verankeren in de P&C-cyclus zodat voortgang aantoonbaar is voor het bestuur.', eerste_stap: 'Voeg een IB-paragraaf toe aan het jaarplan en de begroting en koppel de voortgang aan de ENSIA-zelfevaluatie.' },
+              4: { toelichting: 'De strategie is verankerd en het bestuur is betrokken; de organisatie gebruikt de ENSIA-uitkomsten actief als input voor de volgende planningsperiode.', eerste_stap: 'Initieer een tweejaarlijkse strategierevisie samen met de IBD en buurgemeenten om de prioriteiten bij te stellen op basis van nieuwe dreigingen.' },
+            },
+          },
+
+          'regelgestuurd': {
+            intro: 'In een regelgestuurde organisatie is de strategie een formeel meerjarenplan van drie jaar, vastgesteld door het MT of de directie. Een compliancematrix per BIO 2-maatregel met RAG-status, eigenaar en deadline is de ruggengraat. Aansluiting op de P&C-cyclus en Three Lines of Defense als organisatiemodel zijn de standaard.',
+            wel: [
+              'Formeel driejarenplan vastgesteld door MT of directie',
+              'Compliancematrix per BIO 2-maatregel met RAG-status, eigenaar en deadline',
+              'IB-paragraaf in begroting en jaarrekening als P&C-koppeling',
+              'Interne audit (derde lijn) bewaakt voortgang; ENSIA als externe ijking',
+              'Three Lines of Defense als organisatiemodel voor de strategie',
+              'Kwartaalrapportage aan MT op basis van vaste RAG-indicatoren',
+            ],
+            niet: [
+              'Strategie zonder formeel MT-besluit of vastgesteld eigenaarschap',
+              'Meerjarenplan dat niet in de P&C-cyclus is verankerd',
+              'Voortgangsrapportage zonder vaste meetpunten en RAG-status',
+              'ENSIA gebruiken als enige sturing zonder intern monitoringssysteem',
+            ],
+            tip: 'Koppel de IB-strategie expliciet aan de rechtmatigheidsverklaring van de gemeentelijke accountant. De accountant raakt BIO 2 via informatiebeveiliging van de financiële systemen — een gezamenlijke aanpak versterkt beide trajecten en bespaart capaciteit in de voorbereiding.',
+            domeinen: [
+              { naam: 'IAM & Autorisatiebeheer', ref: '5.15–5.18',    aanpak: 'Jaar 1: rollenmatrix vaststellen en access review inrichten. Eigenaar: ICT-directeur. Maatstaf: jaarlijkse access review aantoonbaar afgerond vóór ENSIA.' },
+              { naam: 'Risicomanagement',         ref: '5.08',          aanpak: 'Centraal risicoregister als strategisch sturingsinstrument. Jaarlijkse risicoanalyse vastgesteld door directie. Eigenaar: CISO. Rapportage: kwartaal aan MT.' },
+              { naam: 'BCM & Continuïteit',       ref: '5.30',          aanpak: 'Strategisch doel jaar 2: BCP/DRP aantoonbaar geoefend en vastgesteld door directie. Eigenaar: directeur bedrijfsvoering. Interne audit valideert jaar 3.' },
+              { naam: 'Bewustzijn & training',    ref: '5.04 / 6.03',   aanpak: 'Verplichte e-learningmodule als strategische baseline. HR-registratie als compliance-bewijs. Deelnamegraad in kwartaalrapportage aan MT.' },
+              { naam: 'Incidentbeheer',           ref: '5.24–5.27',     aanpak: 'Jaar 1: formeel incidentproces in ITSM inrichten. Jaar 2: rapportage aan MT en koppeling aan AP-meldplicht. Eigenaar: CISO.' },
+              { naam: 'Leveranciersbeheer',       ref: '5.19–5.22',     aanpak: 'Strategisch doel: due diligence checklist vastgesteld en toegepast bij alle nieuwe contracten. Eigenaar: juridische afdeling. Maatstaf jaar 2: 100% actuele verwerkersovereenkomsten.' },
+              { naam: 'ISMS inrichting',          ref: '5.01 / 5.02',   aanpak: 'Volledig ISMS-traject als strategische pijler. Jaar 1: scope en beleid. Jaar 2: PDCA draait. Jaar 3: management review aantoonbaar en externe validatie via ENSIA.' },
+            ],
+            bestuurscultuur: {
+              gemeenschap: { argument: 'Een gemeenschapscultuur werkt op collegiale norm en gezamenlijkheid — ook in een regelgestuurde organisatie. Positioneer de IB-strategie als gezamenlijke professionele ambitie, niet als externe verplichting: "wij als organisatie stellen een norm die wij van onszelf verwachten." De compliancematrix past bij de bestaande procesrationaliteit; gebruik de match als ingang. Bespreek de strategische prioriteiten eerst informeel in het MT vóór de formele vaststelling — dat geeft ruimte voor eigenaarschap. Refereer aan vergelijkbare regelgestuurde gemeenten die hetzelfde pad bewandelen. Vermijd punitieve of juridische framing.', eerste_stap: 'Bespreek de concept-prioriteiten van het driejarenplan informeel in het MT en vraag elk lid eigenaarschap van één maatregel te nemen.' },
+              vecht:       { argument: 'In een vechtcultuur kan een strategisch plan snel een strijdpunt worden als de eigenaarsvraag politiek wordt. Anker de strategie in objectieve normen: ENSIA, de IBD-routekaart en de rechtmatigheidsverklaring zijn externe ijkpunten die boven de interne politiek uitstijgen. Bouw een formele coalitie bij MT-leden die compliance al onderschrijven en laat hen het plan mede-ondertekenen. Presenteer de compliancematrix als systeemkwaliteitsinstrument, nooit als prestatiebeoordeling van een afdeling of leidinggevende. Zorg dat het MT-besluit over de strategie een genomen besluit is, niet een discussiepunt.', eerste_stap: 'Identificeer twee of drie MT-leden die compliance al onderschrijven en zorg dat zij het strategieplan mede-ondertekenen vóór de formele vergadering.' },
+              debat:       { argument: 'Een debatcultuur is de natuurlijke omgeving voor een formeel meerjarenplan: MT-besluiten, RAG-rapportage en bestuurlijke voortgangsnotities zijn precies wat deze cultuur verwacht en begrijpt. Koppel de strategie aan de P&C-cyclus en de rechtmatigheidsverklaring — dat geeft de IB-ambitie bestuurlijk gewicht en maakt haar moeilijk te negeren. Breng het plan als notitie "besluit gevraagd" in de reguliere MT-vergadering. De rekenkamer en provincie als externe referentie in de aanbiedingsbrief versterken het formele gezag van de strategie. Informeel bespreken zonder besluit is onvoldoende — de debatcultuur verwacht altijd een formele lijn.', eerste_stap: 'Stel een notitie "besluit gevraagd" op met het driejarenplan en de compliancematrix en zet deze op de agenda van het eerstvolgende MT.' },
+              regent:      { argument: 'In een regentencultuur wordt de koers informeel bepaald vóór de formele vergadering. Deel het strategieplan eerst discreet met de directeur en twee of drie sleutel-MT-leden — zij moeten het plan kennen en begrijpen vóór het formele moment. De directeur moet de strategie persoonlijk dragen als bestuurlijke ambitie, niet als reactie op externe druk. Positioneer het meerjarenplan als bewijs van professionele kwaliteit richting rekenkamer en provincie: "wij als organisatie bewaken onze eigen standaard." Formaliseer pas nadat de informele lijn staat.', eerste_stap: 'Bespreek het concept-driejarenplan discreet met de directeur en vraag diens actieve sponsorschap vóór de formele MT-presentatie.' },
+            },
+            volwassenheid: {
+              1: { toelichting: 'Er is geen vastgestelde strategie: prioriteiten zijn niet formeel belegd, eigenaarschap ontbreekt en de IB-activiteiten zijn ad hoc en ongericht.', eerste_stap: 'Stel een startdocument op met de drie meest kritische BIO 2-domeinen en vraag de directie dit formeel te benoemen als strategische prioriteit.' },
+              2: { toelichting: 'Er is een begin van strategie maar eigenaarschap en P&C-koppeling ontbreken: het plan bestaat maar is niet verankerd in de organisatiecyclus.', eerste_stap: 'Voeg een IB-paragraaf toe aan het jaarplan en benoem per strategisch doel een eigenaar uit het MT.' },
+              3: { toelichting: 'De strategie is vastgesteld en loopt; de volgende stap is externe validatie en aantoonbaarheid via de interne auditfunctie.', eerste_stap: 'Plan een interne audit op de voortgang van de strategische doelen en bespreek de uitkomsten in de eerstvolgende management review.' },
+              4: { toelichting: 'De strategie wordt jaarlijks bijgesteld op basis van ENSIA-uitkomsten en interne auditresultaten; het bestuur is structureel betrokken.', eerste_stap: 'Introduceer een jaarlijkse strategierevisie als vast agendapunt in de management review en koppel de uitkomsten aan de begroting van het volgend jaar.' },
+            },
+          },
+
+          'vakinhoudelijk': {
+            intro: 'In een vakinhoudelijk geleide organisatie is de strategie alleen effectief als professionals die zelf mede hebben bepaald. De CISO is facilitator, niet eigenaar — professionals zijn verantwoordelijk voor de IB-maatregelen binnen hun eigen vakdomein. Koppeling aan beroepsnorm en toezichtskader geeft de strategie vakinhoudelijk gezag.',
+            wel: [
+              'Vakinhoudelijk gedragen roadmap: professionals kiezen hun prioriteiten mee',
+              'CISO als facilitator van het strategieproces, niet als eigenaar van de uitvoering',
+              'Koppeling aan beroepsnorm, toezichtskader en AP als strategische horizon',
+              'Per vakdomein: welke IB-maatregelen zijn het meest relevant voor dit vakgebied?',
+              'Bewustzijn en training als structurele strategische investering, niet als eenmalige actie',
+              'ENSIA-voorbereiding als jaarlijkse strategische ijking voor alle domeinen',
+            ],
+            niet: [
+              'Top-down strategiedocument zonder betrokkenheid van de professionals',
+              'Compliancematrix als primair strategisch instrument — dat werkt niet bij professionals',
+              'CISO die de strategie als eigenaar presenteert aan de lijn',
+              'Strategische prioriteiten die los staan van het dagelijks vakinhoudelijk werk',
+            ],
+            tip: 'Organiseer een strategiesessie per vakdomein: "welke BIO 2-maatregelen zijn voor jullie het meest relevant en wat is haalbaar in twee jaar?" De CISO levert het kader; de professionals vullen de inhoud in. Dit geeft de strategie vakinhoudelijk eigenaarschap dat top-down nooit kan afdwingen.',
+            domeinen: [
+              { naam: 'IAM & Autorisatiebeheer', ref: '5.15–5.18',    aanpak: 'Strategie per vakdomein: welke toegangsrechten zijn vakinhoudelijk noodzakelijk en hoe borgen professionals zelf dat die actueel zijn? Eigenaar: vakinhoudelijk leidinggevende.' },
+              { naam: 'Risicomanagement',         ref: '5.08',          aanpak: 'Jaarlijkse risicoanalyse per vakdomein, geleid door de professional zelf. CISO levert het format en integreert de resultaten. Strategisch doel: elk domein heeft een eigenaar vóór jaar 2.' },
+              { naam: 'BCM & Continuïteit',       ref: '5.30',          aanpak: 'Strategie: continuïteitsscenario\'s vertaald naar de vakwerksituatie door de professionals zelf. Eigenaar: vakinhoudelijk leidinggevende. Jaar 2: aantoonbaar geoefend per domein.' },
+              { naam: 'Bewustzijn & training',    ref: '5.04 / 6.03',   aanpak: 'Strategische investering: IB als structureel onderdeel van de vakintroductie en jaarlijkse bijscholing. Eigenaar: HR en vakleiders samen. Maatstaf: aantoonbare opname in onboarding.' },
+              { naam: 'Incidentbeheer',           ref: '5.24–5.27',     aanpak: 'Strategie: meldcultuur als vakinhoudelijke norm. Lage drempel per domein. Eigenaar per domein: vakinhoudelijk leidinggevende. Strategisch doel jaar 2: aantoonbare meldregistratie.' },
+              { naam: 'Leveranciersbeheer',       ref: '5.19–5.22',     aanpak: 'Professionals beoordelen leveranciers op vakinhoudelijke normen. Strategie: toetsingscriteria per vakdomein opstellen in jaar 1. CISO ondersteunt met het kader.' },
+              { naam: 'ISMS inrichting',          ref: '5.01 / 5.02',   aanpak: 'ISMS opgebouwd vanuit de kernprocessen per vakdomein. Strategie: elk domein levert een eigen IB-bijlage bij het ISMS. CISO integreert. Jaar 3: management review met alle domeinhouders.' },
+            ],
+            bestuurscultuur: {
+              gemeenschap: { argument: 'Een gemeenschapscultuur in een vakinhoudelijke organisatie draait op collegiale norm en gedeeld vakmanschap — de strategie werkt alleen als het een gezamenlijk initiatief is van de professionals zelf. Organiseer de strategiesessie als co-creatiebijeenkomst met vertegenwoordigers van elk vakdomein: "wij bepalen samen wat voor ons het meest relevant is." Refereer aan collega-gemeenten die dezelfde uitdagingen kennen en al verder zijn. Vermijd technocratische roadmaps; vertaal de strategie naar wat het betekent voor het dagelijks vakwerk. De CISO faciliteert, de professionals bepalen de richting.', eerste_stap: 'Organiseer een co-creatiesessie met vertegenwoordigers van elk vakdomein om samen de IB-prioriteiten voor de komende twee jaar te bepalen.' },
+              vecht:       { argument: 'Strategie kan in een vechtcultuur een persoonlijk strijdpunt worden als de eigenaarsvraag politiek wordt geladen. In een vakinhoudelijke organisatie is het schild de vakinhoudelijke legitimiteit: de professionals bepalen zelf hun prioriteiten op basis van beroepsnorm en eigen expertise. Bouw draagvlak bij invloedrijke vakleiders vóór de formele presentatie van de strategie. Anker de strategie in externe normen — ENSIA, AP, beroepskader — die boven de interne politiek uitstijgen. Presenteer de strategie als collectieve vakinhoudelijke ambitie, nooit als beslissing van de CISO of het management.', eerste_stap: 'Identificeer twee of drie invloedrijke vakleiders die de strategie willen trekken en bouw draagvlak bij hen vóór de formele presentatie.' },
+              debat:       { argument: 'Een debatcultuur verwacht een formeel vastgesteld meerjarenplan met expliciete eigenaarsbeschrijving per domein en koppeling aan het wettelijke toezichtskader. De rekenkamer, provincie en AP zijn externe referenties die de strategie bestuurlijk gewicht geven. Breng de strategie als formele notitie in via de bestuurlijke vergaderlijn. Koppel de vakinhoudelijke eigenaarsbeschrijving expliciet aan het toezichtskader: "elk domein is aantoonbaar verantwoordelijk voor zijn eigen IB-maatregelen." Informeel bespreken zonder besluit is onvoldoende — de debatcultuur verwacht altijd een formele lijn met een eigenaar per maatregel.', eerste_stap: 'Stel per vakdomein een eigenaar vast en laat de strategie formeel vaststellen door het bestuurlijk overleg met koppeling aan het toezichtskader.' },
+              regent:      { argument: 'In een regentencultuur bepalen de meest gezaghebbende vakleiders de toon — hun steun voor de strategie geeft die meer gewicht dan elk formeel besluit. Bespreek het conceptplan eerst discreet met de meest gezaghebbende professional in elk domein vóór de formele presentatie. Vraag diens publieke onderschrijving als ankerpunt voor de bredere uitrol. Positioneer de strategie als professionele ambitie: "wij als vakorganisatie stellen een norm die wij van onszelf verwachten richting burgers, AP en rekenkamer." Formaliseer pas nadat de informele lijn bij de sleutelfiguren staat.', eerste_stap: 'Bespreek het conceptplan discreet met de meest gezaghebbende vakleider per domein en vraag diens actieve onderschrijving vóór de formele presentatie.' },
+            },
+            volwassenheid: {
+              1: { toelichting: 'Professionals weten niet wat BIO 2 van hun vakdomein vraagt en er is geen gedeeld beeld van de strategische richting. Eigenaarschap ontbreekt volledig.', eerste_stap: 'Organiseer een korte sessie per vakdomein om samen de drie meest relevante BIO 2-maatregelen te benoemen en één eigenaar te benoemen.' },
+              2: { toelichting: 'Er is bewustzijn maar geen gedeeld plan: initiatieven zijn persoonsafhankelijk en niet geborgd in de organisatiecyclus. Als de trekker wegvalt, valt de strategie stil.', eerste_stap: 'Formaliseer eigenaarschap per vakdomein bij de lijnmanager en leg de strategische prioriteiten vast in een eenvoudig tweepagina-document.' },
+              3: { toelichting: 'De strategie is vastgesteld en loopt in de meeste domeinen; de volgende stap is externe validatie en verankering in de beroepscultuur.', eerste_stap: 'Voeg IB-voortgang toe als vast agendapunt in het vakoverleg en vraag een IBD-expert de strategie te toetsen op volledigheid.' },
+              4: { toelichting: 'De strategie wordt door professionals zelf gedragen en bijgesteld; de organisatie leert structureel van incidenten en ENSIA-uitkomsten per domein.', eerste_stap: 'Introduceer een halfjaarlijkse strategierevisie per vakdomein, geleid door de vakleider zelf, met de ENSIA-uitkomsten als input.' },
+            },
+          },
+
+          'teamgedreven': {
+            intro: 'In een teamgedreven organisatie is de strategie geen driejarenplan maar een rolling roadmap per kwartaal. Security is een integraal onderdeel van de product- en projectroadmap. OKR\'s voor IB-verbeterdoelen per team en ENSIA als jaarlijks baken geven richting. "Security by design" is het strategisch principe — niet een compliancelijst.',
+            wel: [
+              'Rolling roadmap per kwartaal; geen vast driejarenplan dat veroudert',
+              'Security als integraal onderdeel van de product- en projectroadmap',
+              'OKR\'s (Objectives & Key Results) voor IB-verbeterdoelen per team',
+              'ENSIA als jaarlijks strategisch baken; dagelijkse voortgang via sprint-reviews',
+              '"Security by design" als strategisch principe boven compliancelijst',
+              'Security champions per team als strategische eigenaren van IB in hun domein',
+            ],
+            niet: [
+              'Statisch driejarenplan dat los staat van de projectcyclus',
+              'Compliancematrix als primaire strategische sturing — dat remt de teams',
+              'Stuurgroep die de strategie bepaalt zonder betrokkenheid van de teams',
+              'ENSIA als enige strategisch kompas zonder koppeling aan de dagelijkse backlog',
+            ],
+            tip: 'Maak IB-verbeterdoelen onderdeel van de kwartaal-OKR\'s van elk team. "Nul onbeheerde accounts per team einde Q3" of "IAM geïntegreerd in de CI/CD-pipeline einde Q2" zijn meetbare sleuteldoelen die passen bij hoe teams al werken. Zo hoeft u geen apart IB-traject naast de productcyclus te runnen.',
+            domeinen: [
+              { naam: 'IAM & Autorisatiebeheer', ref: '5.15–5.18',    aanpak: 'Strategisch doel: zero-trust IAM ingebakken in de CI/CD-pipeline van alle teams. OKR per team per kwartaal. Eigenaar: security champion per team.' },
+              { naam: 'Risicomanagement',         ref: '5.08',          aanpak: 'Per project: lightweight threat modeling als standaard. Strategisch doel: elk project start met een risicoanalyse vóór de bouwfase. Eigenaar: projectlead.' },
+              { naam: 'BCM & Continuïteit',       ref: '5.30',          aanpak: 'Strategie: chaos engineering ingebakken in de release-pipeline. Doel per kwartaal: minimaal één uitvaloefening per kritisch systeem. Eigenaar: DevOps-team.' },
+              { naam: 'Bewustzijn & training',    ref: '5.04 / 6.03',   aanpak: 'Security champions als strategische eigenaren van bewustwording per team. Kwartaalrapportage over bereik. Geen centrale trainingsplanning maar team-eigen aanpak.' },
+              { naam: 'Incidentbeheer',           ref: '5.24–5.27',     aanpak: 'Blameless postmortems als strategische cultuurinterventie. Doel: elk IB-incident resulteert in een gedeeld leermoment in de eerstvolgende sprint-review.' },
+              { naam: 'Leveranciersbeheer',       ref: '5.19–5.22',     aanpak: 'Security als criterium in de vendor-selectie, geïntegreerd in het PoC-framework van elk team. Strategisch doel: IB-criteria standaard in elk vendor-selectieproces.' },
+              { naam: 'ISMS inrichting',          ref: '5.01 / 5.02',   aanpak: 'Lean ISMS met hoge iteratiesnelheid: minimale scope, uitbreiden op basis van geleerde lessen. ENSIA als jaarlijkse toets. Geen groot ISMS-traject als startpunt.' },
+            ],
+            bestuurscultuur: {
+              gemeenschap: { argument: 'Een gemeenschapscultuur in een teamgedreven organisatie draait op gedeelde energie en gezamenlijk eigenaarschap — iedereen doet mee omdat ze erbij horen. De IB-strategie werkt als gezamenlijk teamproject: security champions per team zijn de strategische eigenaren, niet een centrale CISO. Organiseer een gezamenlijke strategiekickoff met alle security champions om de kwartaaldoelen te bepalen. Refereer aan wat het team zelf wil bereiken: minder uitval, betere samenwerking met ketenpartners, vertrouwen van burgers. Vermijd framing als complianceverplichting — positioneer het als fundament voor de innovatieagenda.', eerste_stap: 'Organiseer een strategiekickoff met alle security champions om samen de IB-OKR\'s voor het eerste kwartaal te bepalen.' },
+              vecht:       { argument: 'In een vechtcultuur kunnen strategische agenda\'s strijdpunten worden als ze als opgelegde verplichting worden gepresenteerd. In een teamgedreven organisatie is de kracht van de bottom-up aanpak het schild: de strategie komt van de teams zelf, niet van de bestuurlijke agenda. Security champions per team zijn de strategische trekkers — twee of drie enthousiastelingen zijn effectiever dan een collegebesluit. Vermijd het als bestuurlijk onderwerp te agenderen voordat de teams het dragen. Verbind de strategie aan wat iedereen wil: minder gedoe bij datalekken, betere samenwerking, snellere oplevering.', eerste_stap: 'Wijs per team een security champion aan en geef hen mandaat om de IB-strategie van hun team te trekken, los van de bestuurlijke agenda.' },
+              debat:       { argument: 'Een debatcultuur verwacht een formeel vastgesteld kader met expliciete eigenaarsbeschrijving en meetbare doelen — ook in een innovatieve, teamgedreven omgeving. BIO 2-aantoonbaarheid is een harde toelatingseis voor samenwerking met Rijksdiensten en aanbestedingen. Een formeel vastgesteld IB-strategiekader per project maakt dit zakelijk afdwingbaar en geeft teams duidelijkheid. Breng de strategie als formeel besluit: OKR\'s en ENSIA als meetlat, eigenaarsbeschrijving per team. Informele afspraken zonder vastgestelde doelen zijn onvoldoende — de debatcultuur verwacht altijd een formele lijn.', eerste_stap: 'Stel de IB-OKR\'s formeel vast als onderdeel van de kwartaalplanning en laat dit goedkeuren door het programmateam of MT.' },
+              regent:      { argument: 'In een regentencultuur bepalen de meest invloedrijke programmamanagers en projectleiders de richting — hun steun voor de strategie geeft die meer gewicht dan een formeel besluit. In een teamgedreven organisatie zijn dat de mensen met de sterkste reputatie bij externe partners. Een sterk IB-kader versterkt die reputatie en maakt samenwerking met Rijksdiensten mogelijk. Bespreek de strategische richting discreet met de meest invloedrijke programmamanager vóór de bredere uitrol. Vraag diens actieve sponsorschap als anker voor de security champions in de teams.', eerste_stap: 'Bespreek de IB-strategie discreet met de meest invloedrijke programmamanager en vraag diens publieke sponsorschap als anker voor de bredere teamuitrol.' },
+            },
+            volwassenheid: {
+              1: { toelichting: 'Er is geen IB-strategie: elk project regelt het (of niet) op eigen wijze, er is geen eigenaar en de ENSIA-verplichting is onbekend of niet opgepakt.', eerste_stap: 'Benoem per team een security champion en stel samen met hen drie IB-doelen vast voor het eerste kwartaal.' },
+              2: { toelichting: 'Er zijn losse initiatieven per team maar geen gedeelde strategische richting: IB is afhankelijk van individuele trekkers en niet verankerd in de projectcyclus.', eerste_stap: 'Maak IB een verplicht onderdeel van de projectfasering en stel de eerste kwartaal-OKR\'s vast voor de twee meest actieve teams.' },
+              3: { toelichting: 'De strategie is per team verankerd in de sprint-cyclus; de volgende stap is aantoonbaarheid op organisatieniveau via ENSIA en een gestandaardiseerde OKR-rapportage.', eerste_stap: 'Introduceer een kwartaalrapportage op organisatieniveau op basis van de OKR-voortgang per team en koppel dit aan de ENSIA-voorbereiding.' },
+              4: { toelichting: 'De organisatie leert continu van IB-bevindingen en stelt de strategie per kwartaal bij; security is volledig geïntegreerd in de product- en projectcyclus.', eerste_stap: 'Start een jaarlijkse strategierevisie op basis van ENSIA-uitkomsten en postmortem-lessen, en gebruik de uitkomsten als input voor de kwartaalplanning van alle teams.' },
+            },
+          },
+
+          'concern': {
+            intro: 'In een concernorganisatie werkt de strategie op twee niveaus: een concern-kader van vijf jaar dat de concern-CISO vaststelt, en een dienst-routekaart van twee tot drie jaar die elke dienst zelf invult. Concernbrede IB-stuurgroep met dienst-CISO\'s en kwartaalrapportage zorgen voor samenhang. Risico-consolidatie op concern-niveau bepaalt welke diensten het meest kwetsbaar zijn en dus strategisch voorrang krijgen.',
+            wel: [
+              'Concern-kader (5 jaar) vastgesteld door concern-directie; dienst-routekaart (2-3 jaar) per dienst',
+              'Concern-CISO stelt baseline vast; diensten vullen maatregel-specifiek in',
+              'Concernbrede IB-stuurgroep met dienst-CISO\'s; kwartaalrapportage als ritme',
+              'Benchmarking tussen diensten als strategisch verbetermechanisme',
+              'Risico-consolidatie op concern-niveau: welke diensten zijn meest kwetsbaar?',
+              'ENSIA op twee niveaus: concernbreed en per dienst als toetsingsinstrument',
+            ],
+            niet: [
+              'Één uniforme strategie over alle diensten zonder lokale uitwerkingsruimte',
+              'Concern-CISO die de strategie van elke dienst zelf bepaalt en uitvoert',
+              'Benchmarking gebruiken als afrekenmechanisme in plaats van strategisch leermiddel',
+              'Risico-consolidatie op concern-niveau overslaan — dan mist de concern-directie het totaalbeeld',
+            ],
+            tip: 'Gebruik de jaarlijkse risico-consolidatie als strategisch prioriteringsinstrument: welke diensten zijn het meest kwetsbaar en waar liggen de concernbrede blinde vlekken? Dat geeft de concern-stuurgroep een objectieve basis om middelen en aandacht te verdelen over de diensten, los van politieke druk.',
+            domeinen: [
+              { naam: 'IAM & Autorisatiebeheer', ref: '5.15–5.18',    aanpak: 'Concern-baseline: concernbrede rollenmatrix en minimumstandaard. Dienst-routekaart: lokale invulling en access review per dienst. Strategisch doel: alle diensten compliant vóór jaar 3.' },
+              { naam: 'Risicomanagement',         ref: '5.08',          aanpak: 'Concern-kader: jaarlijkse risico-consolidatie door concern-CISO. Dienst-routekaart: eigen risicoanalyse per dienst. Stuurgroep bespreekt consolidatie per kwartaal.' },
+              { naam: 'BCM & Continuïteit',       ref: '5.30',          aanpak: 'Concern BCP als strategische baseline. Dienst-routekaart: uitvoeringsvariant per dienst. Strategisch doel: alle diensten aantoonbaar geoefend vóór ENSIA jaar 2.' },
+              { naam: 'Bewustzijn & training',    ref: '5.04 / 6.03',   aanpak: 'Concernbrede e-learning als strategische minimumstandaard. Dienst-routekaart: aanvulling op vakspecifieke risico\'s. Maatstaf: deelnamegraad per dienst in kwartaalrapportage.' },
+              { naam: 'Incidentbeheer',           ref: '5.24–5.27',     aanpak: 'Concern-escalatiestructuur als strategisch kader. Dienst-routekaart: first response per dienst. Concern-CISO rapporteert geconsolideerde incidenttrends aan stuurgroep.' },
+              { naam: 'Leveranciersbeheer',       ref: '5.19–5.22',     aanpak: 'Strategisch: centrale due diligence voor concernbrede leveranciers. Dienst-routekaart: lokale toets voor dienst-specifieke leveranciers. Eigenaar: centrale inkoop en dienst-CISO samen.' },
+              { naam: 'ISMS inrichting',          ref: '5.01 / 5.02',   aanpak: 'Concern-ISMS als strategisch overkoepelend kader; dienst-bijlagen als eigenstandige verantwoording. Management review op twee niveaus. Jaar 3: externe validatie concern-breed.' },
+            ],
+            bestuurscultuur: {
+              gemeenschap: { argument: 'Een gemeenschapscultuur in een concern werkt op collegiale verbinding tussen diensten — de strategie werkt als gedeeld concernproject, niet als opdracht van boven. Positioneer de IB-stuurgroep als leernetwerk van alle dienst-CISO\'s: zij bepalen samen de strategische prioriteiten en leren van elkaars aanpak. Gebruik de benchmark tussen diensten als kennisdelingsplatform: welke dienst heeft een goed voorbeeld dat anderen kunnen overnemen? Dat heeft meer overtuigingskracht dan een centraal opgelegd kader. Bespreek de concern-strategie in een gezamenlijk overleg van alle dienst-CISO\'s vóór de formele vaststelling.', eerste_stap: 'Organiseer een gezamenlijk strategieoverleg van alle dienst-CISO\'s om de concernbrede IB-prioriteiten voor de komende drie jaar gezamenlijk te bepalen.' },
+              vecht:       { argument: 'In een vechtcultuur kunnen interdienst-conflicten de concern-strategie snel tot politiek strijdpunt maken als diensten het als opgelegde bemoeienis ervaren. Bouw via informele bilaterale afstemming met elk diensthoofd een coalitie vóór de formele vaststelling van het concern-kader. Anker de strategie in objectieve normen: ENSIA, IBD-routekaart en risico-consolidatie zijn externe ijkpunten die boven de interne politiek uitstijgen. Presenteer de benchmark als leerinstrument, niet als ranglijst. Bouw de concern-stuurgroep op als samenwerkingsverband, niet als controlemechanisme van de concern-CISO.', eerste_stap: 'Voer bilaterale gesprekken met elk diensthoofd om het concern-kader voor te leggen en bezwaren vroegtijdig te signaleren vóór de formele vaststelling.' },
+              debat:       { argument: 'Een debatcultuur spreekt de taal van formele mandaten, eigenaarsbeschrijvingen en aantoonbare naleving — precies wat een concern-IB-kader vereist. Een overkoepelend driejarenplan met formele eigenaarsbeschrijving per dienst maakt concernbrede aantoonbaarheid mogelijk richting rekenkamer, provincie en AP. Breng het concern-kader als formele notitie in via de concern-directie met expliciete eigenaarsbeschrijving per dienst. De kwartaalrapportage van de stuurgroep is het formele monitoring-instrument. Informeel bespreken zonder vastgesteld besluit is onvoldoende — de debatcultuur verwacht altijd een formele lijn.', eerste_stap: 'Stel het concern-IB-kader formeel vast via de concern-directie en laat elk diensthoofd een uitvoeringsplan opstellen binnen dat kader.' },
+              regent:      { argument: 'In een regentencultuur bepalen de meest gezaghebbende diensthoofden en de concern-directeur informeel de koers — de formele vergadering bekrachtigt wat informeel al is uitgelijnd. Een sterk concern-IB-kader versterkt de bestuurlijke reputatie van het concern als geheel richting toezichthouders en ketenpartners. Bespreek het concept-kader eerst discreet met de concern-directeur en de twee of drie meest gezaghebbende diensthoofden vóór de formele stuurgroepvergadering. Positioneer de strategie als bewijs van professionele kwaliteit: "ons concern bewaakt zijn eigen standaard." Formaliseer pas nadat de informele lijn staat.', eerste_stap: 'Bespreek het concept-concern-kader discreet met de concern-directeur en de meest gezaghebbende diensthoofden vóór de formele stuurgroepvergadering.' },
+            },
+            volwassenheid: {
+              1: { toelichting: 'Er is geen concern-strategie: elke dienst doet het anders of nauwelijks, er is geen overkoepelend kader en de concern-directie heeft geen beeld van de totale IB-kwetsbaarheid.', eerste_stap: 'Maak een inventarisatie van de IB-staat per dienst en gebruik dit als basis voor de eerste risico-consolidatie op concern-niveau.' },
+              2: { toelichting: 'Er is een concern-CISO maar de verbinding met de diensten is zwak: de strategie bestaat op papier maar is niet verankerd in de diensten en eigenaarschap per dienst ontbreekt.', eerste_stap: 'Benoem per dienst een IB-contactpersoon en richt de concernbrede IB-stuurgroep in als maandelijks overleg.' },
+              3: { toelichting: 'Concern-kader en dienst-routekaarten zijn verbonden; de volgende stap is een gestructureerde benchmark en gestandaardiseerde kwartaalrapportage.', eerste_stap: 'Introduceer een kwartaalrapportage per dienst aan de stuurgroep en start de eerste benchmark tussen diensten op basis van ENSIA-uitkomsten.' },
+              4: { toelichting: 'De strategie op twee niveaus werkt en leert; de concern-directie stuurt actief op de risico-consolidatie en de benchmark tussen diensten levert structurele verbeteringen op.', eerste_stap: 'Start een peer-review programma waarbij diensten elkaars strategische aanpak beoordelen en best practices uitwisselen via de stuurgroep.' },
+            },
+          },
+
+        }, // end strategie
 
         toetsing: {
 
