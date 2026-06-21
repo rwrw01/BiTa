@@ -470,7 +470,8 @@ const CONTENT = {
   // ── Wizard option metadata ─────────────────────────────────────
   meta: {
     modules: [
-      { key: 'nen7510', label: 'BIO 2 — Informatiebeveiliging voor gemeenten', sub: 'Implementatie van BIO 2, de verplichte norm voor Nederlandse overheden' },
+      { key: 'nen7510',       label: 'BIO 2 — Informatiebeveiliging voor gemeenten', sub: 'Implementatie van BIO 2, de verplichte norm voor Nederlandse overheden' },
+      { key: 'it-governance', label: 'IT Governance — 9-vlaksmodel',                 sub: 'Besturing van informatiemanagement en IT — voor CIO en strategisch informatiemanager' },
     ],
     doelen: [
       { key: 'visie',         label: 'Visie',         sub: 'Richting bepalen — wat willen we zijn?' },
@@ -1325,6 +1326,214 @@ const CONTENT = {
         }, // end implementatie
       }, // end doelen
     }, // end nen7510
+
+    'it-governance': {
+      label: 'IT Governance — 9-vlaksmodel',
+      doelen: {
+
+        // ── VISIE ───────────────────────────────────────────────────
+        visie: {
+          'plat':           null,
+          'vakinhoudelijk': null,
+          'teamgedreven':   null,
+          'concern':        null,
+
+          'regelgestuurd': {
+            intro: 'In een regelgestuurde gemeente werkt een IT-governancevisie alleen als zij onderdeel wordt van de bestaande besturingscyclus. De organisatie denkt in PDCA-cycli, stuurgroepen en jaarplannen. De visie positioneert informatiemanagement als sturende functie naast ICT — niet als synoniem voor ICT-beheer. Doelgroep van deze module: CIO, strategisch informatiemanager of gemeentesecretaris die de bestuurlijke rol van informatiemanagement wil verankeren.',
+            wel: [
+              'Formele vaststelling als MT-besluit, inclusief eigenaarsbeschrijving per besturingsrelatie',
+              'Koppeling aan coalitieakkoord en Digitale Agenda van de gemeente',
+              'Informatiemanagement als aparte sturende functie — expliciet onderscheiden van ICT-beheer',
+              'Besturingsrelaties A, B en C benoemd: wie vertaalt strategie naar beleid, beleid naar IT?',
+              'Jaarlijkse herijking als vast onderdeel van de directiebeoordeling',
+              'Gebruik van GEMMA-referentiearchitectuur als gemeentelijk inrichtingskader',
+            ],
+            niet: [
+              'IT-governance als synoniem voor ICT-beheer of projectportfoliobeheer',
+              'Visie die de informatiemanagementfunctie niet benoemt of niet van ICT onderscheidt',
+              'Besturingsrelaties impliciet laten: wie stuurt wie op basis van welke informatie?',
+              'Stuurgroep IT als enige besturingsvorm — een vergadering is geen governance',
+              'Koppeling aan de bredere organisatiekoers ontbreekt',
+            ],
+            tip: 'Formuleer de visie als antwoord op drie vragen: wie vertaalt onze strategie naar informatiebeleid? Wie bewaakt dat onze IT-inrichting aansluit op onze processen? En wie zorgt dat onze informatievoorziening de juiste stuurinformatie levert aan het bestuur? Die drie vragen wijzen de drie besturingsrelaties aan die centraal staan in effectieve IT-governance.',
+            domeinen_kop: 'Besturingsrelaties — 9-vlaksmodel (Maes)',
+            domeinen_th: ['Besturingsrelatie', 'Aanduiding', 'Besturingsvraag voor dit organisatietype'],
+            domeinen: [
+              { naam: 'Strategie → Informatiebeleid',     ref: 'Relatie A', aanpak: 'De gemeentesecretaris of directeur is eigenaar van de vertaling van organisatiestrategie naar informatiebeleid. De visie benoemt dit mandaat expliciet: wie heeft het, en hoe is de vertaling georganiseerd?' },
+              { naam: 'Informatiebeleid → IT-strategie',  ref: 'Relatie B', aanpak: 'De CIO of senior informatiemanager vertaalt informatiebeleid naar technologiekeuzes. De visie belegt dit als aparte bestuurlijke rol — geen onderdeel van het lijnmanagement of ICT-beheer.' },
+              { naam: 'Informatiebeleid → Informatiemanagement', ref: 'Relatie C', aanpak: 'Tactisch informatiemanagement is de verbinding tussen beleid en uitvoering. De visie maakt expliciet dat dit een sturende, niet een uitvoerende functie is.' },
+              { naam: 'Informatiemanagement → IT-inrichting',    ref: 'Relatie D', aanpak: 'De inrichting van IT-architectuur volgt uit informatiemanagement, niet uit technologische beschikbaarheid. De visie verankert dit inhoudelijk eigenaarschap.' },
+              { naam: 'Informatiemanagement → Informatievoorziening', ref: 'Relatie E', aanpak: 'Operationele informatievoorziening is vraaggestuurd: de bedrijfsprocessen bepalen wat nodig is, informatiemanagement vertaalt dat naar systemen en data.' },
+              { naam: 'Bedrijfsprocessen → Informatiebehoefte',  ref: 'Relatie F', aanpak: 'De processen formuleren hun informatiebehoefte; de visie belegt wie die behoefte ophaalt en vertaalt naar opdrachten voor IT. Eigenaar: afdelingshoofden, coördinator: informatiemanager.' },
+            ],
+            bestuurscultuur: {
+              gemeenschap: { argument: 'In een regelgestuurde organisatie met gemeenschapscultuur werkt de combinatie van formele besluitvorming en gezamenlijk geformuleerde inhoud het best. Bespreek de concept-visie informeel met MT-leden vóór de formele vaststelling, zodat iedereen de kernkeuzes kan herkennen als eigen ambitie. Positioneer informatiemanagement als gedeelde verantwoordelijkheid: niet van ICT, niet van de gemeentesecretaris alleen, maar van de hele directie. Vermijd een visie die door een externe adviseur wordt ingebracht zonder draagvlak bij de MT-leden — dat roept weerstand op in een omgeving die op consensus is gebouwd.', eerste_stap: 'Organiseer een MT-sessie van twee uur om samen antwoord te geven op de drie besturingsvragen, vóór de formele notitie wordt geschreven.' },
+              vecht:       { argument: 'In een vechtcultuur is een visie die eigenaarschap belegt bij specifieke personen snel een strijdpunt. Formuleer de besturingsrelaties functioneel: "de organisatie belegt relatie C bij de functie informatiemanager" — niet bij een naam. Bouw informeel draagvlak bij twee of drie invloedrijke MT-leden vóór de formele bespreking. Verbind de visie aan wat iedereen onderschrijft: betere dienstverlening, minder technisch falen, duidelijker verantwoordelijkheden. Vermijd elke framing die één persoon of afdeling als "winner" of "verliezer" van de governance-visie positioneert.', eerste_stap: 'Voer bilaterale gesprekken met twee of drie MT-leden om de functionele kernkeuzes informeel te toetsen vóór de formele notitie.' },
+              debat:       { argument: 'In een debatcultuur heeft een IT-governancevisie pas gezag als zij formeel is vastgesteld als MT-besluit met expliciete bestuursambities. Koppel de visie aan het coalitieakkoord en aan de rechtmatigheidsverklaring — dat geeft haar bestuurlijk gewicht. Beschrijf per besturingsrelatie de eigenaar en de rapportagefrequentie. Breng de visie in als bestuurlijke notitie met een heldere vraag om instemming. Een informeel uitgelijnde visie die nooit formeel is vastgesteld heeft in deze cultuur geen bestuurlijk gezag.', eerste_stap: 'Stel een formele bestuurlijke notitie op met de IT-governancevisie, eigenaarsbeschrijving per besturingsrelatie, en koppeling aan het coalitieakkoord.' },
+              regent:      { argument: 'In een regentencultuur is de gemeentesecretaris de sleutelfiguur voor de IT-governancevisie — formele bekrachtiging volgt zodra de informele lijn staat. Bespreek de concept-visie eerst discreet met de gemeentesecretaris en vraag diens persoonlijk sponsorschap. Positioneer IT-governance als bewijs van professionele kwaliteit richting toezichthouders en ketenpartners, niet als complianceverplichting. Zodra de gemeentesecretaris het draagt, loopt de formele vaststelling vanzelf. Vermijd de stap om de visie in de volle MT-vergadering te introduceren zonder voorafgaande afstemming.', eerste_stap: 'Bespreek de concept-visie discreet met de gemeentesecretaris en vraag een expliciet mandaat om de besturingsrelaties namens het directieteam te formaliseren.' },
+            },
+            volwassenheid: {
+              1: { toelichting: 'IT wordt intern gezien als technisch beheer; informatiemanagement bestaat niet als aparte functie en er is geen IT-governancevisie vastgesteld.',                                                               eerste_stap: 'Stel de gemeentesecretaris drie vragen: wie bepaalt welke informatie wij nodig hebben? Wie toetst of onze IT aansluit op onze processen? En wie rapporteert hierover aan het bestuur? Gebruik de antwoorden als basis voor een eerste concept-visie.' },
+              2: { toelichting: 'Informatiebeleid bestaat als document, maar de besturingsrelaties zijn niet formeel belegd en de koppeling aan de strategische cyclus ontbreekt.',                                                             eerste_stap: 'Gebruik het bestaande informatiebeleid als vertrekpunt: welke besturingsrelaties worden impliciet gevolgd? Maak ze expliciet en koppel ze aan eigenaren in de organisatie.' },
+              3: { toelichting: 'De visie is vastgesteld, besturingsrelaties zijn formeel belegd en informatiemanagement is erkend als sturende functie naast ICT.',                                                                            eerste_stap: 'Plan de eerste jaarlijkse herijking als onderdeel van de directiebeoordeling en gebruik de GEMMA-richtlijnen als externe toetssteen.' },
+              4: { toelichting: 'De visie wordt jaarlijks herijkt, besturingsrelaties worden gemeten op effectiviteit, en IT-governance is een integraal onderdeel van de bestuurlijke cyclus.',                                              eerste_stap: 'Introduceer een jaarlijkse governancereview met externe benchmarking — stel op basis van collegagemeenten vast of de besturingsrelaties actueel en effectief zijn.' },
+            },
+          },
+        }, // end visie
+
+        // ── STRATEGIE ───────────────────────────────────────────────
+        strategie: {
+          'plat':           null,
+          'vakinhoudelijk': null,
+          'teamgedreven':   null,
+          'concern':        null,
+
+          'regelgestuurd': {
+            intro: 'De IT-governancestrategie in een regelgestuurde gemeente vertaalt de visie naar een PDCA-cyclus voor de besturingsrelaties. De organisatie heeft sterke papieren: formele beslislijnen, een managementcyclus en een cultuur van rapportage. Het risico is dat governance-activiteiten papieren tijgers worden — aanwezig op papier, maar niet levend in de praktijk. De strategie richt zich op lean besturing via bestaande cyclische mechanismen.',
+            wel: [
+              'IT-governancestrategie vertaald in concrete besturingsmechanismen per relatie (A-F)',
+              'Eigenaar per besturingsrelatie met rapportagefrequentie en escalatiepad',
+              'Informatiemanager met formeel mandaat voor relaties C, D en E',
+              'Bestuurskalender: wanneer wordt welke besturingsrelatie gereviewd?',
+              'Aansluiting bij GEMMA-referentiearchitectuur als gemeentelijk inrichtingskader',
+              'Koppeling aan de P&C-cyclus via een jaarlijkse governance-review',
+            ],
+            niet: [
+              'Governance reduceren tot een stuurgroepstructuur of vergaderschema',
+              'Informatiemanager als ICT-projectleider positioneren zonder sturend mandaat',
+              'Besturingsrelaties beschrijven zonder eigenaren en escalatiepaden',
+              'GEMMA implementeren als compliance-checklist in plaats van inhoudelijk kader',
+              'Strategie die niet realistisch is voor de beschikbare capaciteit',
+            ],
+            tip: 'Maak voor elke besturingsrelatie (A-F) een beslissingskaart: wie beslist, op basis van welke informatie, hoe vaak, en wie escaleert als het misgaat. Dat is de governance-strategie in de meest bruikbare vorm voor een regelgestuurde organisatie die al gewend is aan format-gedreven rapportage.',
+            domeinen_kop: 'Besturingsrelaties — 9-vlaksmodel (Maes)',
+            domeinen_th: ['Besturingsrelatie', 'Aanduiding', 'Strategie voor dit organisatietype'],
+            domeinen: [
+              { naam: 'Strategie → Informatiebeleid',     ref: 'Relatie A', aanpak: 'Gemeentesecretaris formuleert jaarlijks de informatiebeleidsopdracht op basis van het coalitieakkoord. Format: één pagina prioriteiten. Frequentie: jaarlijks, gekoppeld aan de beleidscyclus.' },
+              { naam: 'Informatiebeleid → IT-strategie',  ref: 'Relatie B', aanpak: 'CIO/informatiemanager presenteert jaarlijks een IT-strategisch overzicht aan het directieteam, als onderdeel van de kadernota-voorbereiding. Input: informatiebeleidsopdracht + marktontwikkelingen.' },
+              { naam: 'Informatiebeleid → Informatiemanagement', ref: 'Relatie C', aanpak: 'Kwartaaloverleg informatiemanager ↔ directieteam: voortgang informatiebeleid, afwijkingen, bijsturing. Rapportageformat: stoplichtoverzicht per beleidsdoelstelling.' },
+              { naam: 'Informatiemanagement → IT-inrichting',    ref: 'Relatie D', aanpak: 'Halfjaarlijkse architectuurreview: past de IT-inrichting nog bij de bedrijfsinformatiebehoeften? Resultaat: aanpassingsagenda voor het ICT-team. Eigenaar: informatiemanager.' },
+              { naam: 'Informatiemanagement → Informatievoorziening', ref: 'Relatie E', aanpak: 'Service level structure per informatiesysteem, beheerd door de informatiemanager, gereviewed door de afdelingshoofden. Kwartaalrapportage als besturingsmoment.' },
+              { naam: 'Bedrijfsprocessen → Informatiebehoefte',  ref: 'Relatie F', aanpak: 'Jaarlijkse informatiebehoefte-inventarisatie per afdeling als input voor de informatieplanningscyclus. Eigenaar per afdeling, coördinator: informatiemanager. Uitvoering: najaar, gekoppeld aan begrotingscyclus.' },
+            ],
+            bestuurscultuur: {
+              gemeenschap: { argument: 'In een regelgestuurde organisatie met gemeenschapscultuur is het strategieproces een gelegenheid om gezamenlijk eigenaarschap te creëren. Bespreek de beslissingskaarten per besturingsrelatie in het MT en laat elk lid de eigenaarskeuze meemaken. Dat maakt de strategie van iedereen, niet van de informatiemanager alleen. Vermijd een strategie die door één persoon of externe adviseur is uitgeschreven zonder betrokkenheid van de MT-leden — in een gemeenschapscultuur is dat de kortste weg naar een document dat niemand gebruikt.', eerste_stap: 'Organiseer een MT-werksessie om per besturingsrelatie gezamenlijk de eigenaar en het rapportagemoment vast te stellen.' },
+              vecht:       { argument: 'In een vechtcultuur wordt een eigenaarskeuze per besturingsrelatie snel een politiek onderwerp als de vergadering er verrast door is. Voer bilaterale gesprekken met de betrokken MT-leden vóór de formele bespreking en zorg dat de eigenaarsbeschrijvingen functioneel zijn geformuleerd. Gebruik de formele P&C-structuur als neutrale inbedding: de strategie past in de bestaande cyclus en vraagt geen nieuwe machtsposities. Begin met de minst gevoelige besturingsrelatie (doorgaans F: informatiebehoefte) om vertrouwen op te bouwen.', eerste_stap: 'Voer bilaterale gesprekken met MT-leden die eigenaar worden van een besturingsrelatie en toets de keuze informeel vóór de MT-vergadering.' },
+              debat:       { argument: 'In een debatcultuur heeft een governance-strategie pas gezag als zij formeel is vastgesteld als MT-besluit met expliciete eigenaarsbeschrijvingen, rapportagefrequenties en escalatiepaden. Leg de strategie vast in een bestuurlijk document met per relatie: eigenaar, rapportagefrequentie, format, en escalatiepad. Koppel de bestuurskalender aan de bestaande P&C-instrumenten zodat governance geen extra cyclus wordt, maar onderdeel van wat al bestaat.', eerste_stap: 'Stel de IT-governance-strategie vast als formeel MT-besluit met eigenaarsbeschrijvingen en rapportagestructuur per besturingsrelatie.' },
+              regent:      { argument: 'In een regentencultuur volgt de formele MT-besluitvorming op de informele consensus bij de sleutelfiguren. Bespreek de beslissingskaarten per relatie eerst discreet met de directeur en de twee of drie meest invloedrijke MT-leden. Positioneer de IT-governancestrategie als instrument van bestuurlijke autonomie: duidelijke besturingsrelaties geven het management meer grip, niet minder. Formaliseer pas nadat de informele lijn staat — dat versnelt de formele bekrachtiging en vermindert de kans op verrassingen in de vergadering.', eerste_stap: 'Bespreek de concept-strategie discreet met de directeur en stel de eigenaarskeuzes in informeel overleg vast vóór de MT-vergadering.' },
+            },
+            volwassenheid: {
+              1: { toelichting: 'Er is geen strategie voor IT-governance; besturingsrelaties zijn niet belegd en informatiemanagement is geen erkende functie.',                                                                                 eerste_stap: 'Maak een kaart van de huidige situatie: wie neemt welke beslissingen over informatiebeleid en IT, formeel of informeel? Gebruik dit als baseline voor de strategie.' },
+              2: { toelichting: 'Er zijn besturingsafspraken maar ze zijn niet formeel vastgelegd of consequent gevolgd; de informatiemanager heeft geen duidelijk mandaat.',                                                                   eerste_stap: 'Formaliseer de bestaande informele besturingsafspraken als eigenaarsbeschrijvingen per besturingsrelatie en leg dit vast als MT-besluit.' },
+              3: { toelichting: 'Besturingsrelaties zijn formeel belegd en worden gevolgd; de bestuurskalender is operationeel als onderdeel van de P&C-cyclus.',                                                                             eerste_stap: 'Introduceer een jaarlijkse effectiviteitsmeting van de besturingsrelaties als onderdeel van de directiebeoordeling.' },
+              4: { toelichting: 'De governance-strategie wordt jaarlijks herzien op basis van gemeten effectiviteit en veranderende organisatiedoelen; benchmarking met collegagemeenten is structureel.',                                    eerste_stap: 'Voer externe benchmarking in met collegagemeenten en gebruik COBIT Lite of GEMMA als referentiekader voor de jaarlijkse herziening.' },
+            },
+          },
+        }, // end strategie
+
+        // ── IMPLEMENTATIE ───────────────────────────────────────────
+        implementatie: {
+          'plat':           null,
+          'vakinhoudelijk': null,
+          'teamgedreven':   null,
+          'concern':        null,
+
+          'regelgestuurd': {
+            intro: 'De implementatie van IT-governance in een regelgestuurde gemeente is een inrichtingsvraagstuk: welke processen, overlegvormen en functies moeten worden ingericht om de besturingsrelaties operationeel te maken? De organisatie heeft de neiging tot overgeorganiseerde structuren — veel stuurgroepen, weinig eigenaarschap. Het doel is een lean governancestructuur die werkt via bestaande cyclische mechanismen, niet via nieuwe bureaucratische lagen.',
+            wel: [
+              'Informatiemanager benoemd met formeel mandaat voor besturingsrelaties C, D en E',
+              'Jaarlijkse informatiebehoefte-inventarisatie per afdeling (relatie F) als onderdeel van de P&C-cyclus',
+              'Bestuurskalender met vaste overlegmomenten per besturingsrelatie',
+              'Informatieplan als jaarlijks product dat de koppeling A → B → C aantoonbaar maakt',
+              'GEMMA-referentiearchitectuur als inrichtingskader voor systemen en processen',
+              'Lean governancestructuur: maximaal gebruik van bestaande cycli, geen nieuwe stuurgroepen',
+            ],
+            niet: [
+              'Extra stuurgroepen inrichten als governance-mechanisme',
+              'Informatiemanager als ICT-projectleider positioneren zonder sturend mandaat',
+              'Governanceprocessen inrichten zonder link aan de P&C-cyclus',
+              'GEMMA implementeren als compliance-checklist in plaats van inrichtingsprincipe',
+              'Besturingsrelaties inrichten als nieuwe bureaucratische laag bovenop bestaande beslislijnen',
+            ],
+            tip: 'Gebruik de bestaande P&C-cyclus als ruggengraat voor de IT-governance-implementatie. Voeg per besturingsrelatie één agendapunt toe aan een bestaand overleg — dat is minder belastend dan een nieuwe vergaderstructuur en sluit aan bij hoe de organisatie al werkt.',
+            domeinen_kop: 'Besturingsrelaties — 9-vlaksmodel (Maes)',
+            domeinen_th: ['Besturingsrelatie', 'Aanduiding', 'Implementatiestap voor dit organisatietype'],
+            domeinen: [
+              { naam: 'Strategie → Informatiebeleid',     ref: 'Relatie A', aanpak: 'Jaarlijkse informatiebeleidsopdracht door de gemeentesecretaris als vast agendapunt in de beleidscyclus. Format: één pagina prioriteiten op basis van het coalitieakkoord. Deadline: uiterlijk april, als input voor de kadernota.' },
+              { naam: 'Informatiebeleid → IT-strategie',  ref: 'Relatie B', aanpak: 'CIO/informatiemanager presenteert jaarlijks een IT-strategisch overzicht aan het directieteam, gekoppeld aan de kadernota-voorbereiding. Input: informatiebeleidsopdracht + marktontwikkelingen. Output: meerjaren IT-agenda.' },
+              { naam: 'Informatiebeleid → Informatiemanagement', ref: 'Relatie C', aanpak: 'Kwartaaloverleg informatiemanager ↔ directieteam: voortgang informatiebeleid, afwijkingen, bijsturing. Format: stoplichtoverzicht per beleidsdoelstelling. Duur: maximaal één uur.' },
+              { naam: 'Informatiemanagement → IT-inrichting',    ref: 'Relatie D', aanpak: 'Halfjaarlijkse architectuurreview: past de IT-inrichting nog bij de bedrijfsinformatiebehoeften? Resultaat: aanpassingsagenda voor het ICT-team. Eigenaar: informatiemanager, deelnemers: ICT-manager en twee afdelingshoofden.' },
+              { naam: 'Informatiemanagement → Informatievoorziening', ref: 'Relatie E', aanpak: 'Service level afspraken per informatiesysteem, beheerd door de informatiemanager en gereviewed door de afdelingshoofden. Kwartaalrapportage als besturingsmoment: werkt het systeem naar behoren?' },
+              { naam: 'Bedrijfsprocessen → Informatiebehoefte',  ref: 'Relatie F', aanpak: 'Jaarlijkse informatiebehoefte-inventarisatie in het najaar (september–oktober) als input voor de begrotingscyclus. Eigenaar per afdeling: het afdelingshoofd. Coördinator: informatiemanager. Resultaat: informatieplan voor het komende jaar.' },
+            ],
+            bestuurscultuur: {
+              gemeenschap: { argument: 'In een regelgestuurde organisatie met gemeenschapscultuur werkt een implementatie beter als de betrokken MT-leden zelf de overlegmomenten en formats hebben meegekozen. Organiseer een werksessie om de bestuurskalender gezamenlijk te vullen en de formats voor de kwartaalrapportage samen vast te stellen. Dat creëert eigenaarschap en maakt de governancestructuur herkenbaar als iets van de hele organisatie, niet van de informatiemanager alleen. Vermijd een kant-en-klare implementatiestructuur die van boven wordt opgelegd — zelfs als die inhoudelijk correct is.', eerste_stap: 'Organiseer een werksessie met de informatiemanager en de betrokken afdelingshoofden om de bestuurskalender en rapportageformats samen vast te stellen.' },
+              vecht:       { argument: 'In een vechtcultuur wordt een nieuwe governancestructuur snel als machtsmiddel gezien. Gebruik uitsluitend bestaande overlegvormen als besturingsmoment — geen nieuwe stuurgroepen. Formuleer de implementatiestappen als procesoptimalisatie binnen de bestaande cyclus. Bouw stap voor stap: begin met de informatiemanager en één besturingsrelatie, bewijs dat het werkt, breid dan uit. Communiceer de voortgang via bestaande kanalen, niet via nieuwe notities en rapportageformats die als extra bureaucratie worden ervaren.', eerste_stap: 'Voeg de IT-governance-rapportage als vast agendapunt toe aan het bestaande MT-overleg, zonder nieuwe vergaderstructuur.' },
+              debat:       { argument: 'In een debatcultuur heeft de implementatie pas gezag als zij formeel is vastgesteld als MT-besluit. Stel een implementatieplan op als MT-besluit: eigenaarsbeschrijvingen per besturingsrelatie, rapportageformats, bestuurskalender met vaste data en een first-year review. Koppel alles aan bestaande P&C-instrumenten zodat de governancestructuur geen extra cyclus wordt, maar onderdeel van het bestaande instrumentarium. Documenteer alle beslissingen — in een debatcultuur telt wat schriftelijk is vastgelegd.', eerste_stap: 'Stel een formeel implementatieplan op als MT-besluit, inclusief bestuurskalender en eigenaarsbeschrijvingen per besturingsrelatie.' },
+              regent:      { argument: 'In een regentencultuur is de implementatie van de governancestructuur pas stabiel als de sleutelfiguren het informeel dragen. Start met de informatiemanager en de gemeentesecretaris en bouw de bestuurskalender stapsgewijs op, beginnend met de meest urgente besturingsrelatie. Formaliseer pas nadat de structuur informeel bewezen heeft te werken. Vermijd de omgekeerde weg: formeel vaststellen wat informeel nog niet gedragen wordt leidt tot een besluit dat niemand actief uitvoert.', eerste_stap: 'Bespreek de implementatiestappen discreet met de gemeentesecretaris en ga akkoord over de eerste besturingsrelatie die formeel wordt ingericht.' },
+            },
+            volwassenheid: {
+              1: { toelichting: 'Er zijn geen governanceprocessen ingericht; informatiebeslissingen worden ad hoc genomen en informatiemanagement is niet als functie belegd.',                                                                   eerste_stap: 'Begin met het benoemen van een informatiemanager (of het aanwijzen van een bestaande medewerker in die rol) en laat die persoon de eerste informatiebehoefte-inventarisatie uitvoeren als nulmeting.' },
+              2: { toelichting: 'Een informatiemanager is benoemd maar heeft geen formeel mandaat of vaste overlegmomenten; de governanceprocessen zijn persoonsafhankelijk.',                                                                  eerste_stap: 'Formaliseer het mandaat van de informatiemanager in een functieomschrijving en voeg het eerste governancemoment toe aan de bestaande P&C-cyclus.' },
+              3: { toelichting: 'Besturingsprocessen zijn ingericht en worden gevolgd; de informatiebehoefte-inventarisatie is operationeel als jaarlijks product.',                                                                          eerste_stap: 'Introduceer de halfjaarlijkse architectuurreview als tweede governancemoment en verbind dit aan de kadernota-voorbereiding.' },
+              4: { toelichting: 'Governance-implementatie is volledig operationeel en leert van eigen resultaten; besturingsprocessen worden jaarlijks verbeterd op basis van effectiviteitsmetingen.',                                       eerste_stap: 'Voer een jaarlijkse governance-volwassenheidsaudit in op basis van het GEMMA-kader en gebruik de uitkomsten als input voor het volgende informatieplan.' },
+            },
+          },
+        }, // end implementatie
+
+        // ── TOETSING ───────────────────────────────────────────────
+        toetsing: {
+          'plat':           null,
+          'vakinhoudelijk': null,
+          'teamgedreven':   null,
+          'concern':        null,
+
+          'regelgestuurd': {
+            intro: 'Toetsing van IT-governance in een regelgestuurde gemeente past goed bij de P&C-cultuur: de organisatie is gewend aan audits, zelfevaluaties en kwartaalrapportages. Het risico is dat toetsing een compliance-exercitie wordt — audits die controleren of de papieren structuur bestaat, niet of de besturingsrelaties echt werken. Effectieve toetsing stelt per relatie de vraag: werkt dit in de praktijk?',
+            wel: [
+              'Jaarlijkse governance-review als onderdeel van de directiebeoordeling',
+              'Toets per besturingsrelatie: werkt de relatie in de praktijk, niet alleen op papier?',
+              'Combinatie van interne zelfevaluatie en externe audit (rekenkamer, externe adviseur)',
+              'Stoplichtoverzicht per besturingsrelatie als vaste managementinformatie',
+              'Bevindingen leiden aantoonbaar tot bijsturing — niet tot een nieuw rapport dat verdwijnt',
+              'GEMMA-richtlijnen als externe toetssteen naast interne criteria',
+            ],
+            niet: [
+              'Toetsing die alleen documentcontrole is: papier aanwezig = voldoende',
+              'Auditrapport dat leidt tot een verbeterplan dat nooit wordt uitgevoerd',
+              'Jaarlijkse compliance-check als vervanging voor een structurele governancecyclus',
+              'Toetsing die de informatiemanager overslaat als primaire informatiebron',
+              'Externe audit als enige toetsvorm — interne zelfevaluatie is minstens even belangrijk',
+            ],
+            tip: 'Stel per besturingsrelatie (A-F) één toetsvraag op: "Werkt deze relatie in de praktijk — ja of nee, en waarom niet?" Een nee-antwoord leidt direct tot een actie in de bestuurskalender. Dat is een governance-review die verder gaat dan documentcontrole.',
+            domeinen_kop: 'Toetsvragen per besturingsrelatie — 9-vlaksmodel (Maes)',
+            domeinen_th: ['Besturingsrelatie', 'Aanduiding', 'Toetsvraag voor dit organisatietype'],
+            domeinen: [
+              { naam: 'Strategie → Informatiebeleid',     ref: 'Relatie A', aanpak: 'Is er dit jaar een informatiebeleidsopdracht geformuleerd op basis van de organisatiestrategie? Is die opdracht formeel vastgesteld en aan de informatiemanager gecommuniceerd?' },
+              { naam: 'Informatiebeleid → IT-strategie',  ref: 'Relatie B', aanpak: 'Is de IT-strategie aantoonbaar afgeleid van het informatiebeleid? Zijn afwijkingen gesignaleerd en besproken in het directieteam, met aantoonbare bijsturing als resultaat?' },
+              { naam: 'Informatiebeleid → Informatiemanagement', ref: 'Relatie C', aanpak: 'Heeft de informatiemanager dit jaar kwartaalrapportages uitgebracht aan het directieteam? Zijn afwijkingen van het informatiebeleid besproken en heeft dit tot concrete bijsturing geleid?' },
+              { naam: 'Informatiemanagement → IT-inrichting',    ref: 'Relatie D', aanpak: 'Is er een architectuurreview uitgevoerd? Zijn de bevindingen teruggekoppeld naar het ICT-team en heeft dit geleid tot aantoonbare aanpassingen in de IT-inrichting?' },
+              { naam: 'Informatiemanagement → Informatievoorziening', ref: 'Relatie E', aanpak: 'Worden de service level afspraken per informatiesysteem gemonitord en gerapporteerd? Zijn afwijkingen bijgestuurd door de informatiemanager binnen de afgesproken termijnen?' },
+              { naam: 'Bedrijfsprocessen → Informatiebehoefte',  ref: 'Relatie F', aanpak: 'Is er dit jaar een informatiebehoefte-inventarisatie uitgevoerd per afdeling? Is de uitkomst gebruikt als aantoonbare input voor het informatieplan en de begrotingscyclus?' },
+            ],
+            bestuurscultuur: {
+              gemeenschap: { argument: 'In een regelgestuurde organisatie met gemeenschapscultuur is de governance-review het meest effectief als een gezamenlijk leermoment in het MT, niet als een auditrapport dat wordt aangeboden. Bespreek de zes toetsvragen per besturingsrelatie in het MT als een open gesprek over wat werkt en wat niet. Maak van de uitkomsten een gezamenlijk verbeterpuntenlijst. Dat is een toetsing die leidt tot actie en gedeeld eigenaarschap — niet tot een archiefdocument. Vermijd een aanpak waarbij de informatiemanager de review uitvoert en de uitkomsten presenteert aan een passief MT.', eerste_stap: 'Organiseer een jaarlijkse governance-review als agendapunt in het MT, aan de hand van de zes toetsvragen per besturingsrelatie.' },
+              vecht:       { argument: 'In een vechtcultuur is een interne governance-review politiek gevoelig — de uitkomsten kunnen snel worden gebruikt om eigenaarschap of verantwoordelijkheid te bevechten. Gebruik een externe adviseur of de rekenkamer als neutrale instantie. Laat de bevindingen presenteren als objectieve feiten, niet als oordeel over personen. Formuleer verbeterpunten functioneel en koppel ze aan de organisatie, niet aan individuen. Vermijd een review die impliciet of expliciet één afdeling of functie aanwijst als oorzaak van tekortkomingen.', eerste_stap: 'Betrek een externe adviseur of de rekenkamer voor de jaarlijkse governance-review om een neutraal en onbetwistbaar oordeel te verkrijgen.' },
+              debat:       { argument: 'In een debatcultuur heeft een governance-review pas gezag als zij formeel is vastgesteld als jaarlijks instrument en als de bevindingen aantoonbaar worden opgevolgd. Stel een vast format vast voor de review, koppel het aan de directiebeoordeling en documenteer de opvolging van bevindingen in het MT-besluitenlijst. Een review zonder aantoonbare opvolging wordt in een debatcultuur niet als serieus toetsingsmoment beschouwd — het wordt gezien als formaliteit. Maak de verbeterpunten SMART en leg een reviewdatum vast.', eerste_stap: 'Stel een formeel format vast voor de jaarlijkse governance-review en leg het vast als onderdeel van de directiebeoordeling, inclusief SMART-verbeterpunten.' },
+              regent:      { argument: 'In een regentencultuur is de meest effectieve governance-review een informeel gesprek met de gemeentesecretaris en de informatiemanager over de stand van zaken, gevolgd door een formele samenvatting voor het MT. Bouw een jaarlijkse informele toetsingsronde in bij de sleutelfiguren vóór de formele directiebeoordeling. Dat geeft de gemeentesecretaris de gelegenheid om ongemakkelijke bevindingen intern te bespreken vóór ze formeel worden, wat de kans op daadwerkelijke opvolging vergroot.', eerste_stap: 'Plan een jaarlijkse informele reflectie met de gemeentesecretaris en de informatiemanager over de effectiviteit van de besturingsrelaties, als voorbereiding op de formele directiebeoordeling.' },
+            },
+            volwassenheid: {
+              1: { toelichting: 'Er is geen toetsing van IT-governance; er is geen beeld van hoe de besturingsrelaties functioneren en er zijn geen criteria voor succes gedefinieerd.',                                                       eerste_stap: 'Gebruik de zes toetsvragen als zelfevaluatie: vraag de informatiemanager om per relatie te beoordelen of deze in de praktijk werkt. Dat is de nulmeting.' },
+              2: { toelichting: 'Er is een zelfevaluatie maar de uitkomsten worden niet systematisch opgevolgd; toetsing is een jaarlijkse formaliteit zonder aantoonbare bijsturing.',                                                        eerste_stap: 'Voeg aan de zelfevaluatie een actietabel toe: per bevinding een eigenaar en een deadline. Bespreek de actietabel drie maanden later in het MT.' },
+              3: { toelichting: 'Governance-review is operationeel als jaarlijks instrument; bevindingen worden systematisch opgevolgd en gerapporteerd aan het MT.',                                                                          eerste_stap: 'Voeg een externe audit toe als aanvulling op de interne zelfevaluatie — één keer per twee jaar om een objectieve blik te garanderen.' },
+              4: { toelichting: 'Toetsing is continu: besturingsrelaties worden kwartaalsgewijs gemonitord en bevindingen leiden direct tot aanpassingen in de governancestructuur.',                                                       eerste_stap: 'Voer een dashboardaanpak in: stoplichtoverzicht per besturingsrelatie, gegenereerd uit de P&C-rapportages en kwartaalrapportages van de informatiemanager.' },
+            },
+          },
+        }, // end toetsing
+
+      }, // end doelen
+    }, // end it-governance
+
   }, // end modules
 }; // end CONTENT
 
@@ -1507,9 +1716,13 @@ function renderOutput() {
 
     ${c.domeinen && c.domeinen.length ? `
     <div class="output-section">
-      <h3>Aanpak per BIO 2-domein</h3>
+      <h3>${esc(c.domeinen_kop || 'Aanpak per BIO 2-domein')}</h3>
       <table class="domains-table">
-        <thead><tr><th>Domein</th><th>Ref.</th><th>Aanpak voor dit organisatietype</th></tr></thead>
+        <thead><tr>
+          <th>${esc((c.domeinen_th && c.domeinen_th[0]) || 'Domein')}</th>
+          <th>${esc((c.domeinen_th && c.domeinen_th[1]) || 'Ref.')}</th>
+          <th>${esc((c.domeinen_th && c.domeinen_th[2]) || 'Aanpak voor dit organisatietype')}</th>
+        </tr></thead>
         <tbody>
           ${c.domeinen.map(d => `
             <tr>
