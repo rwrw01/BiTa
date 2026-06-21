@@ -488,7 +488,208 @@ const CONTENT = {
     'nen7510': {
       label: 'BIO 2 — Informatiebeveiliging voor gemeenten',
       doelen: {
-        visie:     null,
+        visie: {
+
+          'plat': {
+            intro: 'In een platte organisatie is visievorming informeel en pragmatisch. Er is geen behoefte aan een uitgebreid beleidssdocument — een heldere gezamenlijk geformuleerde kern van een half A4 is krachtiger dan een nota die niemand leest. De gemeentesecretaris is de natuurlijke eigenaar van de IB-visie.',
+            wel: [
+              'Korte, heldere visie-uitspraak van maximaal een half A4 — geen beleidsnota',
+              'Gezamenlijk geformuleerd door gemeentesecretaris en teamleiders',
+              'Verbinding aan vertrouwen van de burger en continuïteit van de dienstverlening',
+              'Ambitie: BIO 2-compliant én betrouwbare partner voor burgers en ketenpartners',
+              'Verankering via directieteam en teamleiders — geen apart visietraject',
+            ],
+            niet: [
+              'Bureaucratisch visiedocument dat buiten de werkelijkheid staat van de werkvloer',
+              'Top-down geformuleerde visie zonder betrokkenheid van teamleiders',
+              'Visie die IB positioneert als technisch thema in plaats van bestuurlijke verantwoordelijkheid',
+              'Ambities formuleren zonder koppeling aan de dagelijkse dienstverlening',
+            ],
+            tip: 'Organiseer één sessie van twee uur met de gemeentesecretaris en drie teamleiders. Beantwoord samen de vragen: wat beloven wij onze burgers, wat zijn onze drie grootste risico\'s, en wat willen wij over drie jaar anders doen? Dat levert een visie die mensen herkennen en die verder gaat dan de minimumverplichting van BIO 2.',
+            domeinen: [
+              { naam: 'IAM & Autorisatiebeheer', ref: '5.15–5.18',  aanpak: 'Visie verankert dat toegang tot persoonsgegevens een persoonlijke verantwoordelijkheid is van elke medewerker — niet een ICT-kwestie.' },
+              { naam: 'Risicomanagement',        ref: '5.08',        aanpak: 'Visie bepaalt de risicobereidheid: welke uitval of datalek is voor deze gemeente onaanvaardbaar? Dat antwoord stuurt alle volgende keuzes.' },
+              { naam: 'BCM & Continuïteit',      ref: '5.30',        aanpak: 'Visie formuleert de continuïteitsambities: welke diensten moeten altijd beschikbaar zijn voor de burger, ongeacht wat er technisch mis gaat?' },
+              { naam: 'Bewustzijn & training',   ref: '5.04 / 6.03', aanpak: 'Visie verankert dat bewustzijn een cultuurkwestie is, niet een scholingsverplichting. Elke medewerker is medeverantwoordelijk voor informatieveiligheid.' },
+              { naam: 'Incidentbeheer',          ref: '5.24–5.27',   aanpak: 'Visie bepaalt de meldcultuur: fouten maken mag, melden is verplicht, afrekenen is uit den boze. Dat beginsel moet vanuit de top worden uitgesproken.' },
+              { naam: 'Leveranciersbeheer',      ref: '5.19–5.22',   aanpak: 'Visie verankert dat IB-eisen aan leveranciers niet onderhandelbaar zijn — ongeacht de contractprijs of de omvang van de organisatie.' },
+              { naam: 'ISMS inrichting',         ref: '5.01 / 5.02', aanpak: 'Visie bepaalt de ambitie voor het ISMS: lean en werkend, niet uitgebreid op papier. Het ISMS dient de organisatie, niet andersom.' },
+            ],
+            bestuurscultuur: {
+              gemeenschap: { argument: 'Visie als gezamenlijk geformuleerd kompas; organiseer een sessie met teamleiders en betrokkenen om de kern samen te formuleren. Gebruik taal die verbindt: "wij als gemeente staan voor betrouwbare dienstverlening aan onze burgers." Refereer aan vergelijkbare gemeenten die dezelfde keuze hebben gemaakt. Vermijd een top-down beleidsnotitie die buiten de werkelijkheid staat van de werkvloer. Een gemeenschapscultuur draagt een visie die het gevoel oproept van gezamenlijk eigenaarschap. De gemeentesecretaris faciliteert, de teamleiders formuleren mee — zo wordt de visie iets van de hele organisatie, niet van de staf.', eerste_stap: 'Organiseer een co-creatiesessie van twee uur met de gemeentesecretaris en drie teamleiders om samen de kern van de IB-visie te formuleren.' },
+              vecht:       { argument: 'Een visie in een vechtcultuur moet neutraal en objectief geformuleerd zijn — buiten de politieke arena. Anker het in de publieke verantwoordelijkheid van de gemeente en in wettelijke verplichtingen zoals BIO 2 en de AVG. Bouw draagvlak bij sleutelpersonen vóór de formele vaststelling — een verraste opponent in het overleg maakt de visie tot strijdpunt. Formuleer de visie in termen van dienstverlening en burgerveiligheid, niet in termen van complianceplicht. Zo overstijgt zij de interne politiek en wordt zij moeilijk te bestrijden zonder de eigen geloofwaardigheid te ondermijnen.', eerste_stap: 'Voer bilaterale gesprekken met de gemeentesecretaris en één of twee invloedrijke teamleiders om de visiekern informeel te toetsen vóór enige formele bespreking.' },
+              debat:       { argument: 'Formele vaststelling door college of MT met expliciete bestuursambities. Koppeling aan coalitieakkoord en jaarplan. Rekenkamer en provincie als externe referentie in de aanbiedingsbrief. Aantoonbaarheid staat centraal. In een debatcultuur heeft een formeel vastgestelde visie meer gezag dan een informeel gedragen ambitie. Breng de visie in als bestuurlijk document met een heldere vraag om instemming. Koppel de IB-visie expliciet aan de bredere digitale ambitie van de gemeente en aan de eisen van ketenpartners en toezichthouders. Zo wordt de visie een bestuurlijk ankerpunt dat moeilijk te negeren is.', eerste_stap: 'Stel een bestuurlijke notitie op met de concept-IB-visie en vraag de gemeentesecretaris formeel akkoord in het eerstvolgende MT of directieteamoverleg.' },
+              regent:      { argument: 'Visie eerst informeel afstemmen met de gemeentesecretaris of directeur vóór de formele vaststelling. De sleutelfiguren moeten de visie persoonlijk dragen — niet als reactie op externe druk, maar als eigen bestuurlijke ambitie. Positioneer IB als bestuurlijke ambitie die de organisatie siert richting externe partners, provincie en rekenkamer. Bespreek het plan één-op-één met de gemeentesecretaris en vraag diens actieve sponsorschap. Zodra de informele lijn staat, gaat de formele bekrachtiging soepel. Vermijd de framing van complianceverplichting; presenteer het als bewijs van professionele kwaliteit.', eerste_stap: 'Bespreek de concept-visie discreet met de gemeentesecretaris en vraag diens actieve sponsorschap vóór enige bredere bespreking.' },
+            },
+            volwassenheid: {
+              1: { toelichting: 'Er is geen IB-visie: informatiebeveiliging is een technisch thema dat bij ICT ligt en het bestuur heeft er geen bewuste positie over ingenomen.', eerste_stap: 'Stel de gemeentesecretaris drie vragen: wat beloven wij onze burgers, wat is ons grootste IB-risico, en wie is eigenaar? Gebruik de antwoorden als basis voor een eerste concept-visie.' },
+              2: { toelichting: 'Er is een IB-beleidsdocument maar geen bestuurlijk gedragen visie: het document leeft niet in de organisatie en medewerkers herkennen de richting niet.', eerste_stap: 'Haal het bestaande beleidsdocument op, extraheer de kernambitie en leg die voor aan de gemeentesecretaris met de vraag of dit klopt als richting.' },
+              3: { toelichting: 'De visie is bestuurlijk vastgesteld en medewerkers herkennen de richting; de volgende stap is de visie zichtbaar maken in de dagelijkse praktijk.', eerste_stap: 'Bespreek de visie in elk teamoverleg aan de hand van een concrete casus uit de eigen dienstverlening en vraag medewerkers wat het voor hun werk betekent.' },
+              4: { toelichting: 'De visie is levend, wordt jaarlijks herijkt en medewerkers kunnen haar uitleggen; de organisatie toetst nieuwe beslissingen aan de IB-visie.', eerste_stap: 'Voer een jaarlijkse visie-check in als vast agendapunt in het MT: zijn onze ambities nog actueel gelet op nieuwe dreigingen en veranderde dienstverlening?' },
+            },
+          },
+
+          'regelgestuurd': {
+            intro: 'In een regelgestuurde organisatie is de IB-visie een formeel vastgesteld beleidsdocument dat deel uitmaakt van de managementcyclus. De visie bevat expliciete ambities per domein, is gekoppeld aan het coalitieakkoord en wordt jaarlijks herijkt als onderdeel van de P&C-cyclus. Three Lines of Defense is het leidende organisatieprincipe.',
+            wel: [
+              'Formeel vastgesteld beleidsdocument door MT of directie',
+              'Expliciete ambities per domein, gekoppeld aan bestuursagenda en coalitieakkoord',
+              'Three Lines of Defense als organisatieprincipe verankerd in de visie',
+              'IB als randvoorwaarde voor digitale transformatie en datagestuurd werken',
+              'Jaarlijkse herijking als onderdeel van de P&C-cyclus',
+              'Verbinding aan NL DIGIbeter en nationaal digitaliseringsbeleid',
+            ],
+            niet: [
+              'Visie die alleen op papier bestaat en niet terugkomt in de managementcyclus',
+              'IB-visie die losstaat van de bredere digitale en organisatieambitie',
+              'Visie zonder eigenaarsbeschrijving per domein en meetbare ambities',
+              'Eenmalig vastgestelde visie zonder jaarlijkse herijking',
+            ],
+            tip: 'Koppel de IB-visie expliciet aan de rechtmatigheidsverklaring en de digitale ambitie van de gemeente. In een regelgestuurde organisatie geeft die koppeling de visie bestuurlijk gewicht en maakt haar deel van de bestaande managementcyclus — zo hoeft u geen apart traject te starten.',
+            domeinen: [
+              { naam: 'IAM & Autorisatiebeheer', ref: '5.15–5.18',  aanpak: 'Visie verankert minimale rechten als organisatieprincipe: toegang wordt aantoonbaar beheerd en jaarlijks gereviewed. Eigenaar: directeur bedrijfsvoering.' },
+              { naam: 'Risicomanagement',        ref: '5.08',        aanpak: 'Visie bepaalt de risicobereidheid op directieniveau: welke risico\'s accepteert de organisatie en welke niet? Vastgelegd als onderdeel van het formele beleidsdocument.' },
+              { naam: 'BCM & Continuïteit',      ref: '5.30',        aanpak: 'Visie formuleert de continuïteitsambities als bestuurlijk ankerpunt: welke kernsystemen moeten altijd beschikbaar zijn? Jaarlijks geoefend en gerapporteerd aan directie.' },
+              { naam: 'Bewustzijn & training',   ref: '5.04 / 6.03', aanpak: 'Visie verankert dat bewustwording een structurele investering is, niet een eenmalige actie. Verplichte e-learning met HR-registratie als instrument, deelnamegraad in kwartaalrapportage.' },
+              { naam: 'Incidentbeheer',          ref: '5.24–5.27',   aanpak: 'Visie formuleert de meldcultuur als organisatienorm: laagdrempelig melden is verplicht, niet optioneel. Incidenttrends worden gerapporteerd aan MT als stuurinformatie.' },
+              { naam: 'Leveranciersbeheer',      ref: '5.19–5.22',   aanpak: 'Visie verankert IB-eisen als standaard inkoopcriterium: geen contract zonder verwerkersovereenkomst en due diligence. Eigenaar: juridische afdeling.' },
+              { naam: 'ISMS inrichting',         ref: '5.01 / 5.02', aanpak: 'Visie bepaalt de ISMS-ambitie: volledig PDCA-cyclus, jaarlijkse management review, aantoonbaar voor ENSIA en externe auditors. Het ISMS is een strategisch sturingsinstrument, geen papieren tijger.' },
+            ],
+            bestuurscultuur: {
+              gemeenschap: { argument: 'Visie als gezamenlijk geformuleerd kompas; organiseer een sessie met teamleiders en betrokkenen om de kern samen te formuleren. Gebruik taal die verbindt: "wij als gemeente staan voor betrouwbare dienstverlening." Refereer aan vergelijkbare gemeenten. Vermijd een top-down beleidsnotitie die buiten de werkelijkheid staat van de werkvloer. In een regelgestuurde organisatie met gemeenschapscultuur past de visie in de bestaande procesrationaliteit. Bespreek de concept-visie informeel in het MT vóór de formele vaststelling — dat geeft ruimte voor eigenaarschap en maakt het een gedeelde ambitie in plaats van een extern opgelegd document.', eerste_stap: 'Bespreek een concept-visie informeel in het MT en vraag elk lid te reageren op de vraag: is dit herkenbaar als onze ambitie?' },
+              vecht:       { argument: 'Een visie in een vechtcultuur moet neutraal en objectief geformuleerd zijn — buiten de politieke arena. Anker het in de publieke verantwoordelijkheid van de gemeente en in wettelijke verplichtingen. Bouw draagvlak bij sleutelpersonen vóór de formele vaststelling. In een regelgestuurde organisatie helpt de processstructuur: de visie hoort in de P&C-cyclus en past naadloos in de bestaande vergaderstructuur. Zo overstijgt zij de interne politiek. Formuleer de visie in termen van dienstverlening en burgervertrouwen, niet in politieke termen. Bouw een formele coalitie bij MT-leden die compliance al onderschrijven.', eerste_stap: 'Identificeer twee of drie MT-leden die de IB-visie willen dragen en bouw met hen informeel draagvlak vóór de formele MT-presentatie.' },
+              debat:       { argument: 'Formele vaststelling door college of MT met expliciete bestuursambities. Koppeling aan coalitieakkoord en jaarplan. Rekenkamer en provincie als externe referentie in de aanbiedingsbrief. Aantoonbaarheid staat centraal. In een regelgestuurde organisatie met debatcultuur is de formele route de enige route die werkt. Breng de visie als bestuurlijke notitie met expliciete ambities per domein en koppeling aan de P&C-cyclus. Gebruik de rechtmatigheidsverklaring als bestuurlijk argument: de IB-visie is randvoorwaarde voor aantoonbare naleving. Elk jaar herijken als vast agendapunt in de management review.', eerste_stap: 'Stel een bestuurlijke notitie op met de concept-IB-visie en de koppeling aan coalitieakkoord en P&C-cyclus; vraag formeel akkoord in het MT.' },
+              regent:      { argument: 'Visie eerst informeel afstemmen met de gemeentesecretaris of directeur vóór de formele vaststelling. De sleutelfiguren moeten de visie persoonlijk dragen — niet als reactie op externe druk, maar als eigen bestuurlijke ambitie. Positioneer IB als bestuurlijke ambitie die de organisatie siert richting externe partners en toezichthouders. In een regelgestuurde organisatie met regentencultuur is het netwerk van directeuren en afdelingshoofden beslissend. Zodra zij de visie dragen, loopt de formele vaststelling soepel. Vermijd de framing van complianceverplichting; positioneer de visie als bewijs van professionele kwaliteit.', eerste_stap: 'Bespreek de concept-visie discreet met de directeur en één of twee sleutel-MT-leden en vraag hun actieve sponsorschap vóór de formele vergadering.' },
+            },
+            volwassenheid: {
+              1: { toelichting: 'Er is geen IB-visie: informatiebeveiliging is niet bestuurlijk gepositioneerd en er is geen gedeeld beeld van de ambitie binnen de directie.', eerste_stap: 'Stel een startdocument op van één pagina met drie vragen: wat is onze ambitie, welke risico\'s accepteren wij niet, en wie is bestuurlijk eigenaar? Leg dit voor aan de directie.' },
+              2: { toelichting: 'Er is een IB-beleidsdocument maar geen bestuurlijk gedragen visie: het document is aanwezig maar niet verbonden aan de P&C-cyclus of de bredere organisatieambitie.', eerste_stap: 'Koppel het bestaande beleidsdocument aan de P&C-cyclus en voeg een IB-paragraaf toe aan het jaarplan van het komende jaar.' },
+              3: { toelichting: 'De visie is bestuurlijk vastgesteld en verankerd in de P&C-cyclus; de volgende stap is herijking op basis van nieuwe dreigingen en veranderende organisatiedoelen.', eerste_stap: 'Plan de eerste jaarlijkse visie-herijking als onderdeel van de management review en gebruik de ENSIA-uitkomsten als input.' },
+              4: { toelichting: 'De visie wordt jaarlijks herijkt en stuurt aantoonbaar de strategische keuzes; de organisatie gebruikt de visie als toetssteen voor nieuwe investeringen en samenwerkingsverbanden.', eerste_stap: 'Introduceer een bestuurlijke IB-agenda die elk kwartaal als agendapunt in het MT terugkomt en de voortgang aan de visie-ambities toetst.' },
+            },
+          },
+
+          'vakinhoudelijk': {
+            intro: 'In een vakinhoudelijk geleide organisatie werkt een IB-visie alleen als die door professionals zelf wordt gedragen, niet als die door de staf wordt opgelegd. De visie positioneert IB als onderdeel van de professionele verantwoordelijkheid en zorgplicht — per vakdomein concreet gemaakt. De CISO is verbindingsofficier, niet eigenaar.',
+            wel: [
+              'Visie gedragen door de professionals, niet opgelegd door de staf',
+              'IB als onderdeel van professionele verantwoordelijkheid en zorgplicht',
+              'Per vakdomein: wat betekent veilig werken concreet voor dit vakgebied?',
+              'CISO als verbindingsofficier tussen bestuurlijke visie en vakinhoudelijke praktijk',
+              'Verbinding met beroepsorganisatie en vakstandaard als legitimatie',
+              'Visie die IB positioneert als kwaliteitsnorm van de beroepsgroep',
+            ],
+            niet: [
+              'Top-down visiedocument zonder betrokkenheid van de professionals',
+              'Visie die IB positioneert als compliance-exercitie in plaats van vakinhoudelijke norm',
+              'CISO die de visie als eigenaar presenteert aan de lijn',
+              'Ambities die los staan van de dagelijkse vakpraktijk',
+            ],
+            tip: 'Vertaal de IB-visie per vakdomein naar een concrete uitspraak: "wij als sociale dienst staan voor vertrouwelijke behandeling van alle klantgegevens, altijd." Dat is een visie die een professional herkent en die verder gaat dan wat BIO 2 minimaal vraagt. De CISO helpt formuleren, de vakleider ondertekent.',
+            domeinen: [
+              { naam: 'IAM & Autorisatiebeheer', ref: '5.15–5.18',  aanpak: 'Visie verankert dat toegang tot dossiers een persoonlijke professionele verantwoordelijkheid is, gekoppeld aan beroepsgeheim en tuchtrecht. Per vakdomein concreet gemaakt.' },
+              { naam: 'Risicomanagement',        ref: '5.08',        aanpak: 'Visie bepaalt dat elk vakdomein zelf eigenaar is van zijn IB-risico\'s. De professional kent de risico\'s van zijn werk het best — de visie geeft dat eigenaarschap formeel terug.' },
+              { naam: 'BCM & Continuïteit',      ref: '5.30',        aanpak: 'Visie verankert continuïteit als vakinhoudelijke norm: "onze dienstverlening aan burgers mag niet stilvallen door technische uitval." Per domein uitgewerkt in scenario\'s.' },
+              { naam: 'Bewustzijn & training',   ref: '5.04 / 6.03', aanpak: 'Visie positioneert IB-bewustzijn als onderdeel van de vakintroductie en professionele ontwikkeling — niet als externe trainingsplicht. Beroepsorganisatie als legitimatie.' },
+              { naam: 'Incidentbeheer',          ref: '5.24–5.27',   aanpak: 'Visie formuleert melden als professionele norm: "een incident niet melden is een verzuim van zorgplicht." Dat is een taal die professionals begrijpen en accepteren.' },
+              { naam: 'Leveranciersbeheer',      ref: '5.19–5.22',   aanpak: 'Visie verankert dat professionals zelf beoordelen of leveranciers voldoen aan de vakinhoudelijke IB-norm — niet uitsluitend de inkoopafdeling of juridische dienst.' },
+              { naam: 'ISMS inrichting',         ref: '5.01 / 5.02', aanpak: 'Visie bepaalt dat het ISMS wordt opgebouwd vanuit de kernprocessen van elk vakdomein. Professionals zijn eigenaar van hun eigen IB-bijdrage aan het ISMS.' },
+            ],
+            bestuurscultuur: {
+              gemeenschap: { argument: 'Visie als gezamenlijk geformuleerd kompas; organiseer een sessie met teamleiders en betrokkenen om de kern samen te formuleren. Gebruik taal die verbindt: "wij als gemeente staan voor betrouwbare dienstverlening." Refereer aan vergelijkbare gemeenten. Vermijd een top-down beleidsnotitie die buiten de werkelijkheid staat van de werkvloer. In een vakinhoudelijke organisatie met gemeenschapscultuur is co-creatie de enige route: professionals die de visie samen formuleren dragen hem ook samen. Organiseer per vakdomein een korte sessie en laat de CISO de resultaten integreren tot een gemeenschappelijke visie.', eerste_stap: 'Organiseer per vakdomein een sessie van één uur om samen te formuleren wat veilig werken voor dat domein betekent; de CISO integreert de uitkomsten.' },
+              vecht:       { argument: 'Een visie in een vechtcultuur moet neutraal en objectief geformuleerd zijn — buiten de politieke arena. Anker het in de publieke verantwoordelijkheid van de gemeente en in wettelijke verplichtingen. Bouw draagvlak bij sleutelpersonen vóór de formele vaststelling. In een vakinhoudelijke organisatie zijn die sleutelpersonen de meest invloedrijke vakleiders. Bouw draagvlak bij hen vóór de formele presentatie. Een visie die door gezaghebbende professionals wordt gedragen is politiek onaantastbaar — niemand kan publiekelijk beweren dat professionele verantwoordelijkheid niet belangrijk is.', eerste_stap: 'Identificeer twee of drie gezaghebbende vakleiders en bespreek de concept-visie met hen; vraag hun publieke onderschrijving vóór de formele vaststelling.' },
+              debat:       { argument: 'Formele vaststelling door college of MT met expliciete bestuursambities. Koppeling aan coalitieakkoord en jaarplan. Rekenkamer en provincie als externe referentie in de aanbiedingsbrief. Aantoonbaarheid staat centraal. In een vakinhoudelijke organisatie met debatcultuur moet de visie ook vakinhoudelijk formeel worden verankerd: per domein een eigenaar met expliciete ambitie en koppeling aan het toezichtskader. Breng de visie als formele notitie met per vakdomein een concrete ambitie en een meetbaar resultaat. Zo voldoet zij aan de formele eisen van de debatcultuur én aan de vakinhoudelijke eisen van de professionals.', eerste_stap: 'Stel per vakdomein een formele IB-ambitie op en laat de visie inclusief domeinambities formeel vaststellen door het bestuurlijk overleg.' },
+              regent:      { argument: 'Visie eerst informeel afstemmen met de gemeentesecretaris of directeur vóór de formele vaststelling. De sleutelfiguren moeten de visie persoonlijk dragen — niet als reactie op externe druk, maar als eigen bestuurlijke ambitie. Positioneer IB als bestuurlijke ambitie die de organisatie siert richting externe partners. In een vakinhoudelijke organisatie met regentencultuur zijn de meest gezaghebbende vakleiders de informele sleutelfiguren. Bespreek de concept-visie eerst met de directeur en daarna met de twee of drie meest gezaghebbende vakleiders. Zodra zij het dragen, volgt de formele bekrachtiging soepel.', eerste_stap: 'Bespreek de concept-visie discreet met de directeur en de twee meest gezaghebbende vakleiders; vraag hun actieve sponsorschap vóór de formele vaststelling.' },
+            },
+            volwassenheid: {
+              1: { toelichting: 'Professionals weten niet wat IB voor hun vakdomein betekent en er is geen gedeeld beeld van de ambitie. IB is een ICT-thema, niet een vakinhoudelijk thema.', eerste_stap: 'Stel per vakdomein de vraag: welke informatie is vitaal voor jullie werk en wat zijn de drie grootste risico\'s? Gebruik de antwoorden als basis voor een eerste concept-visie.' },
+              2: { toelichting: 'Er is bewustzijn maar de visie is nog niet gedragen door de professionals: initiatieven zijn persoonsafhankelijk en de richting is niet gedeeld over domeinen heen.', eerste_stap: 'Leg een concept-visie voor aan de vakleiders en vraag hun reactie: herkennen zij dit als hun ambitie? Pas de tekst aan op basis van de feedback.' },
+              3: { toelichting: 'De visie is gedragen door professionals en verankerd in het vakinhoudelijk werk; de volgende stap is externe validatie en koppeling aan de beroepsstandaard.', eerste_stap: 'Toets de IB-visie aan de beroepsstandaard van de relevante vakorganisatie en gebruik dat als externe legitimatie richting bestuur en toezichthouders.' },
+              4: { toelichting: 'De visie wordt door professionals zelf bewaakt en bijgesteld; IB is integraal onderdeel van de professionele cultuur en de beroepsidentiteit.', eerste_stap: 'Introduceer een jaarlijkse vakinhoudelijke IB-reflectie per domein, geleid door de vakleider zelf, als structureel onderdeel van de beroepsontwikkeling.' },
+            },
+          },
+
+          'teamgedreven': {
+            intro: 'In een teamgedreven organisatie is de IB-visie een gedeelde ambitie die leeft in de teams — geen statisch document maar een levend principe. "Security by design" en "privacy by default" zijn cultuurprincipes boven compliancevereisten. De visie positioneert IB als enabler van innovatie, niet als rem.',
+            wel: [
+              'Gedeelde ambitie die leeft in de teams, geen statisch visiedocument',
+              '"Security by design" en "privacy by default" als cultuurprincipes',
+              'IB als enabler van innovatie: "veilig experimenteren" als positieve formulering',
+              'OKR-logica: visie vertaalt naar meetbare kwartaaldoelen per team',
+              'Verbinding aan Common Ground en dataplatform-ambitie',
+              'Security champions als ambassadeurs van de visie in hun team',
+            ],
+            niet: [
+              'Statisch visiedocument dat in een la verdwijnt na vaststelling',
+              'Visie die IB positioneert als rem op innovatie of als compliance-exercitie',
+              'Top-down geformuleerde visie zonder betrokkenheid van de teams',
+              'Ambities zonder koppeling aan de projecten en producten van de teams',
+            ],
+            tip: 'Formuleer de IB-visie als positieve uitdaging: "wij bouwen digitale diensten die burgers vertrouwen verdienen, en wij bewijzen dat met aantoonbare veiligheid." Dat is een visie die past bij een innovatieve organisatie en die verder gaat dan de minimumverplichting van BIO 2. Laat de teams zelf de kwartaaldoelen bepalen die bij deze visie horen.',
+            domeinen: [
+              { naam: 'IAM & Autorisatiebeheer', ref: '5.15–5.18',  aanpak: 'Visie verankert zero-trust als architectuurprincipe van elk nieuw product. IAM is geen beheerstaak maar een designkeuze die teams vanaf dag 1 meenemen.' },
+              { naam: 'Risicomanagement',        ref: '5.08',        aanpak: 'Visie bepaalt dat elk team eigenaar is van de risico\'s van zijn product. Threat modeling is een ontwerptool, geen compliance-exercitie aan het einde van het project.' },
+              { naam: 'BCM & Continuïteit',      ref: '5.30',        aanpak: 'Visie positioneert chaos engineering als bewijs van kwaliteit: "wij weten dat ons product bestand is tegen uitval, want wij testen het aantoonbaar." Onderdeel van de releasecyclus.' },
+              { naam: 'Bewustzijn & training',   ref: '5.04 / 6.03', aanpak: 'Visie verankert dat bewustzijn een teamverantwoordelijkheid is, gedragen door de security champion. Geen centrale scholingsverplichting maar een teamcultuur van open leren van fouten.' },
+              { naam: 'Incidentbeheer',          ref: '5.24–5.27',   aanpak: 'Visie formuleert blameless postmortems als leerinstituut: fouten zijn grondstof voor verbetering, niet aanleiding voor afrekening. Dat is een bestuurlijk principe dat vanuit de top moet worden uitgesproken.' },
+              { naam: 'Leveranciersbeheer',      ref: '5.19–5.22',   aanpak: 'Visie verankert dat IB-eisen aan leveranciers een designkeuze zijn: geen vendor die niet voldoet aan de IB-norm van het team, ongeacht de prijs of leversnelheid.' },
+              { naam: 'ISMS inrichting',         ref: '5.01 / 5.02', aanpak: 'Visie bepaalt dat het ISMS lean en iteratief is: minimale scope, hoge aanpassingssnelheid, en elke sprint bijgesteld op basis van geleerde lessen. Geen groot traject als startpunt.' },
+            ],
+            bestuurscultuur: {
+              gemeenschap: { argument: 'Visie als gezamenlijk geformuleerd kompas; organiseer een sessie met teamleiders en betrokkenen om de kern samen te formuleren. Gebruik taal die verbindt: "wij als gemeente staan voor betrouwbare dienstverlening." Refereer aan vergelijkbare gemeenten. Vermijd een top-down beleidsnotitie die buiten de werkelijkheid staat van de werkvloer. In een teamgedreven organisatie met gemeenschapscultuur werkt een gezamenlijke kickoff met alle security champions als fundament voor de visie: zij formuleren samen de ambitie en nemen die mee terug naar hun team. Zo leeft de visie direct in de dagelijkse praktijk.', eerste_stap: 'Organiseer een kickoff met alle security champions en teamleiders om samen de IB-visie te formuleren als gedeelde ambitie.' },
+              vecht:       { argument: 'Een visie in een vechtcultuur moet neutraal en objectief geformuleerd zijn — buiten de politieke arena. Anker het in de publieke verantwoordelijkheid van de gemeente en in wettelijke verplichtingen. Bouw draagvlak bij sleutelpersonen vóór de formele vaststelling. In een teamgedreven organisatie zijn die sleutelpersonen de meest invloedrijke programmamanagers en security champions. De visie moet van de teams zelf komen — een bestuurlijk opgelegde visie werkt contraproductief in een vechtcultuur. Bouw bottom-up draagvlak bij twee of drie enthousiastelingen en gebruik hen als ambassadeurs voor de bredere uitrol.', eerste_stap: 'Bouw draagvlak bij twee of drie enthousiastelingen in de teams en laat hen de concept-visie formuleren vóór enige bestuurlijke presentatie.' },
+              debat:       { argument: 'Formele vaststelling door college of MT met expliciete bestuursambities. Koppeling aan coalitieakkoord en jaarplan. Rekenkamer en provincie als externe referentie in de aanbiedingsbrief. Aantoonbaarheid staat centraal. In een teamgedreven organisatie met debatcultuur moet de visie formeel worden verankerd als randvoorwaarde voor elk project: geen product zonder aantoonbare IB-toets. Breng de visie als formeel MT-besluit met koppeling aan de projectmethodiek en de OKR-structuur. Zo krijgt zij de formele status die de debatcultuur vereist én de operationele werking die de teams nodig hebben.', eerste_stap: 'Laat de IB-visie formeel vaststellen als onderdeel van de projectmethodiek en de OKR-structuur van de organisatie.' },
+              regent:      { argument: 'Visie eerst informeel afstemmen met de gemeentesecretaris of directeur vóór de formele vaststelling. De sleutelfiguren moeten de visie persoonlijk dragen — niet als reactie op externe druk, maar als eigen bestuurlijke ambitie. Positioneer IB als bestuurlijke ambitie die de organisatie siert richting externe partners. In een teamgedreven organisatie met regentencultuur zijn de meest invloedrijke programmamanagers de informele sleutelfiguren. Bespreek de concept-visie eerst discreet met hen. Zodra zij de visie dragen en publiek uitdragen, volgt de rest van de organisatie vanzelf.', eerste_stap: 'Bespreek de concept-visie discreet met de meest invloedrijke programmamanager en vraag diens publieke sponsorschap als anker voor de bredere uitrol.' },
+            },
+            volwassenheid: {
+              1: { toelichting: 'Er is geen gedeelde IB-visie: elk team heeft zijn eigen beeld van wat veiligheid betekent, of het thema leeft helemaal niet. Security is een technisch thema, niet een organisatieambitie.', eerste_stap: 'Stel aan de drie meest betrokken teams de vraag: wat betekent "veilig werken" voor jullie product? Gebruik de antwoorden als basis voor een eerste gedeelde ambitie.' },
+              2: { toelichting: 'Er is bewustzijn maar geen gedeelde visie: initiatieven zijn teamspecifiek en niet verbonden aan een gemeenschappelijke ambitie. Als enthousiaste trekkers vertrekken, valt de energie weg.', eerste_stap: 'Formuleer een eerste concept-visie op basis van bestaande initiatieven en leg die voor aan alle security champions; vraag hen: herkennen jullie dit als de onze?' },
+              3: { toelichting: 'De visie is gedeeld en leeft in de teams; de volgende stap is haar vertaling naar meetbare kwartaaldoelen per team via de OKR-structuur.', eerste_stap: 'Introduceer IB-ambities als vast onderdeel van de kwartaal-OKR\'s van elk team en bespreek de voortgang in de kwartaalreview.' },
+              4: { toelichting: 'De visie wordt door teams zelf bewaakt en bijgesteld; IB is een integraal onderdeel van de teamcultuur en de productontwikkeling. Teams toetsen nieuwe beslissingen spontaan aan de gedeelde IB-ambitie.', eerste_stap: 'Voer een jaarlijkse visie-retrospective in als vast onderdeel van de jaarplanning: wat hebben wij geleerd en waar willen wij over een jaar staan?' },
+            },
+          },
+
+          'concern': {
+            intro: 'In een concernorganisatie werkt de IB-visie op twee niveaus: een concern-brede ambitie die de concern-CISO bewaakt, en een dienst-specifieke invulling die elke dienst zelf uitwerkt. Eenheid in diversiteit: gemeenschappelijke waarden, lokale uitwerking. Rapportage aan college en raad op concern-niveau.',
+            wel: [
+              'Visie op twee niveaus: concern-brede IB-ambitie en dienst-specifieke invulling',
+              'Eenheid in diversiteit: gemeenschappelijke waarden, lokale uitwerking',
+              'Concern-CISO als hoeder van de visie; dienst-CISO\'s als implementators',
+              'Rapportage aan college of raad op concern-niveau; diensten verantwoorden intern',
+              'IB als onderdeel van het concern-governanceraamwerk',
+              'Jaarlijkse herijking op concern-niveau met input van alle diensten',
+            ],
+            niet: [
+              'Één uniforme visie over alle diensten zonder ruimte voor lokale invulling',
+              'Concern-visie die zo abstract is dat diensten er niets mee kunnen',
+              'Diensten die elk hun eigen IB-visie formuleren zonder concern-kader',
+              'Visie die alleen op concern-niveau leeft en niet in de diensten doordringt',
+            ],
+            tip: 'Formuleer de concern-visie als een set van drie tot vijf gemeenschappelijke waarden waaraan alle diensten zich committeren, maar laat de uitwerking per dienst vrij. Dat geeft het concern samenhang zonder de diensten te beknotten. De concern-CISO bewaakt de waarden; de dienst-CISO\'s bepalen hoe zij die in hun context waarmaken.',
+            domeinen: [
+              { naam: 'IAM & Autorisatiebeheer', ref: '5.15–5.18',  aanpak: 'Concern-visie verankert een minimumstandaard voor toegangsbeheer als gemeenschappelijke waarde. Diensten werken dit uit naar hun eigen systemen en processen.' },
+              { naam: 'Risicomanagement',        ref: '5.08',        aanpak: 'Concern-visie bepaalt de risicobereidheid op concern-niveau. Diensten vullen hun eigen risicoprofiel in binnen de concern-kaders. Concern-CISO consolideert en rapporteert aan college.' },
+              { naam: 'BCM & Continuïteit',      ref: '5.30',        aanpak: 'Concern-visie formuleert de continuïteitsambities als concern-brede norm. Diensten vertalen dit naar hun eigen bedrijfskritische processen en systemen.' },
+              { naam: 'Bewustzijn & training',   ref: '5.04 / 6.03', aanpak: 'Concern-visie verankert dat IB-bewustzijn een concernbrede cultuurambitie is. Gemeenschappelijke e-learning als minimumstandaard; diensten vullen vakspecifiek aan.' },
+              { naam: 'Incidentbeheer',          ref: '5.24–5.27',   aanpak: 'Concern-visie formuleert de meldcultuur als concern-brede norm. Diensten hebben eigen first-response; concern-CISO ontvangt en consolideert. Trends worden concern-breed gedeeld als leermateriaal.' },
+              { naam: 'Leveranciersbeheer',      ref: '5.19–5.22',   aanpak: 'Concern-visie verankert IB-eisen als minimumstandaard bij alle inkoop. Concernbrede leveranciers via centrale due diligence; lokale leveranciers via dienst-eigen toetsing.' },
+              { naam: 'ISMS inrichting',         ref: '5.01 / 5.02', aanpak: 'Concern-visie bepaalt de ISMS-ambitie op twee niveaus: concern-kader met dienst-bijlagen. Management review op beide niveaus. Concern-CISO borgt samenhang; dienst-CISO\'s borgen lokale uitvoering.' },
+            ],
+            bestuurscultuur: {
+              gemeenschap: { argument: 'Visie als gezamenlijk geformuleerd kompas; organiseer een sessie met teamleiders en betrokkenen om de kern samen te formuleren. Gebruik taal die verbindt: "wij als gemeente staan voor betrouwbare dienstverlening." Refereer aan vergelijkbare gemeenten. Vermijd een top-down beleidsnotitie die buiten de werkelijkheid staat van de werkvloer. In een concern met gemeenschapscultuur werkt de concern-visie als gedeeld project van alle dienst-CISO\'s: zij formuleren samen de gemeenschappelijke waarden en nemen die mee terug naar hun dienst. Het IB-coördinatorennetwerk is de motor van de visievorming.', eerste_stap: 'Organiseer een gezamenlijk overleg van alle dienst-CISO\'s om samen de drie tot vijf gemeenschappelijke IB-waarden van het concern te formuleren.' },
+              vecht:       { argument: 'Een visie in een vechtcultuur moet neutraal en objectief geformuleerd zijn — buiten de politieke arena. Anker het in de publieke verantwoordelijkheid van de gemeente en in wettelijke verplichtingen. Bouw draagvlak bij sleutelpersonen vóór de formele vaststelling. In een concern met vechtcultuur kunnen interdienst-conflicten de concern-visie tot strijdpunt maken. Formuleer de visie zo dat diensten er ruimte in voelen: gemeenschappelijke waarden, lokale vrijheid. Bouw via bilaterale afstemming met diensthoofden draagvlak vóór de formele vaststelling. Een concern-visie die diensten het gevoel geeft van autonomie werkt beter dan een opgelegd kader.', eerste_stap: 'Voer bilaterale gesprekken met elk diensthoofd om de concept-concern-visie te toetsen en bezwaren vroegtijdig te signaleren.' },
+              debat:       { argument: 'Formele vaststelling door college of MT met expliciete bestuursambities. Koppeling aan coalitieakkoord en jaarplan. Rekenkamer en provincie als externe referentie in de aanbiedingsbrief. Aantoonbaarheid staat centraal. In een concern met debatcultuur moet de concern-visie formeel worden vastgesteld door de concern-directie, met expliciete eigenaarsbeschrijving per dienst en koppeling aan het concern-governanceraamwerk. Elk diensthoofd stelt vervolgens een dienst-visie op binnen het concern-kader. Zo voldoet de visiestructuur aan de formele eisen van de debatcultuur én aan de behoefte aan lokale autonomie.', eerste_stap: 'Laat de concern-directie de IB-visie formeel vaststellen en verplicht elk dienst een eigen uitwerkingsdocument op te stellen binnen dat kader.' },
+              regent:      { argument: 'Visie eerst informeel afstemmen met de gemeentesecretaris of directeur vóór de formele vaststelling. De sleutelfiguren moeten de visie persoonlijk dragen — niet als reactie op externe druk, maar als eigen bestuurlijke ambitie. Positioneer IB als bestuurlijke ambitie die de organisatie siert richting externe partners. In een concern met regentencultuur zijn de meest gezaghebbende diensthoofden de informele sleutelfiguren. Bespreek de concept-visie eerst discreet met de concern-directeur en de twee of drie meest gezaghebbende diensthoofden. Zodra zij de visie dragen, volgt de formele bekrachtiging soepel.', eerste_stap: 'Bespreek de concept-concern-visie discreet met de concern-directeur en de twee meest gezaghebbende diensthoofden; vraag hun actieve sponsorschap vóór de formele vaststelling.' },
+            },
+            volwassenheid: {
+              1: { toelichting: 'Er is geen concern-IB-visie: elke dienst heeft een eigen beeld of geen beeld van de ambitie. Er is geen gedeeld concern-kader en de concern-directie heeft geen bestuurlijke positie ingenomen.', eerste_stap: 'Maak een inventarisatie van de IB-ambities per dienst en gebruik dit als input voor een eerste concern-brede visiesessie.' },
+              2: { toelichting: 'Er is een concern-CISO maar de visie leeft niet in de diensten: de concern-ambitie is geformuleerd maar niet vertaald naar dienst-specifieke uitwerking en eigenaarschap per dienst ontbreekt.', eerste_stap: 'Vraag elk diensthoofd om de concern-visie te vertalen naar drie concrete IB-ambities voor hun eigen dienst en leg dit vast als startpunt.' },
+              3: { toelichting: 'De concern-visie is vastgesteld en diensten hebben een eigen uitwerking gemaakt; de volgende stap is herijking en verankering in de concern-rapportagecyclus.', eerste_stap: 'Introduceer een jaarlijkse concern-brede visie-herijking als vast agendapunt in de stuurgroep met input van alle dienst-CISO\'s.' },
+              4: { toelichting: 'De concern-visie is levend en wordt jaarlijks herijkt met input van alle diensten; de organisatie toetst nieuwe concern-brede beslissingen aan de gedeelde IB-ambitie.', eerste_stap: 'Start een peer-review ronde waarbij diensten elkaars visie-uitwerking beoordelen en van elkaar leren via het IB-coördinatorennetwerk.' },
+            },
+          },
+
+        },
 
         strategie: {
 
