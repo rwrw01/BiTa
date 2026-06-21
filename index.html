@@ -6,24 +6,28 @@
 <title>BITA-tool — Business IT Alignment</title>
 <style>
   :root {
-    --purple: #883486;
-    --teal:   #006782;
-    --dark:   #1a1a2e;
-    --body:   #2c2c3e;
-    --light:  #f5f3f8;
-    --border: #ddd5e8;
-    --green:  #3a7a3a;
-    --red:    #9e2a2a;
-    --blue:   #2e6eb0;
-    --orange: #c45f10;
-    --well-bg: #f0f7f0;
-    --niet-bg: #fdf0f0;
+    --purple:   #1A2B3C;
+    --teal:     #1B7840;
+    --dark:     #1A2B3C;
+    --body:     #2D3748;
+    --light:    #F7F8FA;
+    --border:   #E2E8F0;
+    --green:    #1B7840;
+    --red:      #9e2a2a;
+    --blue:     #1A2B3C;
+    --orange:   #c45f10;
+    --well-bg:  #f0f7f0;
+    --niet-bg:  #fdf0f0;
+    --ath-green-dark:   #146433;
+    --ath-gradient:     linear-gradient(135deg, #1A2B3C 0%, #146433 100%);
+    --ath-shadow:       0 2px 8px rgba(26, 43, 60, 0.05);
+    --ath-shadow-hover: 0 4px 16px rgba(26, 43, 60, 0.1);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    font-family: "Segoe UI", Calibri, "Helvetica Neue", sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Calibri, sans-serif;
     font-size: 15px;
     line-height: 1.65;
     color: var(--body);
@@ -32,7 +36,7 @@
 
   /* ── Header ── */
   header {
-    background: var(--purple);
+    background: var(--ath-gradient);
     color: #fff;
     padding: 2.5rem 4rem 2rem;
   }
@@ -108,18 +112,24 @@
   }
   .option-card {
     border: 2px solid var(--border);
-    border-radius: 8px;
+    border-radius: 0;
     padding: 1rem 1.3rem;
     cursor: pointer;
-    transition: border-color 0.15s, background 0.15s;
+    transition: border-color 0.15s, background 0.15s, box-shadow 0.2s, transform 0.2s;
     display: flex;
     align-items: flex-start;
     gap: 1rem;
+    box-shadow: var(--ath-shadow);
   }
-  .option-card:hover { border-color: var(--purple); background: var(--light); }
+  .option-card:hover {
+    border-color: var(--purple);
+    background: var(--light);
+    box-shadow: var(--ath-shadow-hover);
+    transform: translateY(-2px);
+  }
   .option-card.selected {
     border-color: var(--purple);
-    background: #f7eef7;
+    background: #eaf2ee;
   }
   .option-card .opt-label {
     font-weight: 700;
@@ -162,16 +172,18 @@
   .btn {
     padding: 0.65rem 1.6rem;
     border: none;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    font-weight: 600;
+    border-radius: 0;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     cursor: pointer;
     font-family: inherit;
-    transition: opacity 0.15s;
+    transition: opacity 0.15s, transform 0.1s;
   }
   .btn:disabled { opacity: 0.4; cursor: not-allowed; }
   .btn-primary { background: var(--purple); color: #fff; }
-  .btn-primary:hover:not(:disabled) { opacity: 0.88; }
+  .btn-primary:hover:not(:disabled) { opacity: 0.88; transform: translateY(-1px); }
   .btn-secondary { background: var(--light); color: var(--body); border: 1px solid var(--border); }
   .btn-secondary:hover:not(:disabled) { background: var(--border); }
 
@@ -180,10 +192,10 @@
   #output.active { display: block; }
 
   .output-header {
-    background: var(--purple);
+    background: var(--ath-gradient);
     color: #fff;
     padding: 1.5rem 2rem;
-    border-radius: 8px 8px 0 0;
+    border-radius: 0;
     margin-bottom: 0;
   }
   .output-header h2 { font-size: 1.2rem; margin-bottom: 0.8rem; }
@@ -192,7 +204,7 @@
   .badge {
     display: inline-block;
     padding: 0.2rem 0.7rem;
-    border-radius: 20px;
+    border-radius: 0;
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -203,7 +215,7 @@
   .output-body {
     border: 1px solid var(--border);
     border-top: none;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0;
     padding: 2rem;
     margin-bottom: 2rem;
   }
@@ -227,7 +239,7 @@
     margin-top: 0.6rem;
   }
   .col-wel, .col-niet {
-    border-radius: 4px;
+    border-radius: 0;
     padding: 0.8rem 1rem;
   }
   .col-wel  { background: var(--well-bg); }
@@ -246,10 +258,10 @@
   .col-niet ul.klein li::before { color: var(--red); }
 
   .tip-box {
-    background: #f8f5fb;
+    background: #f0f5f2;
     border-left: 4px solid var(--purple);
     padding: 0.8rem 1rem;
-    border-radius: 0 4px 4px 0;
+    border-radius: 0;
     font-size: 0.85rem;
     margin-top: 0.6rem;
   }
@@ -259,7 +271,7 @@
     background: var(--light);
     border-left: 4px solid var(--teal);
     padding: 0.8rem 1rem;
-    border-radius: 0 4px 4px 0;
+    border-radius: 0;
     font-size: 0.85rem;
     margin-top: 0.6rem;
   }
@@ -267,7 +279,7 @@
   .placeholder-notice {
     background: #fff8e8;
     border: 1px dashed #c8a000;
-    border-radius: 6px;
+    border-radius: 0;
     padding: 1.2rem 1.5rem;
     color: #7a6000;
     font-size: 0.88rem;
@@ -307,11 +319,17 @@
   /* ── Footer ── */
   footer {
     text-align: center;
-    font-size: 0.75rem;
-    color: #888;
-    padding: 2rem;
-    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.6);
+    background: var(--purple);
+    padding: 1.5rem 4rem;
     margin-top: 3rem;
+  }
+
+  /* ── Accessibility ── */
+  :focus-visible {
+    outline: 3px solid var(--teal);
+    outline-offset: 2px;
   }
 
   /* ── Responsive ── */
