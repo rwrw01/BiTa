@@ -142,6 +142,20 @@
     color: #555;
     line-height: 1.45;
   }
+  .option-card .opt-voorbeeld {
+    display: none;
+    margin-top: 0.55rem;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--teal);
+    border-left: 3px solid var(--teal);
+    padding-left: 0.6rem;
+    line-height: 1.4;
+  }
+  .option-card:hover .opt-voorbeeld,
+  .option-card.selected .opt-voorbeeld {
+    display: block;
+  }
   .option-card .opt-icon {
     width: 32px;
     height: 32px;
@@ -465,11 +479,11 @@ const CONTENT = {
       { key: 'toetsing',      label: 'Toetsing',      sub: 'Gap-analyse of audit — waar staan we?' },
     ],
     orgtypes: [
-      { key: 'plat',           label: 'Platte aansturing, directe lijn',        sub: 'Top en uitvoering staan dicht bij elkaar — weinig lagen, direct schakelen. Economies of flow.' },
-      { key: 'regelgestuurd',  label: 'Regelgestuurd en gestandaardiseerd',      sub: 'Coördinatie via vaste processen, systemen en lagen. PDCA-cyclus centraal. Economies of scale.' },
-      { key: 'vakinhoudelijk', label: 'Vakinhoudelijk geleid',                   sub: 'Professionals bepalen de werkwijze op basis van expertise — de lijn stuurt op output, niet op methode.' },
-      { key: 'teamgedreven',   label: 'Teamgedreven en adaptief',                sub: 'Werkt in tijdelijke teams en programma\'s — structuur past zich aan de opgave aan.' },
-      { key: 'concern',        label: 'Concern met zelfstandige domeinen',       sub: 'Autonome clusters of diensten onder één bestuurlijk dak — rapportage op twee niveaus.' },
+      { key: 'plat',           label: 'Platte aansturing, directe lijn',        sub: 'Top en uitvoering staan dicht bij elkaar — weinig lagen, direct schakelen. Economies of flow.',        voorbeeld: '"De gemeentesecretaris belt zelf naar de teamleider als er iets speelt — geen tussenlaag."' },
+      { key: 'regelgestuurd',  label: 'Regelgestuurd en gestandaardiseerd',      sub: 'Coördinatie via vaste processen, systemen en lagen. PDCA-cyclus centraal. Economies of scale.',      voorbeeld: '"Voor iedere beslissing is eerst een notitie nodig, die langs twee stuurgroepen gaat."' },
+      { key: 'vakinhoudelijk', label: 'Vakinhoudelijk geleid',                   sub: 'Professionals bepalen de werkwijze op basis van expertise — de lijn stuurt op output, niet op methode.', voorbeeld: '"De juristen en planologen bepalen hoe het gaat — de lijn houdt zich er niet mee bezig."' },
+      { key: 'teamgedreven',   label: 'Teamgedreven en adaptief',                sub: 'Werkt in tijdelijke teams en programma\'s — structuur past zich aan de opgave aan.',                  voorbeeld: '"We werken in opgaveteams en squads. De afdeling bestaat op papier, het team bepaalt."' },
+      { key: 'concern',        label: 'Concern met zelfstandige domeinen',       sub: 'Autonome clusters of diensten onder één bestuurlijk dak — rapportage op twee niveaus.',               voorbeeld: '"Elk cluster heeft zijn eigen directeur en zijn eigen ICT — het concern stelt alleen de kaders."' },
     ],
     bestuurscultuur: [
       { key: 'gemeenschap', label: 'Gemeenschapscultuur', sub: 'Informeel en consensusgericht — pragmatisch, conflictvermijdend, "gezellig besturen"' },
@@ -1358,6 +1372,7 @@ function renderOptions(containerId, items, stateKey, nextBtnId) {
       <div>
         <div class="opt-label">${esc(item.label)}</div>
         <div class="opt-sub">${esc(item.sub)}</div>
+        ${item.voorbeeld ? `<div class="opt-voorbeeld">${esc(item.voorbeeld)}</div>` : ''}
       </div>`;
     card.addEventListener('click', () => {
       state[stateKey] = item.key;
